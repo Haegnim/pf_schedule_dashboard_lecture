@@ -2,4 +2,11 @@
 #ff9062
 #3acbe8
 
-test
+fa-database
+fa-thermomether-half
+fa-clone
+fa-chart-o
+
+[개인 pick color]
+#13C7A3
+#0078FF

@@ -1,40 +1,263 @@
 /* Wrapper Style Code  */
-.wrapper{width: 100%; height: 100vh; background: #eee; display:flex; align-items: center; justify-content: center; min-height:768px;}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 768px;
+}
 
 /* Main Contents Box Style Code */
-.dashboard{width: 90%; max-width:1280px; height: 90%;  background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(253,247,249,1) 100%); box-shadow:0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 50%); border-radius: 30px; display: flex; padding: 12px; justify-content: space-between; 
+.dashboard {
+  width: 90%;
+  max-width: 1280px;
+  height: 90%;
+  background: linear-gradient(
+    0deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(253, 247, 249, 1) 100%
+  );
+  box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 50%);
+  border-radius: 30px;
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
 }
-.dashboard > *{border-radius:20px;}
+.dashboard > * {
+  border-radius: 20px;
+}
 
 /* Header Contents Style Code */
-header{width:7%; height: 100%; background: linear-gradient(0deg, rgba(123,64,250,1) 0%, rgba(124,65,245,1) 100%); display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 30px 0;}
-header h2{width: 30px; height: auto;}
-header h2 img{width: 100%;}
-header a{color:#fff;}
-header .gnb{width: 100%;}
-header .gnb a{width: 100%; padding: 15px 0; font-size: 20px; display: flex; align-items: center; justify-content: center;}
-header .sign-out{font-size:20px;}
+header {
+  width: 7%;
+  height: 100%;
+  background: linear-gradient(0deg, #13c7a3 0%, #0078ff 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+header h2 {
+  width: 30px;
+  height: auto;
+}
+header h2 img {
+  width: 100%;
+}
+header a {
+  color: #fff;
+}
+header .gnb {
+  width: 100%;
+}
+header .gnb a {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .sign-out {
+  font-size: 20px;
+}
 
 /* Graph-ui Contents Style Code */
-.graph-ui{width: calc(58% - 24px); height: 100%;}
-.graph-ui>div{width: 100%; height:33.33%; border-radius:20px; }
-.graph-ui>div.intro{background: #ffe2a2;}
-.graph-ui>div.each-pofol{padding:20px 0; border: 0;}
-.graph-ui>div.each-pofol>div{width: 100%; height: 100%; border-radius: 15px;}
-.graph-ui .each-pofol .each-title{width:100%; height: 25%;}
-.graph-ui .each-pofol .each-graph{width: 100%; height: 75%; display: flex; justify-content: space-between;}
-.graph-ui .each-pofol .each-graph div{height: 100%; border:1px solid #f7f7f7; border-radius: 20px; box-shadow:0px 0px 3px #ccc; background: #fff; width: calc(25% - 8.5px);}
+.graph-ui {
+  width: calc(58% - 24px);
+  height: 100%;
+}
+.graph-ui > div {
+  width: 100%;
+  height: 33.33%;
+  border-radius: 20px;
+}
+.graph-ui > div.intro {
+  background: url("/schedule/img/bg.svg") no-repeat center center;
+  background-size: cover;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.graph-ui > div.intro h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transform: translateY(25px);
+  opacity: 0;
+  animation: fade-up-01 0.5s 1;
+  animation-fill-mode: forwards;
+}
+.graph-ui > div.intro p {
+  font-size: 16px;
+  font-weight: 400;
+  transform: translateY(25px);
+  opacity: 0;
+  animation: fade-up-01 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.graph-ui > div.intro a {
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 7px 0;
+  margin-top: 10px;
+  width: 100px;
+  transition: all 0.4s;
+  font-size: 12px;
+  transform: translateY(25px);
+  opacity: 0;
+  animation: fade-up-01 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.graph-ui > div.intro a:hover {
+  color: #13c7a3;
+  background: #fff;
+}
+.graph-ui > div.intro i {
+  position: absolute;
+  font-size: 150px;
+  right: -20px;
+  top: -5px;
+  opacity: 0.3;
+}
+.graph-ui > div.each-pofol {
+  padding: 20px 0;
+  border: 0;
+}
+.graph-ui > div.each-pofol > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.graph-ui .each-pofol .each-title {
+  width: 100%;
+  height: 25%;
+}
+.graph-ui .each-pofol .each-graph {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+.graph-ui .each-pofol .each-graph div {
+  height: 100%;
+  border: 1px solid #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px #ccc;
+  background: #fff;
+  width: calc(25% - 8.5px);
+}
 
-
-
-/* border-radius: 20px; box-shadow:0px 0px 3px #ccc; background: #fff; height: calc(50% - 8.5px); */
-
-
-
-.graph-ui>div.total-pofol{border:1px solid #f7f7f7; box-shadow:0px 0px 3px #ccc; background: #fff;}
+.graph-ui > div.total-pofol {
+  border: 1px solid #f7f7f7;
+  box-shadow: 0px 0px 3px #ccc;
+  background: #fff;
+}
 
 /* Table-ui Contents Style Code */
-.table-ui{width: 35%; height: 100%; _background: #222;display: flex; flex-direction: column; justify-content: space-between;}
-.table-ui>div{width: 100%; height: calc(50% - 8.5px); border:1px solid;}
+.table-ui {
+  width: 35%;
+  height: 100%;
+  _background: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.table-ui > div {
+  width: 100%;
+  height: calc(50% - 8.5px);
+  border: 1px solid #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px #ccc;
+  background: #fff;
+  padding: 30px 20px;
+}
 /* .table-ui>div.each-contents{margin-top: 10px;}
 .table-ui .new-update{} */
+
+.table-ui .tit-box,
+.each-btns {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.table-ui .tit-box p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #0078ff;
+}
+.table-ui .tit-box a:hover {
+  text-decoration: underline;
+}
+.table-ui .con-details li {
+  display: flex;
+  padding: 5px 0;
+  align-items: center;
+}
+.table-ui .con-details {
+  margin-top: 5px;
+}
+.table-ui .con-details li i {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0078ff;
+  margin-right: 10px;
+}
+.table-ui .con-txt {
+  width: 100%;
+}
+.table-ui .each-contents .con-details li i {
+  color: #13c7a3;
+}
+.table-ui .con-txt p {
+  color: #333;
+  line-height: 1.4;
+}
+/* .table-ui .new-update .con-txt p a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+} */
+.table-ui .con-txt p:hover {
+  text-decoration: underline;
+}
+.table-ui .con-txt em {
+  font-style: normal;
+  font-size: 12px;
+}
+.table-ui .each-contents .each-btns button {
+  width: calc(25% - 3px);
+  display: block;
+  background: #fff;
+  color: #13c7a3;
+  padding: 10px 0;
+  font-weight: 400;
+  border: 1px solid #13c7a3;
+  border-radius: 20px;
+}
+.table-ui .each-contents .each-btns button.active {
+  color: #fff;
+  background: #13c7a3;
+  _border: 1px solid #13c7a3;
+}
