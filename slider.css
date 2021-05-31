@@ -1,8 +1,9 @@
 .slider {
-  width: 40%;
+  width: 20%;
   height: 500px;
   margin: auto;
   background: yellow;
+  overflow: hidden;
 }
 .slide-box {
   width: 100%;
@@ -11,7 +12,6 @@
   border: 1px solid;
   position: relative;
   left: 0;
-  overflow: hidden;
 }
 .slide-box > div {
   width: 100%;
