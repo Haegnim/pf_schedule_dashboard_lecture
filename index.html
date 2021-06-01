@@ -11,7 +11,7 @@
     <link rel="icon" href="/schedule/img/favicon.ico" type="image/x-icon">
     <link rel="apple-tounch-icon" href="/schedule/img/favicon.ico">
 
-    <!-- Customicon link  -->
+    <!-- Customicon Link  -->
     <link rel="stylesheet" href="/schedule/css/customicon.css">
     <!-- Font Awesome Link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,11 +23,16 @@
     <!-- Reset CSS Link -->
     <link rel="stylesheet" href="/schedule/css/reset.css">
 
+    <!-- Plugin CSS Link -->
+    <link rel="stylesheet" href="/schedule/lib/css/lightslider.css">
     <!-- Main CSS Link  -->
     <link rel="stylesheet" href="/schedule/css/style.css">
 
     <!-- Animation CSS Link  -->
     <link rel="stylesheet" href="/schedule/css/animation.css">
+
+    <!-- Media Query CSS Link -->
+    <link rel="stylesheet" href="/schedule/css/Media.css">
 
 </head>
 <body>
@@ -39,18 +44,44 @@
             <header>
                 <h2><a href="#"><img src="/schedule/img/logo.svg" alt="logo"></a></h2>
                 <ul class="gnb">
-                    <li><a href=""><i class="ma ma-logo2"></i></a></li>
+                    <li><a href=""><i class="fa fa-trello"></i></a></li>
                     <li><a href=""><i class="fa fa-pencil"></i></a></li>
                     <li><a href=""><i class="fa fa-search"></i></a></li>
                 </ul>
                 <a href="#" class="sign-out"><i class="fa fa-sign-out"></i></a>
+
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                </div>
             </header>
             <section class="graph-ui">
                 <div class="intro">
-                    <h2>Database Project Process</h2>
-                    <p>데이터베이스 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
-                    <a href="#">More Details</a>
-                    <i class="fa fa-database"></i>
+                    <div class="slide-box">
+                        <h2>Database Project Process</h2>
+                        <p>데이터베이스 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+                        <a href="#">More Details</a>
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <div class="slide-box">
+                        <h2>Database Project Process</h2>
+                        <p>API 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+                        <a href="#">More Details</a>
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <div class="slide-box">
+                        <h2>Database Project Process</h2>
+                        <p>리뉴얼 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+                        <a href="#">More Details</a>
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <div class="slide-box">
+                        <h2>Database Project Process</h2>
+                        <p>기획 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+                        <a href="#">More Details</a>
+                        <i class="fa fa-database"></i>
+                    </div>
+                    
                 </div>
                 <div class="each-pofol">
                     <div>
@@ -88,7 +119,13 @@
                                 <em>2021-05-31</em>
                             </div>
                         </li>
-
+                        <li>
+                            <i class="fa fa-clone"></i>
+                            <div class="con-txt">
+                                <p>데이터베이스 테이블 설계 완료</p>
+                                <em>2021-05-31</em>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="each-contents">
@@ -113,7 +150,13 @@
                                 <em>2021-05-31</em>
                             </div>
                         </li>
-
+                        <li>
+                            <i class="fa fa-clone"></i>
+                            <div class="con-txt">
+                                <p>데이터베이스 테이블 설계 완료</p>
+                                <em>2021-05-31</em>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -122,8 +165,22 @@
         <!-- End of Main Dashboard Frame  -->
 
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="/schedule/lib/js/lightslider.js"></script>  
     <script src="js/index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $(".intro").lightSlider({
+              item:1,
+              pager:false,
+              loop: true,
+              slideMargin:0,
+              speed: 400, //ms'
+                auto: true,
+                pause: 5000,
+          }); 
+        });
+      </script>
 
 </body>
 </html>
