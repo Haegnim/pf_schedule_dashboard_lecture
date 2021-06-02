@@ -113,8 +113,6 @@
   .graph-ui div.intro p {
     display: none;
   }
-  .graph-ui div.intro a {
-  }
   .graph-ui .each-pofol .each-graph {
     flex-wrap: wrap;
   }

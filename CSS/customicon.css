@@ -12,10 +12,14 @@
   font: normal normal normal 14px/1 todo-logo-for-lecture;
   font-size: inherit;
   text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  _line-height: 0;
 }
 
 .ma-logo:before {
   content: "\0530";
+  font-size: 40px;
 }
 .ma-logo2:before {
   content: "\0532";

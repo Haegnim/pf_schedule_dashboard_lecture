@@ -12,7 +12,8 @@
     <link rel="apple-tounch-icon" href="/schedule/img/favicon.ico">
 
     <!-- Customicon Link  -->
-    <link rel="stylesheet" href="/schedule/css/customicon.css">
+    <!-- <link rel="stylesheet" href="/schedule/css/customicon.css"> -->
+
     <!-- Font Awesome Link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -25,6 +26,8 @@
 
     <!-- Plugin CSS Link -->
     <link rel="stylesheet" href="/schedule/lib/css/lightslider.css">
+    <link rel="stylesheet" href="/schedule/lib/css/piechart.css">
+
     <!-- Main CSS Link  -->
     <link rel="stylesheet" href="/schedule/css/style.css">
 
@@ -44,7 +47,7 @@
             <header>
                 <h2><a href="#"><img src="/schedule/img/logo.svg" alt="logo"></a></h2>
                 <ul class="gnb">
-                    <li><a href=""><i class="fa fa-trello"></i></a></li>
+                    <li><a href=""><i class="custom-font"></i></a></li>
                     <li><a href=""><i class="fa fa-pencil"></i></a></li>
                     <li><a href=""><i class="fa fa-search"></i></a></li>
                 </ul>
@@ -89,10 +92,26 @@
                             <h3>Each Portfolio Process Rate</h3>
                         </div>
                         <div class="each-graph">
-                            <div class="db-pofol"></div>
-                            <div class="api-pofol"></div>
-                            <div class="renewal-pofol"></div>
-                            <div class="panning-pofol"></div>
+                            <div class="db-pofol">
+                                <span class="chart" data-percent="86">
+                                    <span class="percent"></span>
+                                </span>
+                            </div>
+                            <div class="api-pofol">
+                                <span class="chart" data-percent="86">
+                                    <span class="percent"></span>
+                                </span>
+                            </div>
+                            <div class="renewal-pofol">
+                                <span class="chart" data-percent="86">
+                                    <span class="percent"></span>
+                                </span>
+                            </div>
+                            <div class="panning-pofol">
+                                <span class="chart" data-percent="86">
+                                    <span class="percent"></span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,6 +186,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="/schedule/lib/js/lightslider.js"></script>  
+    <script src="/schedule/lib/js/easypiechart.js"></script> 
     <script src="js/index.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -180,7 +200,32 @@
                 pause: 5000,
           }); 
         });
-      </script>
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        function startPie(a, b, c){
+            var chart = window.chart = new EasyPieChart(document.querySelector(a + ' .chart'), {
+            easing: 'easeOutElastic',
+            delay: 3000,
+            barColor: b,
+            trackColor: c,
+            scaleColor: false,
+            lineWidth: 8,
+            trackWidth: 10,
+            lineCap: 'round',
+            onStep: function(from, to, percent) {
+                this.el.children[0].innerHTML = Math.round(percent);
+            }
+            });
+        }
+
+        startPie('.db-pofol', '#13C7A3', '#e6e6e6');
+        startPie('.api-pofol', '#0078FF', '#e6e6e6');
+        startPie('.renewal-pofol', '#13C7A3', '#e6e6e6');
+        startPie('.panning-pofol', '#0078FF', '#e6e6e6');
+        });
+    </script>
 
 </body>
 </html>
