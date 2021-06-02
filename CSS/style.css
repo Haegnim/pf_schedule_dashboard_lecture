@@ -143,19 +143,19 @@ header .sign-out {
   flex-direction: column;
   position: relative;
 }
-.graph-ui div.intro .slide-box:nth-child(2) {
+.graph-ui div.intro .slide-box:nth-child(1) {
   background: url(/schedule/img/bg.svg) no-repeat center center;
   background-size: cover;
 }
-.graph-ui div.intro .slide-box:nth-child(3) {
+.graph-ui div.intro .slide-box:nth-child(2) {
   background: url(/schedule/img/bg2.svg) no-repeat center center;
   background-size: cover;
 }
-.graph-ui div.intro .slide-box:nth-child(4) {
+.graph-ui div.intro .slide-box:nth-child(3) {
   background: url(/schedule/img/bg3.svg) no-repeat center center;
   background-size: cover;
 }
-.graph-ui div.intro .slide-box:nth-child(5) {
+.graph-ui div.intro .slide-box:nth-child(4) {
   background: url(/schedule/img/bg4.svg) no-repeat center center;
   background-size: cover;
 }
