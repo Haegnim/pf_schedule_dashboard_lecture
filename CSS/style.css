@@ -116,6 +116,7 @@ header .sign-out {
 .mobile-menu.active {
   transform: rotate(135deg);
 }
+
 /* Graph-ui Contents Style Code */
 .graph-ui {
   width: calc(58% - 24px);
@@ -290,11 +291,34 @@ header .sign-out {
   flex-direction: column;
 }
 .graph-ui > div.total-pofol div.total-chart h3 {
-  font-weight: 400;
+  font-weight: 300;
+  margin-top: 15px;
 }
 .graph-ui > div.total-pofol div.total-txt {
   width: 60%;
   margin-top: 15px;
+}
+div.total-chart {
+  padding: 10px 0;
+}
+div.total-chart .percent {
+  line-height: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+div.total-chart .chart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+div.total-chart .chart canvas {
+  width: auto !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Table-ui Contents Style Code */

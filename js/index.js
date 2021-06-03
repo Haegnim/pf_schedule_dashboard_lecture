@@ -29,12 +29,27 @@ document.addEventListener('DOMContentLoaded', function() {
         tWidth = 8;
     }
 
+    var chart = window.chart = new EasyPieChart(document.querySelector('.total-chart .chart'), {
+        easing: 'easeOutElastic',
+        delay: 3000,
+        barColor: '#13C7A3',
+        trackColor: '#e6e6e6',
+        scaleColor: false,
+        lineWidth: 18,
+        trackWidth: 18,
+        size:200,
+        lineCap: 'round',
+        onStep: function(from, to, percent) {
+            this.el.children[0].innerHTML = Math.round(percent);
+        }
+    });
+
     const poData = [
         {poKind:'.db-pofol', bColor:'#13C7A3', tColor:'#e6e6e6'},
         {poKind:'.api-pofol', bColor:'#0078FF', tColor:'#e6e6e6'},
         {poKind:'.renewal-pofol', bColor:'#8933FF', tColor:'#e6e6e6'},
         {poKind:'.panning-pofol', bColor:'#BD5ED9', tColor:'#e6e6e6'},
-        {poKind:'.total-chart', bColor:'#BD5ED9', tColor:'#e6e6e6'}
+        //{poKind:'.total-chart', bColor:'#BD5ED9', tColor:'#e6e6e6'}
     ]
 
     function startPie(){

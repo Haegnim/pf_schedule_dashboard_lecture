@@ -95,30 +95,34 @@
                             <div class="db-pofol">
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
+                                    <i class="fa fa-database"></i>
                                 </span>
                                 <b>DB Project</b>
-                                <i class="fa fa-database"></i>
+                                
                             </div>
                             <div class="api-pofol">
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
+                                    <i class="fa fa-thermometer-half"></i>
                                 </span>
                                 <b>API Project</b>
-                                <i class="fa fa-thermometer-half"></i>
+                                
                             </div>
                             <div class="renewal-pofol">
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
+                                    <i class="fa fa-clone"></i>
                                 </span>
                                 <b>Renewal Project</b>
-                                <i class="fa fa-clone"></i>
+                                
                             </div>
                             <div class="panning-pofol">
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
+                                    <i class="fa fa-bar-chart-o"></i>
                                 </span>
-                                <b>Panning Project</b>
-                                <i class="fa fa-bar-chart-o"></i>
+                                <b>Planning Project</b>
+                                
                             </div>
                         </div>
                     </div>
@@ -127,8 +131,8 @@
                     <div class="total-chart">
                         <span class="chart" data-percent="35">
                             <span class="percent"></span>
+                            <h3>Total Process Rate</h3>
                         </span>
-                        <h3>ToTal Process Rate</h3>
                     </div>
                     <div class="total-txt">
 
