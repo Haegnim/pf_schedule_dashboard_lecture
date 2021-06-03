@@ -233,6 +233,7 @@ header .sign-out {
   justify-content: space-between;
 }
 .graph-ui .each-pofol .each-graph div {
+  min-height: 150px;
   height: 100%;
   border: 1px solid #f7f7f7;
   border-radius: 20px;
@@ -242,12 +243,58 @@ header .sign-out {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.graph-ui .each-pofol .each-graph div b {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.graph-ui .each-pofol .each-graph div i {
+  position: absolute;
+  font-size: 45px;
+  opacity: 0.1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #13c7a3;
+}
+.graph-ui .each-pofol .each-graph div i.fa-database {
+  color: #13c7a3;
+}
+.graph-ui .each-pofol .each-graph div i.fa-thermometer-half {
+  color: #0078ff;
+}
+.graph-ui .each-pofol .each-graph div i.fa-clone {
+  color: #8933ff;
+}
+.graph-ui .each-pofol .each-graph div i.fa-bar-chart-o {
+  color: #bd5ed9;
 }
 
 .graph-ui > div.total-pofol {
   border: 1px solid #f7f7f7;
   box-shadow: 0px 0px 3px #ccc;
   background: #fff;
+  display: flex;
+}
+.graph-ui > div.total-pofol > div {
+  height: 100%;
+}
+.graph-ui > div.total-pofol div.total-chart {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.graph-ui > div.total-pofol div.total-chart h3 {
+  font-weight: 400;
+}
+.graph-ui > div.total-pofol div.total-txt {
+  width: 60%;
+  margin-top: 15px;
 }
 
 /* Table-ui Contents Style Code */

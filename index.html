@@ -96,26 +96,44 @@
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
                                 </span>
+                                <b>DB Project</b>
+                                <i class="fa fa-database"></i>
                             </div>
                             <div class="api-pofol">
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
                                 </span>
+                                <b>API Project</b>
+                                <i class="fa fa-thermometer-half"></i>
                             </div>
                             <div class="renewal-pofol">
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
                                 </span>
+                                <b>Renewal Project</b>
+                                <i class="fa fa-clone"></i>
                             </div>
                             <div class="panning-pofol">
                                 <span class="chart" data-percent="86">
                                     <span class="percent"></span>
                                 </span>
+                                <b>Panning Project</b>
+                                <i class="fa fa-bar-chart-o"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="total-pofol"></div>
+                <div class="total-pofol">
+                    <div class="total-chart">
+                        <span class="chart" data-percent="35">
+                            <span class="percent"></span>
+                        </span>
+                        <h3>ToTal Process Rate</h3>
+                    </div>
+                    <div class="total-txt">
+
+                    </div>
+                </div>
             </section>
             <section class="table-ui">
                 <div class="new-update">
@@ -184,50 +202,16 @@
         <!-- End of Main Dashboard Frame  -->
 
     </div>
+
+    <!-- Jquery Framework Load -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <!-- Plugins Load -->
     <script src="/schedule/lib/js/lightslider.js"></script>  
-    <script src="/schedule/lib/js/easypiechart.js"></script> 
-    <script src="js/index.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-          $(".intro").lightSlider({
-              item:1,
-              pager:false,
-              loop: true,
-              slideMargin:0,
-              speed: 400, //ms'
-                auto: true,
-                pause: 5000,
-                mode:'fade',
-                adaptiveHeight:true,
-          }); 
-        });
-    </script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-
-        function startPie(a, b, c){
-            var chart = window.chart = new EasyPieChart(document.querySelector(a + ' .chart'), {
-            easing: 'easeOutElastic',
-            delay: 3000,
-            barColor: b,
-            trackColor: c,
-            scaleColor: false,
-            lineWidth: 8,
-            trackWidth: 10,
-            lineCap: 'round',
-            onStep: function(from, to, percent) {
-                this.el.children[0].innerHTML = Math.round(percent);
-            }
-            });
-        }
-
-        startPie('.db-pofol', '#13C7A3', '#e6e6e6');
-        startPie('.api-pofol', '#0078FF', '#e6e6e6');
-        startPie('.renewal-pofol', '#8933FF', '#e6e6e6');
-        startPie('.panning-pofol', '#BD5ED9', '#e6e6e6');
-        });
-    </script>
+    <script src="/schedule/lib/js/easypiechart.js"></script>
+    <!-- Vanilla JS Code Load  -->
+    <script src="/schedule/js/index.js"></script>
+    <!-- Jquery Code Load  -->
+    <script src="/schedule/js/jquery.index.js"></script>
 
 </body>
 </html>
