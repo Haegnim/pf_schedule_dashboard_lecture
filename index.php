@@ -43,21 +43,11 @@
     <div class="wrapper">
         <!-- Main Dashboard Frame  -->
         <div class="dashboard">
-            
-            <header>
-                <h2><a href="#"><img src="/schedule/img/logo.svg" alt="logo"></a></h2>
-                <ul class="gnb">
-                    <li><a href=""><i class="custom-font"></i></a></li>
-                    <li><a href=""><i class="fa fa-pencil"></i></a></li>
-                    <li><a href=""><i class="fa fa-search"></i></a></li>
-                </ul>
-                <a href="#" class="sign-out"><i class="fa fa-sign-out"></i></a>
-
-                <div class="mobile-menu">
-                    <span></span>
-                    <span></span>
-                </div>
-            </header>
+        <!-- Header include   -->
+            <?php
+                include $_SERVER['DOCUMENT_ROOT']."/schedule/include/header.php";
+            ?>
+        <!-- graph-ui    -->
             <section class="graph-ui">
                 <div class="intro">
                     <div class="slide-box">
@@ -141,6 +131,7 @@
                     </div>
                 </div>
             </section>
+        <!-- table-ui  -->
             <section class="table-ui">
                 <div class="new-update">
                     <div class="tit-box">

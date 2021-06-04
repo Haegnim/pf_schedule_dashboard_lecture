@@ -90,7 +90,7 @@ header .sign-out {
 
 /* Mobile Menu Icon Style code  */
 .mobile-menu {
-  _display: none;
+  display: none;
   width: 25px;
   height: 25px;
   position: relative;
