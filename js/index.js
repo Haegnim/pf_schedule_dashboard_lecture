@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if(winWidth <= 1280 && winWidth > 950){
         pieSize = 150;
-    } else if(winWidth <= 950) {
+    } else if(winWidth <= 950 && winWidth > 400) {
         pieSize = 170;
+    } else if(winWidth <= 400) {
+        pieSize = 140;
     } else {
         pieSize = 200;
     }
@@ -55,8 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if(winWidth <= 1280 && winWidth > 950){
             pieSize = 150;
-        } else if(winWidth <= 950) {
+        } else if(winWidth <= 950 && winWidth > 400) {
             pieSize = 170;
+        } else if(winWidth <= 400) {
+            pieSize = 140;
         } else {
             pieSize = 200;
         }

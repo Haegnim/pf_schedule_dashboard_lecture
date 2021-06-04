@@ -87,7 +87,7 @@
   }
   /* Header Contents Style Code */
   header {
-    padding: 15px;
+    padding: 8px 15px;
   }
   /* Graph-ui Contents Style Code */
   .graph-ui {
@@ -104,6 +104,8 @@
   .graph-ui .each-pofol .each-title {
     height: auto;
     padding: 10px 0 10px 5px;
+    text-align: center;
+    border-bottom: 1.5px solid #dfdfdf;
   }
   .graph-ui .each-pofol .each-graph {
     height: auto;
@@ -119,6 +121,18 @@
     height: auto;
     width: 100%;
     margin-top: 10px;
+  }
+  div.total-txt {
+    padding-left: 30px;
+  }
+  div.total-txt h3 {
+    font-size: 16px;
+  }
+  div.total-txt p {
+    font-size: 14px;
+  }
+  div.total-txt button {
+    font-size: 12px;
   }
 
   .chart {
@@ -165,5 +179,19 @@
   .graph-ui .each-pofol .each-graph div {
     width: calc(50% - 5px);
     margin-top: 10px;
+  }
+  .graph-ui > div.total-pofol {
+    display: block;
+    height: 350px;
+  }
+  .graph-ui > div.total-pofol div.total-chart,
+  .graph-ui > div.total-pofol div.total-txt {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    text-align: center;
+  }
+  .graph-ui > div.total-pofol div.total-txt button {
+    margin: 20px auto;
   }
 }
