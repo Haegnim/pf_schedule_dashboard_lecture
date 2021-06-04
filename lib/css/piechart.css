@@ -6,12 +6,12 @@
   _margin-top: 50px;
   _margin-bottom: 50px;
   text-align: center;
+  justify-content: center;
 }
 .chart canvas {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% !important;
 }
 .percent {
   display: inline-block;
