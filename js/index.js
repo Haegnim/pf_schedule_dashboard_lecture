@@ -14,6 +14,18 @@ mobileMenu.onclick = () => {
 
 }
 
+const btn = document.querySelector('#btn');
+
+
+function bgBtn(){
+    const wrap = document.querySelector('.wrapper');
+    wrap.classList.toggle("active");
+}
+
+btn.addEventListener('click', function(){
+    wrap.style.background="#efefef"
+});
+
 //Pie Chart Rendering Code
 document.addEventListener('DOMContentLoaded', function () {
 

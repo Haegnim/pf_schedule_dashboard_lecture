@@ -67,7 +67,7 @@
                         <textarea placeholder="상세 일정을 작성해 주세요." name="spInputCon" ></textarea>
                     </div>
                     <div class="btns">
-                    <button type="button" onclick="spInsert()">진행 상황 작성</button>
+                        <button type="button" onclick="spInsert()">진행 상황 작성</button>
                     </div>
                 </form>
 

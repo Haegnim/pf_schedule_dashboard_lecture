@@ -1,4 +1,5 @@
 /* Wrapper Style Code  */
+
 @font-face {
   font-family: "todo-logo-for-lecture";
   src: url("/schedule/font/todo-logo-for-lecture-Regular.eot")
@@ -41,11 +42,44 @@
   color: #bd5ed9;
 }
 
+/* {r: 19, g: 199, b: 163},
+        {r: 0, g: 120, b: 255},
+        {r: 137, g: 51, b: 255},
+        {r: 189, g: 94, b: 217} */
+
 .wrapper {
   width: 100%;
   height: 100vh;
-  _background: linear-gradient(125deg, #1283ec 30%, #0078ff 100%);
   background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 796px;
+}
+.wrapper.active {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(19, 199, 163, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(137, 51, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(
+      225deg,
+      rgba(0, 120, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(
+      315deg,
+      rgba(189, 94, 217, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  _background: #eee;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +93,7 @@
   height: 90%;
   /* background: linear-gradient(
     0deg,
-    rgba(250, 250, 250, 1) 0%,
+    F0EEEF 0%,
     rgba(253, 247, 249, 1) 100%
   ); */
   background: #efefef;
@@ -79,13 +113,20 @@ header {
   width: 7%;
   height: 100%;
   background: linear-gradient(0deg, #13c7a3 0%, #0078ff 100%);
-  _background: rgba(250, 250, 250, 1);
+  _background: F0EEEF;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  position: relative;
+  border: 8px solid #eee;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+header:hover {
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
 }
 header h2 {
   width: 30px;
@@ -95,8 +136,11 @@ header h2 img {
   width: 100%;
 }
 header a {
-  _text-shadow: 1px 1px white, -1px -1px #666;
+  display: block;
   color: #fff;
+  /* background: linear-gradient(145deg, #13c7a3 0%, #0078ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 header .gnb {
   width: 100%;
@@ -119,7 +163,7 @@ header .sign-out {
   width: 25px;
   height: 25px;
   position: relative;
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .mobile-menu span {
   display: block;
@@ -144,13 +188,20 @@ header .sign-out {
 
 /* Main Page Graph-ui Contents Style Code */
 .graph-ui {
-  width: calc(58% - 24px);
+  width: calc(58% - 28px);
   height: 100%;
 }
 .graph-ui > div {
   width: 100%;
   height: 33.33%;
   border-radius: 20px;
+}
+.graph-ui > div:first-child {
+  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  transition: all 0.3s;
+}
+.graph-ui > div:first-child:hover {
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
 }
 .graph-ui div.intro {
   height: 100% !important;
@@ -162,13 +213,14 @@ header .sign-out {
   overflow: hidden;
 }
 .graph-ui div.intro .slide-box {
-  padding: 40px 50px;
+  padding: 40px 55px;
   height: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  border: 8px solid #eee;
+  border-radius: 20px;
 }
 .graph-ui div.intro .slide-box:nth-child(1) {
   background: url(/schedule/img/bg.svg) no-repeat center center;
@@ -207,7 +259,7 @@ header .sign-out {
   padding: 7px 0;
   margin-top: 10px;
   width: 100px;
-  transition: all 0.4s;
+  transition: all 0.3s;
   font-size: 12px;
   transform: translateY(25px);
   opacity: 0;
@@ -221,7 +273,8 @@ header .sign-out {
   font-size: 150px;
   right: -20px;
   top: -5px;
-  opacity: 0.3;
+  _opacity: 0.3;
+  color: #efefef;
 }
 
 .graph-ui div.intro .slide-box.active h2 {
@@ -267,18 +320,19 @@ header .sign-out {
   height: 100%;
   _border: 1px solid #f7f7f7;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
   _box-shadow: 0px 0px 3px #ccc;
   background: #efefef;
-  width: calc(25% - 8.5px);
+  width: calc(25% - 10.5px);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
+  transition: all 0.3s;
 }
 .graph-ui .each-pofol .each-graph div:hover {
-  box-shadow: inset 3px 3px 4px #d9d9d9, inset -3px -3px 4px #ffffff;
+  box-shadow: inset 3px 3px 4px #ccc, inset -3px -3px 4px #ffffff;
 }
 .graph-ui .each-pofol .each-graph div b {
   margin-top: 10px;
@@ -309,9 +363,13 @@ header .sign-out {
 }
 
 .graph-ui > div.total-pofol {
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
   background: #efefef;
   display: flex;
+  transition: all 0.3s;
+}
+.graph-ui > div.total-pofol:hover {
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
 }
 .graph-ui > div.total-pofol > div {
   height: 100%;
@@ -348,6 +406,7 @@ div.total-chart .chart {
   justify-content: center;
   flex-direction: column;
 }
+
 div.total-chart .percent {
   line-height: 0;
   font-size: 22px;
@@ -385,7 +444,7 @@ div.total-txt button {
   padding: 5px 0px;
   color: #13c7a3;
   width: 150px;
-  transition: all 0.4s;
+  transition: all 0.3s;
   text-shadow: 1px 1px #fff;
 }
 div.total-txt button:hover {
@@ -414,11 +473,14 @@ div.total-txt button:hover {
   height: calc(50% - 8.5px);
   _border: 1px solid #f7f7f7;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
   background: #efefef;
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
+}
+.table-ui > div:hover {
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
 }
 .table-ui > div::-webkit-scrollbar {
   display: none;
@@ -439,7 +501,7 @@ div.total-txt button:hover {
 .table-ui .tit-box p {
   font-size: 18px;
   font-weight: 400;
-  color: #0078ff;
+  color: #666;
 }
 .table-ui .tit-box a:hover {
   text-decoration: underline;
@@ -463,7 +525,7 @@ div.total-txt button:hover {
   font-size: 20px;
   _color: #0078ff;
   margin-right: 10px;
-  box-shadow: inset 3px 3px 4px #d9d9d9, inset -3px -3px 4px #ffffff;
+  box-shadow: inset 3px 3px 4px #ccc, inset -3px -3px 4px #ffffff;
 }
 /* .table-ui .con-txt {
   width: 100%;
@@ -489,7 +551,7 @@ div.total-txt button:hover {
   font-size: 12px;
 }
 .table-ui .each-contents .each-btns a {
-  width: calc(25% - 3px);
+  width: calc(25% - 5px);
   display: block;
   background: #efefef;
   color: #888;
@@ -497,13 +559,13 @@ div.total-txt button:hover {
   font-weight: 400;
   border: none;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
   text-align: center;
 }
 .table-ui .each-contents .each-btns a.active {
   _color: #13c7a3;
   background: #fefefe;
-  box-shadow: inset 3px 3px 4px #d9d9d9, inset -3px -3px 4px #ffffff;
+  box-shadow: inset 3px 3px 4px #ccc, inset -3px -3px 4px #ffffff;
   border: none;
   text-shadow: 1px 1px 2px #0078ff, inset -1px -1px 2px #0078ff;
 }
@@ -525,7 +587,7 @@ div.total-txt button:hover {
   width: 100%;
   height: calc(66.66% - 12px);
   border-radius: 15px;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff;
   background: #efefef;
   display: flex;
   margin-top: 12px;
@@ -540,47 +602,62 @@ div.total-txt button:hover {
 
 .graph-ui .input-box .input-tit input {
   width: calc(65% - 12px);
-  padding: 10px;
+  padding: 15px;
   border: none;
-  border-radius: 20px;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  border-radius: 25px;
+  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
   background: #efefef;
+  transition: all 0.3s;
+}
+.graph-ui .input-box .input-tit input:hover {
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
 }
 .graph-ui .input-box .input-tit input:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #d9d9d9, inset -3px -3px 6px #ffffff;
+  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff,
+    inset 3px 3px 3px #72afff;
 }
 .graph-ui .input-box .input-tit select {
   width: 35%;
   border: none;
   outline: 0;
-  padding: 10px 5px;
+  padding: 10px 15px;
   border-radius: 20px;
   background: #efefef;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
   color: #333;
+  transition: all 0.3s;
+}
+.graph-ui .input-box .input-tit select:hover {
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
 }
 .graph-ui .input-box .input-tit select:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #d9d9d9, inset -3px -3px 6px #ffffff;
+  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff,
+    inset 3px 3px 3px #72afff;
 }
 .graph-ui .input-con textarea {
   width: 100%;
   border: none;
   outline: 0;
-  padding: 10px;
-  height: 300px;
+  padding: 20px;
+  height: 250px;
   border-radius: 20px;
   margin-top: 12px;
   resize: none;
   color: #333;
   background: #efefef;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  transition: all 0.3s;
+}
+.graph-ui .input-con textarea:hover {
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
 }
 .graph-ui .input-con textarea:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #d9d9d9, inset -3px -3px 6px #ffffff;
+  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff,
+    inset 3px 3px 3px #72afff;
 }
 .graph-ui .btns {
   width: 100%;
@@ -593,13 +670,14 @@ div.total-txt button:hover {
   border: none;
   border-radius: 20px;
   background: #efefef;
-  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
   color: #333;
   padding: 10px 25px;
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .graph-ui .btns button:hover {
-  color: #0078ff;
-  background: #efefef;
-  box-shadow: inset 3px 3px 6px #d9d9d9, inset -3px -3px 6px #ffffff;
+  color: #fff;
+  font-weight: bold;
+  background: #0078ff;
+  box-shadow: inset 3px 3px 6px #0059ff, inset -3px -3px 6px #0099ff;
 }

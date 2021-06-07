@@ -130,7 +130,7 @@
 
         </div>
         <!-- End of Main Dashboard Frame  -->
-
+        <button id ="btn" onclick = "bgBtn();"> on </button>
     </div>
 
     <!-- Jquery Framework Load -->
@@ -138,6 +138,9 @@
     <!-- Plugins Load -->
     <script src="/schedule/lib/js/lightslider.js"></script>  
     <script src="/schedule/lib/js/easypiechart.js"></script>
+    <!-- Vanilla JS Code Load  -->
+    <script type="module" src="/schedule/js/app.js"></script>
+    <!-- <script src="/schedule/js/glowparticle.js"></script> -->
     <!-- Vanilla JS Code Load  -->
     <script src="/schedule/js/index.js"></script>
     <!-- Jquery Code Load  -->
