@@ -20,7 +20,7 @@
     <!-- Google Font Link  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+    
     <!-- Reset CSS Link -->
     <link rel="stylesheet" href="/schedule/css/reset.css">
 
@@ -117,83 +117,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="total-pofol">
-                    <div class="total-chart">
-                        <span class="chart" data-percent="35">
-                            <span class="percent"></span>
-                            <!-- <h3>Total Process Rate</h3> -->
-                        </span>
-                    </div>
-                    <div class="total-txt">
-                        <h3>Total Process Rate</h3>
-                        <p>Your process rate is very low.. Plz Hurry Up!!</p>
-                        <button>Update Rate</button>
-                    </div>
-                </div>
+                <?php
+                include $_SERVER['DOCUMENT_ROOT']."/schedule/include/total_pofol.php";
+                 ?>
+
             </section>
-        <!-- table-ui  -->
-            <section class="table-ui">
-                <div class="new-update">
-                    <div class="tit-box">
-                        <p>Recent Update</p>
-                        <a href="#">More</a>
-                    </div>
-                    <ul class="con-details">
-                        <li>
-                            <i class="fa fa-database"></i>
-                            <div class="con-txt">
-                                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
-                                <em>2021-05-31</em>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-clone"></i>
-                            <div class="con-txt">
-                                <p>데이터베이스 테이블 설계 완료</p>
-                                <em>2021-05-31</em>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-clone"></i>
-                            <div class="con-txt">
-                                <p>데이터베이스 테이블 설계 완료</p>
-                                <em>2021-05-31</em>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="each-contents">
-                    <div class="each-btns">
-                        <button class="active">Database</button>
-                        <button>API</button>
-                        <button>Renewal</button>
-                        <button>Planning</button>
-                    </div>
-                    <ul class="con-details">
-                        <li>
-                            <i class="fa fa-database"></i>
-                            <div class="con-txt">
-                                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
-                                <em>2021-05-31</em>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-clone"></i>
-                            <div class="con-txt">
-                                <p>데이터베이스 테이블 설계 완료</p>
-                                <em>2021-05-31</em>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-clone"></i>
-                            <div class="con-txt">
-                                <p>데이터베이스 테이블 설계 완료</p>
-                                <em>2021-05-31</em>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+
+             <!-- table contents on right side  -->
+             <?php
+                include $_SERVER['DOCUMENT_ROOT']."/schedule/include/table_ui.php";
+             ?>
 
         </div>
         <!-- End of Main Dashboard Frame  -->

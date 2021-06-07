@@ -34,6 +34,10 @@
     width: 90px;
     height: 90px;
   }
+  /* Insert Form Page Style Code  */
+  .graph-ui .input-con textarea {
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -71,6 +75,14 @@
   div.total-txt {
     _padding-left: 40px;
     width: 50%;
+  }
+  /* Insert Form Page Style Code  */
+
+  .graph-ui > div.input-box {
+    height: calc(60% - 12px);
+  }
+  .graph-ui .input-con textarea {
+    height: 180px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -193,5 +205,25 @@
   }
   .graph-ui > div.total-pofol div.total-txt button {
     margin: 20px auto;
+  }
+  /* Insert Form Page Style Code  */
+  .graph-ui > div.input-box {
+    padding: 10px;
+  }
+  .graph-ui .title-box h3 {
+    font-size: 16px;
+  }
+  .graph-ui .input-box input {
+    font-size: 12px;
+  }
+  .graph-ui .input-box select {
+    font-size: 12px;
+  }
+  .graph-ui .input-con textarea {
+    font-size: 12px;
+  }
+  .graph-ui .btns button {
+    font-size: 12;
+    padding: 8px 15px;
   }
 }
