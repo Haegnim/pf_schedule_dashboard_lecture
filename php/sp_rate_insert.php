@@ -6,14 +6,14 @@
     $sp_ren = $_GET['ren_pro'];
     $sp_pla = $_GET['pla_pro'];
 
-    //echo $sp_idx, $sp_db, $sp_api, $sp_ren, $sp_pla; 
+    echo $sp_idx, $sp_db, $sp_api, $sp_ren, $sp_pla; 
 
     include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
     $sql = "UPDATE SP_rate SET RATE_db = $sp_db, RATE_api = $sp_api, RATE_ren = $sp_ren, RATE_pla = $sp_pla WHERE RATE_idx = $sp_idx";
 
     mysqli_query($dbConn, $sql);
 
-    $sql1 = "SELECT * FROM sp_rate WHERE RATE_idx = $sp_idx";
+    $sql1 = "SELECT * FROM SP_rate WHERE RATE_idx = $sp_idx";
 
     $rate_result = mysqli_query($dbConn, $sql1);
 
@@ -26,7 +26,7 @@
            'ren_rate' => $rate_row['RATE_ren'],
            'pla_rate' => $rate_row['RATE_pla']
         ));
-    }
+    };
     
     file_put_contents($_SERVER["DOCUMENT_ROOT"].'/schedule/data/sp_rate.json', json_encode($arr));
 
