@@ -37,6 +37,13 @@
     <!-- Media Query CSS Link -->
     <link rel="stylesheet" href="/schedule/css/Media.css">
 
+    <script defer>
+        const hostname = window.location.href;
+        console.log(hostname);
+        if(hostname == 'http://localhost/schedule/'){
+            window.location.replace('http://localhost/schedule/?key=database')
+        }
+    </script>
 </head>
 <body>
     
@@ -130,7 +137,46 @@
 
         </div>
         <!-- End of Main Dashboard Frame  -->
-        <button id ="btn" onclick = "bgBtn();"> on </button>
+        
+    </div>
+
+    <!-- 2.모달 박스 UI 제작 => style.css 135번줄 -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="times">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+            <form action="/schedule/php/sp_rate_insert.php" class="rate-form" name="rate_form">
+                <p>
+                    <label for="db_pro">DB Project</label>
+                    <input type="text" id="db_pro" value="78" name="db_pro">
+                </p>
+                <p>
+                    <label for="api_pro">API Project</label>
+                    <input type="text" id="db_pro" value="60" name="api_pro">
+                </p>
+                <p>
+                    <label for="ren_pro">Renewal Project</label>
+                    <input type="text" id="ren_pro" value="55" name="ren_pro">
+                </p>
+                <p>
+                    <label for="pla_pro">Planning Project</label>
+                    <input type="text" id="pla_pro" value="90" name="pla_pro">
+                </p>
+            </form>
+            <div class="updateBtnBox">
+            <button type="button" id="updateBtn">Update Rate</button>
+            </div>
+        </div>
+        <script>
+            const updateBrn = document.querySelector('#updateBtn');
+            updateBtn.onclick = function(){
+                //alert('abc');
+                document.rate_form.submit();
+            }
+        </script>
     </div>
 
     <!-- Jquery Framework Load -->
@@ -138,8 +184,7 @@
     <!-- Plugins Load -->
     <script src="/schedule/lib/js/lightslider.js"></script>  
     <script src="/schedule/lib/js/easypiechart.js"></script>
-    <!-- Vanilla JS Code Load  -->
-    <script type="module" src="/schedule/js/app.js"></script>
+    <!-- <script type="module" src="/schedule/js/app.js"></script> -->
     <!-- <script src="/schedule/js/glowparticle.js"></script> -->
     <!-- Vanilla JS Code Load  -->
     <script src="/schedule/js/index.js"></script>

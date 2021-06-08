@@ -19,7 +19,9 @@ const btn = document.querySelector('#btn');
 
 function bgBtn(){
     const wrap = document.querySelector('.wrapper');
+    const btn = document.querySelector('#btn span');
     wrap.classList.toggle("active");
+    btn.classList.toggle("active");
 }
 
 btn.addEventListener('click', function(){
@@ -145,3 +147,30 @@ document.addEventListener('DOMContentLoaded', function () {
     startPie();    
 
 });
+
+//Open Modal for
+//1. 버튼 DOM 저장 => index.php 143번줄
+const modalBtn =document.querySelector('#open-modal');
+//5. modal변수에 모달박스 DOM 저장
+const modal=document.querySelector('#myModal');
+//6. X버튼 DOM 저장
+const times = document.querySelector('#times');
+
+
+//4. modalBtn을 클릭했을 때 모달 박스 보이기
+// When the user clicks on the button, open the modal 
+modalBtn.onclick = function() {
+    modal.style.display = "block";
+  }
+  //7. X버튼 클릭시 모달창 제거
+// When the user clicks on <span> (x), close the modal
+times.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  //모달 이외 영역 클릭 시 모달창 제거
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }

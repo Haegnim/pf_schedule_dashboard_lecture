@@ -21,6 +21,7 @@
 .logo:before {
   content: "\0530";
   font-size: 60px;
+  -webkit-font-smoothing: antialiased;
 }
 .logo2:before {
   content: "\0532";
@@ -97,7 +98,7 @@
     rgba(253, 247, 249, 1) 100%
   ); */
   background: #efefef;
-  box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 50%);
+  box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 60%);
 
   border-radius: 30px;
   display: flex;
@@ -119,14 +120,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   position: relative;
   border: 8px solid #eee;
   border-radius: 20px;
   transition: all 0.3s;
 }
 header:hover {
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
 }
 header h2 {
   width: 30px;
@@ -155,6 +156,35 @@ header .gnb a {
 }
 header .sign-out {
   font-size: 20px;
+}
+header #btn {
+  width: 34px;
+  height: 60px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #efefef;
+  box-shadow: inset 3px 3px 6px #bbb;
+}
+header #btn > span {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: #13c7a3;
+  border-radius: 14px;
+  margin-left: 50%;
+  margin-top: 50%;
+  top: 2px;
+  left: -13px;
+  position: relative;
+  transition: all 0.4s;
+}
+header #btn:hover span {
+  transform: scale(0.8, 0.8);
+}
+header #btn span.active {
+  top: 18px;
 }
 
 /* Mobile Menu Icon Style code  */
@@ -197,11 +227,11 @@ header .sign-out {
   border-radius: 20px;
 }
 .graph-ui > div:first-child {
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   transition: all 0.3s;
 }
 .graph-ui > div:first-child:hover {
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
 }
 .graph-ui div.intro {
   height: 100% !important;
@@ -320,8 +350,8 @@ header .sign-out {
   height: 100%;
   _border: 1px solid #f7f7f7;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
-  _box-shadow: 0px 0px 3px #ccc;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
+  _box-shadow: 0px 0px 3px #bbb;
   background: #efefef;
   width: calc(25% - 10.5px);
   display: flex;
@@ -332,7 +362,7 @@ header .sign-out {
   transition: all 0.3s;
 }
 .graph-ui .each-pofol .each-graph div:hover {
-  box-shadow: inset 3px 3px 4px #ccc, inset -3px -3px 4px #ffffff;
+  box-shadow: inset 3px 3px 4px #bbb, inset -3px -3px 4px #ffffff;
 }
 .graph-ui .each-pofol .each-graph div b {
   margin-top: 10px;
@@ -363,13 +393,13 @@ header .sign-out {
 }
 
 .graph-ui > div.total-pofol {
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   background: #efefef;
   display: flex;
   transition: all 0.3s;
 }
 .graph-ui > div.total-pofol:hover {
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
 }
 .graph-ui > div.total-pofol > div {
   height: 100%;
@@ -431,7 +461,7 @@ div.total-txt h3 {
   font-weight: 400;
   padding: 0 0 5px 0;
   color: #555;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
 }
 div.total-txt p {
   font-weight: 300;
@@ -473,14 +503,14 @@ div.total-txt button:hover {
   height: calc(50% - 8.5px);
   _border: 1px solid #f7f7f7;
   border-radius: 20px;
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   background: #efefef;
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
 }
 .table-ui > div:hover {
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
 }
 .table-ui > div::-webkit-scrollbar {
   display: none;
@@ -492,7 +522,7 @@ div.total-txt button:hover {
 .each-btns {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -517,7 +547,7 @@ div.total-txt button:hover {
 .table-ui .con-details li i {
   width: 50px;
   height: 50px;
-  _border: 1px solid #ccc;
+  _border: 1px solid #bbb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -525,7 +555,7 @@ div.total-txt button:hover {
   font-size: 20px;
   _color: #0078ff;
   margin-right: 10px;
-  box-shadow: inset 3px 3px 4px #ccc, inset -3px -3px 4px #ffffff;
+  box-shadow: inset 3px 3px 4px #bbb, inset -3px -3px 4px #ffffff;
 }
 /* .table-ui .con-txt {
   width: 100%;
@@ -559,13 +589,13 @@ div.total-txt button:hover {
   font-weight: 400;
   border: none;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
   text-align: center;
 }
 .table-ui .each-contents .each-btns a.active {
   _color: #13c7a3;
   background: #fefefe;
-  box-shadow: inset 3px 3px 4px #ccc, inset -3px -3px 4px #ffffff;
+  box-shadow: inset 3px 3px 4px #bbb, inset -3px -3px 4px #ffffff;
   border: none;
   text-shadow: 1px 1px 2px #0078ff, inset -1px -1px 2px #0078ff;
 }
@@ -579,7 +609,7 @@ div.total-txt button:hover {
   font-weight: 400;
   padding-bottom: 10px;
   color: #333;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   margin-bottom: 10px;
 }
 
@@ -587,7 +617,7 @@ div.total-txt button:hover {
   width: 100%;
   height: calc(66.66% - 12px);
   border-radius: 15px;
-  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff;
+  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff;
   background: #efefef;
   display: flex;
   margin-top: 12px;
@@ -605,16 +635,16 @@ div.total-txt button:hover {
   padding: 15px;
   border: none;
   border-radius: 25px;
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   background: #efefef;
   transition: all 0.3s;
 }
 .graph-ui .input-box .input-tit input:hover {
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
 }
 .graph-ui .input-box .input-tit input:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff,
+  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff,
     inset 3px 3px 3px #72afff;
 }
 .graph-ui .input-box .input-tit select {
@@ -624,16 +654,16 @@ div.total-txt button:hover {
   padding: 10px 15px;
   border-radius: 20px;
   background: #efefef;
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   color: #333;
   transition: all 0.3s;
 }
 .graph-ui .input-box .input-tit select:hover {
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
 }
 .graph-ui .input-box .input-tit select:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff,
+  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff,
     inset 3px 3px 3px #72afff;
 }
 .graph-ui .input-con textarea {
@@ -648,15 +678,15 @@ div.total-txt button:hover {
   color: #333;
   background: #efefef;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   transition: all 0.3s;
 }
 .graph-ui .input-con textarea:hover {
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
 }
 .graph-ui .input-con textarea:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #ccc, inset -3px -3px 6px #ffffff,
+  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff,
     inset 3px 3px 3px #72afff;
 }
 .graph-ui .btns {
@@ -665,12 +695,13 @@ div.total-txt button:hover {
   text-align: center;
   margin-top: 12px;
 }
-.graph-ui .btns button {
+.graph-ui .btns button,
+#updateBtn {
   outline: 0;
   border: none;
   border-radius: 20px;
   background: #efefef;
-  box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
   color: #333;
   padding: 10px 25px;
   transition: all 0.3s;
@@ -680,4 +711,105 @@ div.total-txt button:hover {
   font-weight: bold;
   background: #0078ff;
   box-shadow: inset 3px 3px 6px #0059ff, inset -3px -3px 6px #0099ff;
+}
+/* ----------------------------  */
+/* 3. 모달 박스 css 작성 => index.js 135번줄 */
+/* The Modal (background) */
+.modal {
+  _display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  _background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(255, 250, 250, 0.7); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fafafa;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: inset 3px 3px 6px #fff, inset 3px 3px 6px #bbb, 0px 10px 20px #bbb;
+  border: 6px solid #fff;
+  width: 40%; /* Could be more or less, depending on screen size */
+  _height: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content .rate-form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.modal-content .rate-form p {
+  width: auto;
+  height: calc(25% - 5px);
+  display: flex;
+  _padding: 0px 10px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.modal-content .rate-form p label {
+  padding: 14px 10px;
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  color: #333;
+  background: #fafafa;
+  box-shadow: 3px 3px 4px #ededed, 3px 3px 4px #999, 3px 3px 4px #bbb;
+  border-radius: 22px;
+  _border: 1px solid #ccc;
+  align-items: center;
+}
+.modal-content .rate-form p input {
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  outline: 0;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: inset 2px 2px 5px #bbb, inset 2px 2px 5px #fff, 3px 3px 4px #fff,
+    3px 3px 6px #bbb;
+  width: calc(35% - 12px);
+}
+.modal-content .rate-form p input:focus {
+  border: 1px solid #8933ff;
+}
+
+#updateBtn {
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px auto;
+  width: 35px;
+  height: 35px;
+  _border: 1px solid #aaa;
+  box-shadow: 6px 6px 12px #bbb, 6px 6px 12px #fff;
+  border-radius: 18px;
+  _margin-bottom: 20px;
+}
+
+.close:hover,
+.close:focus {
+  _border: 1px solid #333;
+  box-shadow: 3px 3px 6px #bbb, 3px 3px 6px #fff;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
 }

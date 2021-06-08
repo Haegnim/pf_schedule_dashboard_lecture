@@ -38,6 +38,9 @@
   .graph-ui .input-con textarea {
     height: 200px;
   }
+  .modal-content {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -77,12 +80,19 @@
     width: 50%;
   }
   /* Insert Form Page Style Code  */
+  .modal-content {
+    width: 70%;
+  }
 
   .graph-ui > div.input-box {
     height: calc(60% - 12px);
   }
   .graph-ui .input-con textarea {
     height: 180px;
+  }
+  .modal-content .rate-form p {
+    _width: 50%;
+    margin-top: 5px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -227,4 +237,24 @@
     font-size: 12;
     padding: 8px 15px;
   }
+  .modal-content {
+    width: 80%;
+    margin: 20% auto;
+  }
+  .modal-content .rate-form p {
+    flex-direction: column;
+  }
+  .modal-content .rate-form p label {
+    width: 100%;
+  }
+  .modal-content .rate-form p input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 6px;
+  }
+  #updateBtn {
+    font-size: 12px;
+  }
+  /* .modal-content .rate-form p label{font-size: 12px; width: 30%;
+  } */
 }

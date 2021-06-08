@@ -88,6 +88,7 @@
                         document.spInputForm.submit();
                     }
                 </script>
+                
             </div>
            
             </section>
@@ -98,6 +99,7 @@
 
         </div>
         <!-- End of Main Dashboard Frame  -->
+        
     </div>
 
     <!-- Jquery Framework Load -->
