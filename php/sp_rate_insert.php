@@ -6,7 +6,7 @@
     $sp_ren = $_GET['ren_pro'];
     $sp_pla = $_GET['pla_pro'];
 
-    echo $sp_idx, $sp_db, $sp_api, $sp_ren, $sp_pla; 
+    //echo $sp_idx, $sp_db, $sp_api, $sp_ren, $sp_pla; 
 
     include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
     $sql = "UPDATE SP_rate SET RATE_db = $sp_db, RATE_api = $sp_api, RATE_ren = $sp_ren, RATE_pla = $sp_pla WHERE RATE_idx = $sp_idx";
@@ -29,6 +29,13 @@
     };
     
     file_put_contents($_SERVER["DOCUMENT_ROOT"].'/schedule/data/sp_rate.json', json_encode($arr));
+
+    echo " 
+    <script>
+        alert('수정이 완료되었습니다');
+        location.href='/schedule/index.php?key=database';
+    </script>
+    ";
 
     //var_dump($arr);
 

@@ -716,7 +716,7 @@ div.total-txt button:hover {
 /* 3. 모달 박스 css 작성 => index.js 135번줄 */
 /* The Modal (background) */
 .modal {
-  _display: none; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 999; /* Sit on top */
   left: 0;
