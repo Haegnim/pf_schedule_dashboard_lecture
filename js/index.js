@@ -84,7 +84,7 @@ $(function(){
         clearTimeout(clearSet);
         clearSet = setTimeout(function(){
 
-            // $('.total-chart .chart canvas').removeData('easyPieChart').remove;
+            $('.total-chart .chart canvas').removeData('easyPieChart').find('canvas').remove;
             //var chart = window.chart = new EasyPieChart(document.querySelector('.total-chart .chart'), {
                 $('.total-chart .chart').easyPieChart({
                     easing: 'easeOutElastic',
@@ -108,9 +108,9 @@ $(function(){
 
     if(winWidth <= 950){
         lWidth = 5;
-        tWidth = 4;
+        tWidth = 5;
     } else {
-        lWidth = 10;
+        lWidth = 8;
         tWidth = 8;
     }
     if(winWidth <= 1280){
@@ -140,9 +140,9 @@ $(function(){
                     barColor: value.bColor,
                     trackColor: value.tColor,
                     scaleColor: false,
-                    lineWidth: 5,
-                    trackWidth: 5,
-                    size: 110,
+                    lineWidth: lWidth,
+                    trackWidth: tWidth,
+                    size: eachSize,
                     lineCap: 'round',
                     onStep: function (from, to, percent) {
                         this.el.children[0].innerHTML = Math.round(percent);

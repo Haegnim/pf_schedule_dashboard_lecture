@@ -107,6 +107,7 @@
     <!-- Plugins Load -->
     <script src="/schedule/lib/js/lightslider.js"></script>  
     <script src="/schedule/lib/js/easypiechart.js"></script>
+    <script src="/schedule/js/total.avg.js"></script>
     <!-- Vanilla JS Code Load  -->
     <script src="/schedule/js/index.js"></script>
     <!-- Jquery Code Load  -->

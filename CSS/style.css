@@ -790,6 +790,144 @@ div.total-txt button:hover {
   border-radius: 20px;
 }
 
+/* Deail Page Style Code  */
+.graph-ui.detail {
+  width: calc(93% - 20px);
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.graph-ui.detail .total-pofol {
+  height: 40%;
+  width: calc(60% - 10px);
+}
+.graph-ui.detail .each-pofol {
+  height: 40%;
+  width: 40%;
+  padding: 0;
+}
+.graph-ui.detail .each-pofol .each-graph {
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: space-between;
+}
+.graph-ui.detail .each-pofol .each-graph div {
+  height: calc(50% - 5px);
+  width: calc(50% - 5px);
+}
+.graph-ui.detail .each-pofol .each-graph div b {
+  display: none;
+}
+.graph-ui.detail .each-pofol .each-graph div i {
+  display: block;
+}
+
+.graph-ui.detail .detail-board {
+  width: 100;
+  height: calc(60% - 10px);
+  background: #fff;
+  border: 1px solid #f7f7f7;
+  box-shadow: 0 0 3px #ccc;
+  padding: 30px 20px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.graph-ui.detail .detail-board::-webkit-scrollbar {
+  display: none;
+}
+.detail-board .board-btns {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.detail-board .board-btns a {
+  background: #13c7a3;
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid #13c7a3;
+  color: #fff;
+  border-radius: 3px;
+  margin: 0 1px;
+  transition: all 0.4s;
+}
+.detail-board .board-btns a:hover {
+  background: #fff;
+  color: #ff9062;
+}
+
+.board-table {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+.board-table ul {
+  width: 100%;
+  height: auto;
+}
+.board-table li {
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+.board-table li.board-title span {
+  background: #13c7a3;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 0;
+}
+.board-table li.board-contents {
+  border-bottom: 1px solid #f0f0f0;
+}
+.board-table li.board-contents span {
+  color: #555;
+  padding: 5px 10px;
+}
+.board-table li.board-contents span:nth-child(3) {
+  justify-content: flex-start;
+}
+.board-table li.board-contents span a {
+  color: #555;
+}
+.board-table li.board-contents span a:hover {
+  text-decoration: underline;
+}
+.board-table li.board-contents span a.del-btn {
+  border: none;
+  background: #13c7a3;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 12px;
+}
+.board-table li.board-contents button {
+  border: none;
+  background: #13c7a3;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.board-table li span {
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-table li span:nth-child(1) {
+  width: 10%;
+}
+.board-table li span:nth-child(2) {
+  width: 20%;
+}
+.board-table li span:nth-child(3) {
+  width: 40%;
+}
+.board-table li span:nth-child(4) {
+  width: 20%;
+}
+.board-table li span:nth-child(5) {
+  width: 10%;
+}
 /* The Close Button */
 .close {
   color: #aaa;
