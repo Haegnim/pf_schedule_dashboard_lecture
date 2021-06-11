@@ -22,26 +22,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Reset CSS Link -->
-    <link rel="stylesheet" href="/schedule/css/reset.css">
+    <link rel="stylesheet" href="/schedule/css/reset.css?">
 
     <!-- Plugin CSS Link -->
-    <link rel="stylesheet" href="/schedule/lib/css/lightslider.css">
-    <link rel="stylesheet" href="/schedule/lib/css/piechart.css">
+    <link rel="stylesheet" href="/schedule/lib/css/lightslider.css?">
+    <link rel="stylesheet" href="/schedule/lib/css/piechart.css?">
 
     <!-- Main CSS Link  -->
-    <link rel="stylesheet" href="/schedule/css/style.css">
+    <link rel="stylesheet" href="/schedule/css/style.css?">
 
     <!-- Animation CSS Link  -->
-    <link rel="stylesheet" href="/schedule/css/animation.css">
+    <link rel="stylesheet" href="/schedule/css/animation.css?">
 
     <!-- Media Query CSS Link -->
-    <link rel="stylesheet" href="/schedule/css/Media.css">
+    <link rel="stylesheet" href="/schedule/css/media.css?ss">
 
     <script defer>
         const hostname = window.location.href;
+        console.log(hostname);
         //console.log(hostname);
-        if(hostname == 'http://localhost/schedule/'){
-            window.location.replace('http://localhost/schedule/?key=database')
+        if(hostname == 'http://haegnim.dothome.co.kr/schedule/'){
+            window.location.replace('http://haegnim.dothome.co.kr/schedule/index.php?key=database')
         }
     </script>
 </head>

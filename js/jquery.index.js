@@ -11,4 +11,8 @@ $(document).ready(function() {
           mode:'fade',
           adaptiveHeight:true,
     }); 
+
+    $(".each-btns a").click(function(e){
+      e.preventDefault();
+    })
 });

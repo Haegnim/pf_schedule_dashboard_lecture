@@ -226,11 +226,11 @@ header #btn span.active {
   height: 33.33%;
   border-radius: 20px;
 }
-.graph-ui > div:first-child {
+.graph-ui > .lSSlideOuter {
   box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
   transition: all 0.3s;
 }
-.graph-ui > div:first-child:hover {
+.graph-ui > .lSSlideOuter:hover {
   box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
 }
 .graph-ui div.intro {

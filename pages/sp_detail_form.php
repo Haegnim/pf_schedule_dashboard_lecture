@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Portfolio schedule</title>
 
     <!-- Favicon Link -->
@@ -35,7 +36,7 @@
     <link rel="stylesheet" href="/schedule/css/animation.css">
 
     <!-- Media Query CSS Link -->
-    <link rel="stylesheet" href="/schedule/css/Media.css">
+    <link rel="stylesheet" href="/schedule/css/media.css">
 
     <script defer>
         const hostname = window.location.href;
@@ -107,10 +108,33 @@
                 ?>
               </ul>
             </div>
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                  <span class="close" id="times">&times;</span>
+                  <!-- <p>Some text in the Modal..</p> -->
+                  <form action="/schedule/php/sp_rate_insert.php" class="rate-form" name="rate_form">
+                      
+                  </form>
+                  <div class="updateBtnBox">
+                  <button type="button" id="updateBtn">Update Rate</button>
+                  </div>
+              </div>
+              
           </div>
+         
         </section>
         </div>        
     </div>
+    <script>
+                  const updateBrn = document.querySelector('#updateBtn');
+                  updateBtn.onclick = function(){
+                      //alert('abc');
+                      document.rate_form.submit();
+                      modal.style.display = "none";
+                  }
+              </script>
     <!-- Jquery Framework Load -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <!-- Plugins Load -->

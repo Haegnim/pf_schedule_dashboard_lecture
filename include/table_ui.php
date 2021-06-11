@@ -8,7 +8,7 @@
                     <ul class="con-details">
                     <?php
   include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
-  $sql = "SELECT * FROM sp_table ORDER BY SP_idx DESC LIMIT 5";
+  $sql = "SELECT * FROM SP_table ORDER BY SP_idx DESC LIMIT 5";
   $ta_result = mysqli_query($dbConn, $sql);
 
   if(!$ta_result){

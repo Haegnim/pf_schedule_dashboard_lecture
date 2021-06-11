@@ -1,3 +1,18 @@
+// for(let i = 0; i < AbortController.length; i++){
+
+// }
+
+// forEach(value){
+
+// }
+
+// map(value){
+
+// }
+
+//앞으로 할 것
+//filter
+
 //Contents Text
 const conTxt = document.querySelectorAll('.con-txt p a');
 
@@ -90,7 +105,7 @@ $(function(){
                     easing: 'easeOutElastic',
                     delay: 3000,
                     barColor: '#13C7A3',
-                    trackColor: '#fff',
+                    trackColor: '#bbb',
                     scaleColor: false,
                     lineWidth: 18,
                     trackWidth: 18,

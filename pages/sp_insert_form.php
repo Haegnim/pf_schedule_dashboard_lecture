@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Schedule Insert</title>
      <!-- Favicon Link -->
      <link rel="shortcut icon" href="/schedule/img/favicon.ico" type="image/x-icon">
@@ -34,7 +35,7 @@
     <link rel="stylesheet" href="/schedule/css/animation.css">
 
     <!-- Media Query CSS Link -->
-    <link rel="stylesheet" href="/schedule/css/Media.css">
+    <link rel="stylesheet" href="/schedule/css/media.css">
 
 </head>
 <body>
@@ -96,7 +97,27 @@
             <?php
                 include $_SERVER['DOCUMENT_ROOT']."/schedule/include/table_ui.php";
                  ?>
+<div id="myModal" class="modal">
 
+<!-- Modal content -->
+<div class="modal-content">
+    <span class="close" id="times">&times;</span>
+    <!-- <p>Some text in the Modal..</p> -->
+    <form action="/schedule/php/sp_rate_insert.php" class="rate-form" name="rate_form">
+        
+    </form>
+    <div class="updateBtnBox">
+    <button type="button" id="updateBtn">Update Rate</button>
+    </div>
+</div>
+<script>
+    const updateBrn = document.querySelector('#updateBtn');
+    updateBtn.onclick = function(){
+        //alert('abc');
+        document.rate_form.submit();
+        modal.style.display = "none";
+    }
+</script>
         </div>
         <!-- End of Main Dashboard Frame  -->
         
@@ -106,11 +127,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <!-- Plugins Load -->
     <script src="/schedule/lib/js/lightslider.js"></script>  
-    <script src="/schedule/lib/js/easypiechart.js"></script>
-    <script src="/schedule/js/total.avg.js"></script>
+    <script src="/schedule/lib/js/jquery.easypiechart.min.js"></script>
+    <!-- <script type="module" src="/schedule/js/app.js"></script> -->
+    <!-- <script src="/schedule/js/glowparticle.js"></script> -->
     <!-- Vanilla JS Code Load  -->
     <script src="/schedule/js/index.js"></script>
     <!-- Jquery Code Load  -->
     <script src="/schedule/js/jquery.index.js"></script>
+    <script src="/schedule/js/modalAjax.js"></script>
+    <script src="/schedule/js/total.avg.js"></script>
 </body>
 </html>
