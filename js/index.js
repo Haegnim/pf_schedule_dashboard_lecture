@@ -72,8 +72,8 @@ $(function(){
         barColor: '#13C7A3',
         trackColor: '#fff',
         scaleColor: false,
-        lineWidth: 18,
-        trackWidth: 18,
+        lineWidth: 20,
+        trackWidth: 20,
         size: pieSize,
         lineCap: 'round',
         onStep: function(from, to, percent) {

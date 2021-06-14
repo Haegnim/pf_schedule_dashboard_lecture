@@ -51,15 +51,6 @@
 .wrapper {
   width: 100%;
   height: 100vh;
-  background: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 796px;
-}
-.wrapper.active {
-  width: 100%;
-  height: 100vh;
   background: linear-gradient(
       135deg,
       rgba(19, 199, 163, 1) 0%,
@@ -80,6 +71,15 @@
       rgba(189, 94, 217, 1) 0%,
       rgba(255, 255, 255, 0) 100%
     );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 796px;
+}
+.wrapper.active {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
   _background: #eee;
   display: flex;
   align-items: center;
@@ -97,7 +97,7 @@
     F0EEEF 0%,
     rgba(253, 247, 249, 1) 100%
   ); */
-  background: #efefef;
+  background: #ebecf0;
   box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 60%);
 
   border-radius: 30px;
@@ -120,14 +120,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
   position: relative;
   border: 8px solid #eee;
   border-radius: 20px;
   transition: all 0.3s;
 }
 header:hover {
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
 }
 header h2 {
   width: 30px;
@@ -163,8 +163,8 @@ header #btn {
   padding: 5px 15px;
   border-radius: 20px;
   border: none;
-  background: #efefef;
-  box-shadow: inset 3px 3px 6px #bbb;
+  background: #ebecf0;
+  box-shadow: inset 1px 1px 2px #babecc;
 }
 header #btn > span {
   content: "";
@@ -226,13 +226,7 @@ header #btn span.active {
   height: 33.33%;
   border-radius: 20px;
 }
-.graph-ui > .lSSlideOuter {
-  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
-  transition: all 0.3s;
-}
-.graph-ui > .lSSlideOuter:hover {
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
-}
+
 .graph-ui div.intro {
   height: 100% !important;
   background-size: cover;
@@ -249,8 +243,9 @@ header #btn span.active {
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 8px solid #eee;
+  _border: 8px solid #eee;
   border-radius: 20px;
+  _box-shadow: inset 2px 2px 4px #133cce86, inset -2px -2px 4px #133cce86;
 }
 .graph-ui div.intro .slide-box:nth-child(1) {
   background: url(/schedule/img/bg.svg) no-repeat center center;
@@ -304,7 +299,7 @@ header #btn span.active {
   right: -20px;
   top: -5px;
   _opacity: 0.3;
-  color: #efefef;
+  color: #ebecf0;
 }
 
 .graph-ui div.intro .slide-box.active h2 {
@@ -350,9 +345,9 @@ header #btn span.active {
   height: 100%;
   _border: 1px solid #f7f7f7;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
-  _box-shadow: 0px 0px 3px #bbb;
-  background: #efefef;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  _box-shadow: 0px 0px 3px #babecc;
+  background: #ebecf0;
   width: calc(25% - 10.5px);
   display: flex;
   align-items: center;
@@ -361,9 +356,7 @@ header #btn span.active {
   position: relative;
   transition: all 0.3s;
 }
-.graph-ui .each-pofol .each-graph div:hover {
-  box-shadow: inset 3px 3px 4px #bbb, inset -3px -3px 4px #ffffff;
-}
+
 .graph-ui .each-pofol .each-graph div b {
   margin-top: 10px;
   font-size: 12px;
@@ -393,13 +386,10 @@ header #btn span.active {
 }
 
 .graph-ui > div.total-pofol {
-  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
-  background: #efefef;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  background: #ebecf0;
   display: flex;
   transition: all 0.3s;
-}
-.graph-ui > div.total-pofol:hover {
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
 }
 .graph-ui > div.total-pofol > div {
   height: 100%;
@@ -461,7 +451,7 @@ div.total-txt h3 {
   font-weight: 400;
   padding: 0 0 5px 0;
   color: #555;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #babecc;
 }
 div.total-txt p {
   font-weight: 300;
@@ -469,17 +459,21 @@ div.total-txt p {
   padding: 10px 0;
 }
 div.total-txt button {
-  border: 1px solid #13c7a3;
-  background: #fff;
-  padding: 5px 0px;
-  color: #13c7a3;
+  border: none;
+  background: #ebecf0;
+  padding: 10px 0px;
+  border-radius: 25px;
+  _color: #13c7a3;
   width: 150px;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
   transition: all 0.3s;
-  text-shadow: 1px 1px #fff;
 }
 div.total-txt button:hover {
-  background: #13c7a3;
-  color: #fff;
+  box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #ffffff;
+}
+div.total-txt button:active {
+  background: #fefefe;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
 }
 .graph-ui > div.total-pofol div.total-chart h3 {
   font-weight: 300;
@@ -503,15 +497,15 @@ div.total-txt button:hover {
   height: calc(50% - 8.5px);
   _border: 1px solid #f7f7f7;
   border-radius: 20px;
-  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
-  background: #efefef;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+  background: #ebecf0;
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
 }
-.table-ui > div:hover {
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
-}
+/* .table-ui > div:hover {
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
+} */
 .table-ui > div::-webkit-scrollbar {
   display: none;
 }
@@ -522,7 +516,7 @@ div.total-txt button:hover {
 .each-btns {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #babecc;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -547,7 +541,7 @@ div.total-txt button:hover {
 .table-ui .con-details li i {
   width: 50px;
   height: 50px;
-  _border: 1px solid #bbb;
+  _border: 1px solid #babecc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -555,7 +549,7 @@ div.total-txt button:hover {
   font-size: 20px;
   _color: #0078ff;
   margin-right: 10px;
-  box-shadow: inset 3px 3px 4px #bbb, inset -3px -3px 4px #ffffff;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
 }
 /* .table-ui .con-txt {
   width: 100%;
@@ -583,21 +577,21 @@ div.total-txt button:hover {
 .table-ui .each-contents .each-btns a {
   width: calc(25% - 5px);
   display: block;
-  background: #efefef;
+  background: #ebecf0;
   color: #888;
   padding: 10px 0;
   font-weight: 400;
   border: none;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
   text-align: center;
 }
 .table-ui .each-contents .each-btns a.active {
   _color: #13c7a3;
   background: #fefefe;
-  box-shadow: inset 3px 3px 4px #bbb, inset -3px -3px 4px #ffffff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
   border: none;
-  text-shadow: 1px 1px 2px #0078ff, inset -1px -1px 2px #0078ff;
+  _text-shadow: inset 1px 1px 2px #0078ff, inset -1px -1px 2px #0078ff;
 }
 
 .graph-ui .title-box {
@@ -609,7 +603,7 @@ div.total-txt button:hover {
   font-weight: 400;
   padding-bottom: 10px;
   color: #333;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #babecc;
   margin-bottom: 10px;
 }
 
@@ -617,8 +611,8 @@ div.total-txt button:hover {
   width: 100%;
   height: calc(66.66% - 12px);
   border-radius: 15px;
-  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff;
-  background: #efefef;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+  background: #ebecf0;
   display: flex;
   margin-top: 12px;
   flex-direction: column;
@@ -635,17 +629,18 @@ div.total-txt button:hover {
   padding: 15px;
   border: none;
   border-radius: 25px;
-  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
-  background: #efefef;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
+  background: #ebecf0;
   transition: all 0.3s;
 }
 .graph-ui .input-box .input-tit input:hover {
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
+    -1px -1px 4px #72afff;
 }
 .graph-ui .input-box .input-tit input:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff,
-    inset 3px 3px 3px #72afff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
+    inset 1px 1px 2px #72afff;
 }
 .graph-ui .input-box .input-tit select {
   width: 35%;
@@ -653,18 +648,19 @@ div.total-txt button:hover {
   outline: 0;
   padding: 10px 15px;
   border-radius: 20px;
-  background: #efefef;
-  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
+  background: #ebecf0;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
   color: #333;
   transition: all 0.3s;
 }
 .graph-ui .input-box .input-tit select:hover {
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
+    -1px -1px 4px #72afff;
 }
 .graph-ui .input-box .input-tit select:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff,
-    inset 3px 3px 3px #72afff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
+    inset 1px 1px 2px #72afff;
 }
 .graph-ui .input-con textarea {
   width: 100%;
@@ -676,18 +672,19 @@ div.total-txt button:hover {
   margin-top: 12px;
   resize: none;
   color: #333;
-  background: #efefef;
+  background: #ebecf0;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
-  box-shadow: 6px 6px 12px #bbb, -6px -6px 12px #ffffff;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
   transition: all 0.3s;
 }
 .graph-ui .input-con textarea:hover {
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff, 3px 3px 3px #72afff;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
+    -1px -1px 4px #72afff;
 }
 .graph-ui .input-con textarea:focus {
   background: #fefefe;
-  box-shadow: inset 3px 3px 6px #bbb, inset -3px -3px 6px #ffffff,
-    inset 3px 3px 3px #72afff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
+    inset 1px 1px 2px #72afff;
 }
 .graph-ui .btns {
   width: 100%;
@@ -700,8 +697,8 @@ div.total-txt button:hover {
   outline: 0;
   border: none;
   border-radius: 20px;
-  background: #efefef;
-  box-shadow: 3px 3px 6px #bbb, -3px -3px 6px #ffffff;
+  background: #ebecf0;
+  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
   color: #333;
   padding: 10px 25px;
   transition: all 0.3s;
@@ -710,7 +707,7 @@ div.total-txt button:hover {
   color: #fff;
   font-weight: bold;
   background: #0078ff;
-  box-shadow: inset 3px 3px 6px #0059ff, inset -3px -3px 6px #0099ff;
+  box-shadow: inset 1px 1px 2px #0059ff, inset -1px -1px 2px #0099ff;
 }
 /* ----------------------------  */
 /* 3. 모달 박스 css 작성 => index.js 135번줄 */
@@ -734,7 +731,8 @@ div.total-txt button:hover {
   margin: 10% auto; /* 15% from the top and centered */
   padding: 25px;
   border-radius: 20px;
-  box-shadow: inset 3px 3px 6px #fff, inset 3px 3px 6px #bbb, 0px 10px 20px #bbb;
+  box-shadow: inset 1px 1px 2px #fff, inset 1px 1px 2px #babecc,
+    0px 10px 20px #babecc;
   border: 6px solid #fff;
   width: 40%; /* Could be more or less, depending on screen size */
   _height: 20%;
@@ -765,7 +763,7 @@ div.total-txt button:hover {
   width: 65%;
   color: #333;
   background: #fafafa;
-  box-shadow: 3px 3px 4px #ededed, 3px 3px 4px #999, 3px 3px 4px #bbb;
+  box-shadow: 3px 3px 4px #ededed, 3px 3px 4px #999, 3px 3px 4px #babecc;
   border-radius: 22px;
   _border: 1px solid #ccc;
   align-items: center;
@@ -776,8 +774,8 @@ div.total-txt button:hover {
   outline: 0;
   border-radius: 22px;
   background: #fff;
-  box-shadow: inset 2px 2px 5px #bbb, inset 2px 2px 5px #fff, 3px 3px 4px #fff,
-    3px 3px 6px #bbb;
+  box-shadow: inset 2px 2px 5px #babecc, inset 2px 2px 5px #fff,
+    3px 3px 4px #fff, 3px 3px 6px #babecc;
   width: calc(35% - 12px);
 }
 .modal-content .rate-form p input:focus {
@@ -824,11 +822,11 @@ div.total-txt button:hover {
 }
 
 .graph-ui.detail .detail-board {
-  width: 100;
+  width: 100%;
   height: calc(60% - 10px);
-  background: #fff;
-  border: 1px solid #f7f7f7;
-  box-shadow: 0 0 3px #ccc;
+  background: #ebecf0;
+  _border: 1px solid #f7f7f7;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
@@ -842,18 +840,18 @@ div.total-txt button:hover {
   display: flex;
 }
 .detail-board .board-btns a {
-  background: #13c7a3;
-  display: block;
-  padding: 8px 15px;
-  border: 1px solid #13c7a3;
-  color: #fff;
-  border-radius: 3px;
-  margin: 0 1px;
-  transition: all 0.4s;
+  border: none;
+  background: #ebecf0;
+  padding: 10px 0px;
+  margin-right: 8px;
+  border-radius: 25px;
+  width: 150px;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
+  transition: all 0.3s;
+  text-align: center;
 }
 .detail-board .board-btns a:hover {
-  background: #fff;
-  color: #ff9062;
+  box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #fff;
 }
 
 .board-table {
@@ -938,7 +936,7 @@ div.total-txt button:hover {
   width: 35px;
   height: 35px;
   _border: 1px solid #aaa;
-  box-shadow: 6px 6px 12px #bbb, 6px 6px 12px #fff;
+  box-shadow: 6px 6px 12px #babecc, 6px 6px 12px #fff;
   border-radius: 18px;
   _margin-bottom: 20px;
 }
@@ -946,7 +944,7 @@ div.total-txt button:hover {
 .close:hover,
 .close:focus {
   _border: 1px solid #333;
-  box-shadow: 3px 3px 6px #bbb, 3px 3px 6px #fff;
+  box-shadow: 2px 2px 5px #babecc, 2px 2px 5px #fff;
   color: #333;
   text-decoration: none;
   cursor: pointer;
