@@ -54,11 +54,11 @@
         $tab_path = "database";
        }
        ?>
-                      <?php
-                      $tab_path = $_GET['key'];
-                    //   echo $tab_path;
-                      include $_SERVER["DOCUMENT_ROOT"].'/schedule/include/tabs/'.$tab_path.'.php';
-                      ?>
+        <?php
+        $tab_path = $_GET['key'];
+    //   echo $tab_path;
+        include $_SERVER["DOCUMENT_ROOT"].'/schedule/include/tabs/'.$tab_path.'.php';
+        ?>
                     </ul>
                 </div>
             </section>
