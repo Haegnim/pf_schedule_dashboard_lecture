@@ -46,14 +46,7 @@
                         <a href="?key=planning">Planning</a>
                     </div>
                     <ul class="con-details">
-                    <?php
-       $tab_path = "";
-       if(array_key_exists("key", $_GET)){
-        $tab_path = $_GET['key']; //$다음에 _ (언더바)는 서버통신을 불러오기위해 꼭 필요함.
-       }else{
-        $tab_path = "database";
-       }
-       ?>
+       
         <?php
         $tab_path = $_GET['key'];
     //   echo $tab_path;
