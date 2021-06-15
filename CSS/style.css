@@ -574,7 +574,7 @@ div.total-txt button:active {
   font-style: normal;
   font-size: 12px;
 }
-.table-ui .each-contents .each-btns a {
+.table-ui .each-contents .each-btns button {
   width: calc(25% - 5px);
   display: block;
   background: #ebecf0;
@@ -585,8 +585,9 @@ div.total-txt button:active {
   border-radius: 20px;
   box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
   text-align: center;
+  transition: all 0.4s;
 }
-.table-ui .each-contents .each-btns a.active {
+.table-ui .each-contents .each-btns button.active {
   _color: #13c7a3;
   background: #fefefe;
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
@@ -839,7 +840,8 @@ div.total-txt button:active {
   height: auto;
   display: flex;
 }
-.detail-board .board-btns a {
+.detail-board .board-btns a,
+.board-table-btns .more-btn {
   border: none;
   background: #ebecf0;
   padding: 10px 0px;
@@ -850,7 +852,10 @@ div.total-txt button:active {
   transition: all 0.3s;
   text-align: center;
 }
-.detail-board .board-btns a:hover {
+.detail-board .board-btns a:hover,
+.detail-board .board-btns a:active,
+.board-table-btns .more-btn:hover {
+  background: #fefefe;
   box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #fff;
 }
 
@@ -879,7 +884,10 @@ div.total-txt button:active {
 }
 .board-table li.board-contents span {
   color: #555;
-  padding: 5px 10px;
+  padding: 10px 10px;
+}
+.board-table li:nth-child(odd) {
+  background: #fff;
 }
 .board-table li.board-contents span:nth-child(3) {
   justify-content: flex-start;
@@ -925,6 +933,12 @@ div.total-txt button:active {
 }
 .board-table li span:nth-child(5) {
   width: 10%;
+}
+
+.board-table-btns {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 /* The Close Button */
 .close {

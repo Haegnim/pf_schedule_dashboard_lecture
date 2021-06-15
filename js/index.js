@@ -195,3 +195,59 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+//-----------table_ui.php--------------
+//tabs funtion
+
+'use strict';
+
+function reqListener () {
+const jsonObj = JSON.parse(this.responseText);
+const jsonDom = document.querySelector('#con-details');
+
+function calltabs(n){
+    const result = jsonObj.filter(value => {
+      return value.sp_cate == n;
+    });
+    for(let i = 0; i < result.length; i++){
+      jsonDom.innerHTML += `
+      <li>
+            <i class="fa fa-${result[i].sp_cate}"></i>
+            <div class="con-txt">
+                <p><a href="#">${result[i].sp_tit}</a></p>
+                <em>${result[i].sp_reg}</em>
+            </div>
+        </li>
+      `;
+    }
+
+}
+
+const btns = document.querySelectorAll('.each-btns button');
+console.log(btns);
+
+btns.forEach(value => {
+  //console.log(value);
+  
+  value.addEventListener('click', function(){
+    btns.forEach(btnItem => {
+        btnItem.className = "";
+    });
+    jsonDom.innerHTML = "";
+    
+    const itemVal = this.getAttribute('value');
+    this.className = "active"
+    calltabs(itemVal);
+  });
+});
+calltabs("database");
+}
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "/schedule/php/read_table_json.php");
+oReq.send();
+
+
+
+
+    

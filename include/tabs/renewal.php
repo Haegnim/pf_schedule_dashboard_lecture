@@ -10,18 +10,19 @@
 </li>
 <?php
     } else {
-        while($ta_row=mysqli_fetch_array($ta_result)){
-            $ta_row_cate = $ta_row['SP_cate'];
-            $ta_row_tit = $ta_row['SP_tit'];
-            $ta_row_reg = $ta_row['SP_reg'];
+        while($db_row=mysqli_fetch_array($ta_result)){
+            $db_row_idx = $db_row['SP_idx'];
+            $db_row_cate = $db_row['SP_cate'];
+            $db_row_tit = $db_row['SP_tit'];
+            $db_row_reg = $db_row['SP_reg'];
 ?>
 
-<li>
-    <i class="fa fa-<?=$ta_row_cate?>"></i>
-    <div class="con-txt">
-        <p><a href="#"><?=$ta_row_tit?></a></p>
-        <em><?=$ta_row_reg?></em>
-    </div>
+<li class="board-contents">
+  <span><?=$db_row_idx?></span>
+  <span><?=$db_row_cate?></span>
+  <span><a href=""><?=$db_row_tit?></a></span>
+  <span><?=$db_row_reg?></span>
+  <span><a href="/schedule/php/sp_delete.php?del_idx=<?=$db_row_idx?>" class="del-btn">삭제</a></span>
 </li>
 <?php
         }

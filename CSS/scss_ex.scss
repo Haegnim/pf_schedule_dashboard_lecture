@@ -4,6 +4,7 @@ $main-color2: #0078ff;
 $sub-color1: #8933ff;
 $sub-color2: #bd5ed9;
 $bg-color: #ebecf0;
+$click-color: #fefefe;
 @mixin hover-sd {
   box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
 }
@@ -379,335 +380,288 @@ header {
             color: $sub-color2;
           }
         }
+        &.total-pofol {
+          @include box-inset();
+          background: $bg-color;
+          display: flex;
+          transition: all 0.3s;
+          > div {
+            height: 100%;
+            &.total-chart {
+              width: 40%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              .chart {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                canvas {
+                  width: auto !important;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+              .percent {
+                line-height: 0;
+                font-size: 22px;
+                font-weight: 600;
+                color: $main-color1;
+              }
+              h3 {
+                font-weight: 300;
+                margin-top: 15px;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-.graph-ui > div.total-pofol {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-  background: #ebecf0;
-  display: flex;
-  transition: all 0.3s;
-}
-.graph-ui > div.total-pofol > div {
-  height: 100%;
-}
-.graph-ui > div.total-pofol div.total-chart {
-  width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-/* .graph-ui > div.total-pofol div.total-chart h3 {
-  font-weight: 300;
-  margin-top: 15px;
-}
-.graph-ui > div.total-pofol div.total-txt {
-  width: 60%;
-  margin-top: 15px;
-}
-/* div.total-chart {
-  padding: 10px 0;
-} */
-/* div.total-chart .percent {
-  line-height: 0;
-  font-size: 22px;
-  font-weight: 600;
-  color: #13c7a3;
-} */
-div.total-chart .chart {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-div.total-chart .percent {
-  line-height: 0;
-  font-size: 22px;
-  font-weight: 600;
-  color: #13c7a3;
-}
-div.total-chart .chart canvas {
-  width: auto !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 div.total-txt {
+  width: 60%;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 0 5px 0;
+    color: #555;
+    border-bottom: 1px solid #babecc;
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  button {
+    border: none;
+    background: $bg-color;
+    padding: 10px 0px;
+    border-radius: 25px;
+    width: 150px;
+    @include box-sd();
+    transition: all 0.3s;
+    &:hover {
+      @include hover-sd();
+    }
+    &:active {
+      background: #fefefe;
+      @include box-inset();
+    }
+  }
 }
-div.total-txt h3 {
-  font-size: 20px;
-  font-weight: 400;
-  padding: 0 0 5px 0;
-  color: #555;
-  border-bottom: 1px solid #babecc;
-}
-div.total-txt p {
-  font-weight: 300;
-  font-size: 16px;
-  padding: 10px 0;
-}
-div.total-txt button {
-  border: none;
-  background: #ebecf0;
-  padding: 10px 0px;
-  border-radius: 25px;
-  _color: #13c7a3;
-  width: 150px;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
-  transition: all 0.3s;
-}
-div.total-txt button:hover {
-  box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #ffffff;
-}
-div.total-txt button:active {
-  background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
-}
-.graph-ui > div.total-pofol div.total-chart h3 {
-  font-weight: 300;
-  margin-top: 15px;
-}
-.graph-ui > div.total-pofol div.total-txt {
-  width: 60%;
-  _margin-top: 15px;
-}
+
 /* Table-ui Contents Style Code */
 .table-ui {
   width: 35%;
   height: 100%;
-  _background: #222;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  > div {
+    width: 100%;
+    height: calc(50% - 8.5px);
+    border-radius: 20px;
+    @include box-inset();
+    background: #ebecf0;
+    padding: 30px 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .tit-box,
+  each-btns {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #babecc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+  .tit-box {
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      color: #666;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .con-details {
+    margin-top: 5px;
+    li {
+      display: flex;
+      padding: 5px 0;
+      align-items: center;
+      i {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 20px;
+        margin-right: 10px;
+        @include hover-sd();
+      }
+    }
+  }
+  .con-txt {
+    p {
+      color: #333;
+      line-height: 1.4;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    em {
+      font-style: normal;
+      font-size: 12px;
+    }
+  }
+  .each-contents .each-btns button {
+    width: calc(25% - 5px);
+    display: block;
+    background: $bg-color;
+    color: #888;
+    padding: 10px 0;
+    font-weight: 400;
+    border: none;
+    border-radius: 20px;
+    @include box-sd();
+    text-align: center;
+    transition: all 0.4s;
+    &:hover {
+      @include hover-sd();
+    }
+    &:active {
+      background: $click-color;
+      @include box-inset();
+      border: none;
+    }
+  }
+  .title-box {
+    width: 100%;
+    height: auto;
+    h3 {
+      font-size: 20px;
+      font-weight: 400;
+      padding-bottom: 10px;
+      color: #333;
+      border-bottom: 1px solid #babecc;
+      margin-bottom: 10px;
+    }
+  }
+  > div.input-box {
+    width: 100%;
+    height: calc(66.66% - 12px);
+    border-radius: 15px;
+    @include box-inset();
+    background: $bg-color;
+    display: flex;
+    margin-top: 12px;
+    flex-direction: column;
+    padding: 20px;
+    .input-tit {
+      display: flex;
+      justify-content: space-between;
+      input {
+        width: calc(65% - 12px);
+        padding: 15px;
+        border: none;
+        border-radius: 25px;
+        @include box-sd();
+        background: $bg-color;
+        transition: all 0.3s;
+        &:hover {
+          @include hover-sd();
+        }
+        &:focus {
+          background: $click-color;
+          @include box-inset();
+        }
+      }
+      select {
+        width: 35%;
+        border: none;
+        outline: 0;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background: #ebecf0;
+        @include box-sd();
+        color: #333;
+        transition: all 0.3s;
+        &:hover {
+          @include hover-sd();
+        }
+        &:focus {
+          background: $click-color;
+          @include box-inset();
+        }
+      }
+    }
+  }
+  .input-con textarea {
+    width: 100%;
+    border: none;
+    outline: 0;
+    padding: 20px;
+    height: 250px;
+    border-radius: 20px;
+    margin-top: 12px;
+    resize: none;
+    color: #333;
+    background: $bg-color;
+    font-family: "Roboto", "Noto Sans KR", sans-serif;
+    @include box-sd();
+    transition: all 0.3s;
+    &:hover {
+      @include hover-sd();
+    }
+    &:focus {
+      @include box-inset();
+      background: $click-color;
+    }
+  }
+  btns {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 12px;
+    button,
+    #updateBtn {
+      outline: 0;
+      border: none;
+      border-radius: 20px;
+      background: $bg-color;
+      @include hover-sd();
+      color: #333;
+      padding: 10px 25px;
+      transition: all 0.3s;
+    }
+    button:hover {
+      color: #fff;
+      font-weight: bold;
+      background: #0078ff;
+      box-shadow: inset 1px 1px 2px #0059ff, inset -1px -1px 2px #0099ff;
+    }
+  }
 }
-.table-ui > div {
-  width: 100%;
-  height: calc(50% - 8.5px);
-  _border: 1px solid #f7f7f7;
-  border-radius: 20px;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
-  background: #ebecf0;
-  padding: 30px 20px;
-  overflow: hidden;
-  overflow-y: auto;
-}
-/* .table-ui > div:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
-} */
-.table-ui > div::-webkit-scrollbar {
-  display: none;
-}
-/* .table-ui>div.each-contents{margin-top: 10px;}
-.table-ui .new-update{} */
 
-.table-ui .tit-box,
-.each-btns {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #babecc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 0;
-}
-.table-ui .tit-box p {
-  font-size: 18px;
-  font-weight: 400;
-  color: #666;
-}
-.table-ui .tit-box a:hover {
-  text-decoration: underline;
-}
-.table-ui .con-details li {
-  display: flex;
-  padding: 5px 0;
-  align-items: center;
-}
-.table-ui .con-details {
-  margin-top: 5px;
-}
-.table-ui .con-details li i {
-  width: 50px;
-  height: 50px;
-  _border: 1px solid #babecc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 20px;
-  _color: #0078ff;
-  margin-right: 10px;
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
-}
-/* .table-ui .con-txt {
-  width: 100%;
-} */
-.table-ui .each-contents .con-details li i {
-  _color: #13c7a3;
-}
-.table-ui .con-txt p {
-  color: #333;
-  line-height: 1.4;
-}
-/* .table-ui .new-update .con-txt p a {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: block;
-} */
-.table-ui .con-txt p:hover {
-  text-decoration: underline;
-}
-.table-ui .con-txt em {
-  font-style: normal;
-  font-size: 12px;
-}
-.table-ui .each-contents .each-btns a {
-  width: calc(25% - 5px);
-  display: block;
-  background: #ebecf0;
-  color: #888;
-  padding: 10px 0;
-  font-weight: 400;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
-  text-align: center;
-}
-.table-ui .each-contents .each-btns a.active {
-  _color: #13c7a3;
-  background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
-  border: none;
-  _text-shadow: inset 1px 1px 2px #0078ff, inset -1px -1px 2px #0078ff;
-}
-
-.graph-ui .title-box {
-  width: 100%;
-  height: auto;
-}
-.graph-ui .title-box h3 {
-  font-size: 20px;
-  font-weight: 400;
-  padding-bottom: 10px;
-  color: #333;
-  border-bottom: 1px solid #babecc;
-  margin-bottom: 10px;
-}
-
-.graph-ui > div.input-box {
-  width: 100%;
-  height: calc(66.66% - 12px);
-  border-radius: 15px;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
-  background: #ebecf0;
-  display: flex;
-  margin-top: 12px;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.graph-ui .input-box .input-tit {
-  display: flex;
-  justify-content: space-between;
-}
-
-.graph-ui .input-box .input-tit input {
-  width: calc(65% - 12px);
-  padding: 15px;
-  border: none;
-  border-radius: 25px;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
-  background: #ebecf0;
-  transition: all 0.3s;
-}
-.graph-ui .input-box .input-tit input:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
-    -1px -1px 4px #72afff;
-}
-.graph-ui .input-box .input-tit input:focus {
-  background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
-    inset 1px 1px 2px #72afff;
-}
-.graph-ui .input-box .input-tit select {
-  width: 35%;
-  border: none;
-  outline: 0;
-  padding: 10px 15px;
-  border-radius: 20px;
-  background: #ebecf0;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
-  color: #333;
-  transition: all 0.3s;
-}
-.graph-ui .input-box .input-tit select:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
-    -1px -1px 4px #72afff;
-}
-.graph-ui .input-box .input-tit select:focus {
-  background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
-    inset 1px 1px 2px #72afff;
-}
-.graph-ui .input-con textarea {
-  width: 100%;
-  border: none;
-  outline: 0;
-  padding: 20px;
-  height: 250px;
-  border-radius: 20px;
-  margin-top: 12px;
-  resize: none;
-  color: #333;
-  background: #ebecf0;
-  font-family: "Roboto", "Noto Sans KR", sans-serif;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
-  transition: all 0.3s;
-}
-.graph-ui .input-con textarea:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
-    -1px -1px 4px #72afff;
-}
-.graph-ui .input-con textarea:focus {
-  background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
-    inset 1px 1px 2px #72afff;
-}
-.graph-ui .btns {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  margin-top: 12px;
-}
-.graph-ui .btns button,
-#updateBtn {
-  outline: 0;
-  border: none;
-  border-radius: 20px;
-  background: #ebecf0;
-  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
-  color: #333;
-  padding: 10px 25px;
-  transition: all 0.3s;
-}
-.graph-ui .btns button:hover {
-  color: #fff;
-  font-weight: bold;
-  background: #0078ff;
-  box-shadow: inset 1px 1px 2px #0059ff, inset -1px -1px 2px #0099ff;
-}
 /* ----------------------------  */
 /* 3. 모달 박스 css 작성 => index.js 135번줄 */
 /* The Modal (background) */
@@ -720,7 +674,6 @@ div.total-txt button:active {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  _background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(255, 250, 250, 0.7); /* Black w/ opacity */
 }
 
@@ -738,47 +691,45 @@ div.total-txt button:active {
   text-align: center;
   display: flex;
   flex-direction: column;
-}
-
-.modal-content .rate-form {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-.modal-content .rate-form p {
-  width: auto;
-  height: calc(25% - 5px);
-  display: flex;
-  _padding: 0px 10px;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.modal-content .rate-form p label {
-  padding: 14px 10px;
-  display: flex;
-  justify-content: center;
-  width: 65%;
-  color: #333;
-  background: #fafafa;
-  box-shadow: 3px 3px 4px #ededed, 3px 3px 4px #999, 3px 3px 4px #babecc;
-  border-radius: 22px;
-  _border: 1px solid #ccc;
-  align-items: center;
-}
-.modal-content .rate-form p input {
-  border: 1px solid #ccc;
-  padding-left: 15px;
-  outline: 0;
-  border-radius: 22px;
-  background: #fff;
-  box-shadow: inset 2px 2px 5px #babecc, inset 2px 2px 5px #fff,
-    3px 3px 4px #fff, 3px 3px 6px #babecc;
-  width: calc(35% - 12px);
-}
-.modal-content .rate-form p input:focus {
-  border: 1px solid #8933ff;
+  .rate-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    p {
+      width: auto;
+      height: calc(25% - 5px);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      label {
+        padding: 14px 10px;
+        display: flex;
+        justify-content: center;
+        width: 65%;
+        color: #333;
+        background: #fafafa;
+        box-shadow: 3px 3px 4px #ededed, 3px 3px 4px #999, 3px 3px 4px #babecc;
+        border-radius: 22px;
+        _border: 1px solid #ccc;
+        align-items: center;
+      }
+      input {
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        outline: 0;
+        border-radius: 22px;
+        background: #fff;
+        box-shadow: inset 2px 2px 5px #babecc, inset 2px 2px 5px #fff,
+          3px 3px 4px #fff, 3px 3px 6px #babecc;
+        width: calc(35% - 12px);
+        &:focus {
+          border: 1px solid $main-color1;
+        }
+      }
+    }
+  }
 }
 
 #updateBtn {

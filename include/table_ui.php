@@ -35,23 +35,18 @@
      }
     }
     ?>
-                        
-                    </ul>
-                </div>
-                <div class="each-contents">
-                    <div class="each-btns">
-                        <a href="?key=database" class="active">Database</a>
-                        <a href="?key=api">API</a>
-                        <a href="?key=renewal">Renewal</a>
-                        <a href="?key=planning">Planning</a>
-                    </div>
-                    <ul class="con-details">
-       
-        <?php
-        $tab_path = $_GET['key'];
-    //   echo $tab_path;
-        include $_SERVER["DOCUMENT_ROOT"].'/schedule/include/tabs/'.$tab_path.'.php';
-        ?>
-                    </ul>
+                    
+        </div>
+        <div class="each-contents">
+            <div class="each-btns">
+                <button class="active" value='database'>데이터베이스</button>
+                <button value='thermomethr-half'>API</button>
+                <button value='clone'>리뉴얼</button>
+                <button value='bar-chart-o'>기획</button>
+            </div>
+            <ul class="con-details" id="con-details">
+
+
+            </ul>
                 </div>
             </section>

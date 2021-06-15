@@ -70,11 +70,11 @@
 
           <div class="detail-board">
             <div class="board-btns">
-              <a href="#">All</a>
-              <a href="#">Database</a>
-              <a href="#">API</a>
-              <a href="#">Renewal</a>
-              <a href="#">Planning</a>
+              <a href="?key=all" class="active">All</a>
+              <a href="?key=database">Database</a>
+              <a href="?key=api">API</a>
+              <a href="?key=renewal">Renewal</a>
+              <a href="?key=planning">Planning</a>
             </div>
             <div class="board-table">
               <ul>
@@ -85,27 +85,24 @@
                   <span>등록일</span>
                   <span>삭제</span>
                 </li>
-                <?php
-                    include $_SERVER['DOCUMENT_ROOT']."/connect/db_conn.php";
-                    $sql = "SELECT * FROM SP_table ORDER BY SP_idx DESC LIMIT 5";
-                    $board_result = mysqli_query($dbConn, $sql);
 
-                    while($board_row=mysqli_fetch_array($board_result)){
-                      $board_row_idx = $board_row['SP_idx'];
-                      $board_row_cate = $board_row['SP_cate'];
-                      $board_row_tit = $board_row['SP_tit'];
-                      $board_row_reg = $board_row['SP_reg'];
-                  ?>
-                <li class="board-contents">
-                  <span><?=$board_row_idx?></span>
-                  <span><?=$board_row_cate?></span>
-                  <span><a href=""><?=$board_row_tit?></a></span>
-                  <span><?=$board_row_reg?></span>
-                  <span><a href="/schedule/php/sp_delete.php?del_idx=<?=$board_row_idx?>" class="del-btn">삭제</a></span>
-                </li>
                 <?php
-                    }
-                ?>
+                $tab_path = $_GET['key'];
+                   include $_SERVER["DOCUMENT_ROOT"].'/schedule/include/tabs/'.$tab_path.'.php';
+                   //php의 마침표는 js의 +
+                  ?>
+
+                <div class="board-table-btns">
+                  <!-- <form action="#" class="search-box">
+                  <select name="" id="">
+                    <option value="">아이디</option>
+                    <option value="">제목</option>
+                  </select>
+                  <input type="text">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                  </form> -->
+                  <button type="button" class="more-btn">더보기</button>
+                </div>
               </ul>
             </div>
             <div id="myModal" class="modal">
@@ -123,7 +120,6 @@
               </div>
               
           </div>
-         
         </section>
         </div>        
     </div>
@@ -148,6 +144,22 @@
     <script src="/schedule/js/jquery.index.js"></script>
     <script src="/schedule/js/modalAjax.js"></script>
     <script src="/schedule/js/total.avg.js"></script>
+
+    <script>
+      $(function(){
+        //더보기 버튼 기능
+        $(".board-contents").hide();
+        $(".board-contents").slice(0,5).show();
+
+        $(".more-btn").click(function(){
+          $(".board-contents:hidden").slice(0,5).show();
+          
+        });
+
+        //테이블 탭 활성화 기능
+        
+      });
+    </script>
 
 </body>
 </html>
