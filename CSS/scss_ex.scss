@@ -1,4 +1,18 @@
 /* Wrapper Style Code  */
+$main-color1: #13c7a3;
+$main-color2: #0078ff;
+$sub-color1: #8933ff;
+$sub-color2: #bd5ed9;
+$bg-color: #ebecf0;
+@mixin hover-sd {
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
+}
+@mixin box-sd {
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
+}
+@mixin box-inset {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
 
 @font-face {
   font-family: "todo-logo-for-lecture";
@@ -31,16 +45,16 @@
 } */
 
 .fa-database {
-  color: #13c7a3;
+  color: $main-color1;
 }
 .fa-thermometer-half {
-  color: #0078ff;
+  color: $main-color2;
 }
 .fa-clone {
-  color: #8933ff;
+  color: $sub-color1;
 }
 .fa-bar-chart-o {
-  color: #bd5ed9;
+  color: $sub-color2;
 }
 
 /* {r: 19, g: 199, b: 163},
@@ -75,16 +89,16 @@
   align-items: center;
   justify-content: center;
   min-height: 796px;
-}
-.wrapper.active {
-  width: 100%;
-  height: 100vh;
-  background: #eee;
-  _background: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 796px;
+
+  .active {
+    width: 100%;
+    height: 100vh;
+    background: $bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 796px;
+  }
 }
 
 /* Main Contents Box Style Code */
@@ -97,9 +111,8 @@
     F0EEEF 0%,
     rgba(253, 247, 249, 1) 100%
   ); */
-  background: #ebecf0;
+  background: $bg-color;
   box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 60%);
-
   border-radius: 30px;
   display: flex;
   padding: 12px;
@@ -120,71 +133,73 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
   position: relative;
+  @include box-sd();
   border: 8px solid #eee;
   border-radius: 20px;
   transition: all 0.3s;
-}
-header:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
-}
-header h2 {
-  width: 30px;
-  height: auto;
-}
-header h2 img {
-  width: 100%;
-}
-header a {
-  display: block;
-  color: #fff;
-  /* background: linear-gradient(145deg, #13c7a3 0%, #0078ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-}
-header .gnb {
-  width: 100%;
-}
-header .gnb a {
-  width: 100%;
-  padding: 15px 0;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header .sign-out {
-  font-size: 20px;
-}
-header #btn {
-  width: 34px;
-  height: 60px;
-  padding: 5px 15px;
-  border-radius: 20px;
-  border: none;
-  background: #ebecf0;
-  box-shadow: inset 1px 1px 2px #babecc;
-}
-header #btn > span {
-  content: "";
-  display: block;
-  width: 26px;
-  height: 26px;
-  background: #13c7a3;
-  border-radius: 14px;
-  margin-left: 50%;
-  margin-top: 50%;
-  top: 2px;
-  left: -13px;
-  position: relative;
-  transition: all 0.4s;
-}
-header #btn:hover span {
-  transform: scale(0.8, 0.8);
-}
-header #btn span.active {
-  top: 18px;
+
+  &:hover {
+    @include hover-sd();
+  }
+
+  h2 {
+    width: 30px;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  a {
+    display: block;
+    color: #fff;
+  }
+
+  .gnb {
+    width: 100%;
+    a {
+      width: 100%;
+      padding: 15px 0;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .sign-out {
+    font-size: 20px;
+  }
+  #btn {
+    width: 34px;
+    height: 60px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #ebecf0;
+    box-shadow: inset 1px 1px 2px #babecc;
+    &:hover span {
+      transform: scale(0.8, 0.8);
+      &.active {
+        top: 18px;
+      }
+    }
+    > span {
+      _content: "";
+      display: block;
+      width: 26px;
+      height: 26px;
+      background: #13c7a3;
+      border-radius: 14px;
+      margin-left: 50%;
+      margin-top: 50%;
+      top: 2px;
+      left: -13px;
+      position: relative;
+      transition: all 0.4s;
+    }
+  }
 }
 
 /* Mobile Menu Icon Style code  */
@@ -194,195 +209,179 @@ header #btn span.active {
   height: 25px;
   position: relative;
   transition: all 0.3s;
-}
-.mobile-menu span {
-  display: block;
-  background: #fff;
-  position: absolute;
-}
-.mobile-menu span:nth-child(1) {
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.mobile-menu span:nth-child(2) {
-  width: 2px;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.mobile-menu.active {
-  transform: rotate(135deg);
+
+  span {
+    display: block;
+    background: #fff;
+    position: absolute;
+    &:nth-child(1) {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-child(2) {
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &.active {
+    transform: rotate(135deg);
+  }
 }
 
 /* Main Page Graph-ui Contents Style Code */
 .graph-ui {
   width: calc(58% - 28px);
   height: 100%;
-}
-.graph-ui > div {
-  width: 100%;
-  height: 33.33%;
-  border-radius: 20px;
-}
-
-.graph-ui div.intro {
-  height: 100% !important;
-  background-size: cover;
-
-  color: #fff;
-
-  position: relative;
-  overflow: hidden;
-}
-.graph-ui div.intro .slide-box {
-  padding: 40px 55px;
-  height: 100%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  _border: 8px solid #eee;
-  border-radius: 20px;
-  _box-shadow: inset 2px 2px 4px #133cce86, inset -2px -2px 4px #133cce86;
-}
-.graph-ui div.intro .slide-box:nth-child(1) {
-  background: url(/schedule/img/bg1.svg) no-repeat center center;
-  background-size: cover;
-}
-.graph-ui div.intro .slide-box:nth-child(2) {
-  background: url(/schedule/img/bg2.svg) no-repeat center center;
-  background-size: cover;
-}
-.graph-ui div.intro .slide-box:nth-child(3) {
-  background: url(/schedule/img/bg3.svg) no-repeat center center;
-  background-size: cover;
-}
-.graph-ui div.intro .slide-box:nth-child(4) {
-  background: url(/schedule/img/bg4.svg) no-repeat center center;
-  background-size: cover;
-}
-
-.graph-ui div.intro h2 {
-  font-size: 28px;
-  text-transform: uppercase;
-  _font-weight: 700;
-  transform: translateY(25px);
-  opacity: 0;
-}
-.graph-ui div.intro p {
-  _font-size: 16px;
-  _font-weight: 400;
-  transform: translateY(25px);
-  opacity: 0;
-}
-.graph-ui div.intro a {
-  color: #fff;
-  border: 1px solid #fff;
-  text-align: center;
-  padding: 7px 0;
-  margin-top: 10px;
-  width: 100px;
-  transition: all 0.3s;
-  font-size: 12px;
-  transform: translateY(25px);
-  opacity: 0;
-}
-.graph-ui div.intro a:hover {
-  color: #13c7a3;
-  background: #fff;
-}
-.graph-ui div.intro i {
-  position: absolute;
-  font-size: 150px;
-  right: -20px;
-  top: -5px;
-  _opacity: 0.3;
-  color: #ebecf0;
-}
-
-.graph-ui div.intro .slide-box.active h2 {
-  animation: fade-up-01 0.5s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0.3s;
-}
-.graph-ui div.intro .slide-box.active p {
-  animation: fade-up-01 0.5s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0.8s;
-}
-.graph-ui div.intro .slide-box.active a {
-  animation: fade-up-01 0.5s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 1.3s;
-}
-
-.graph-ui > div.each-pofol {
-  padding: 20px 0;
-  _border: 0;
-}
-.graph-ui > div.each-pofol > div {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-}
-.graph-ui .each-pofol .each-title {
-  width: 100%;
-  height: 25%;
-}
-.graph-ui .each-pofol .each-title h3 {
-  font-weight: 400;
-  color: #666;
-}
-.graph-ui .each-pofol .each-graph {
-  width: 100%;
-  height: 75%;
-  display: flex;
-  justify-content: space-between;
-}
-.graph-ui .each-pofol .each-graph div {
-  height: 100%;
-  _border: 1px solid #f7f7f7;
-  border-radius: 20px;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-  _box-shadow: 0px 0px 3px #babecc;
-  background: #ebecf0;
-  width: calc(25% - 10.5px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  transition: all 0.3s;
-}
-
-.graph-ui .each-pofol .each-graph div b {
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 400;
-}
-.graph-ui .each-pofol .each-graph div i {
-  position: absolute;
-  font-size: 45px;
-  opacity: 0.1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  color: #13c7a3;
-}
-.graph-ui .each-pofol .each-graph div i.fa-database {
-  color: #13c7a3;
-}
-.graph-ui .each-pofol .each-graph div i.fa-thermometer-half {
-  color: #0078ff;
-}
-.graph-ui .each-pofol .each-graph div i.fa-clone {
-  color: #8933ff;
-}
-.graph-ui .each-pofol .each-graph div i.fa-bar-chart-o {
-  color: #bd5ed9;
+  > div {
+    width: 100%;
+    height: 33.33%;
+    border-radius: 20px;
+    &.intro {
+      height: 100% !important;
+      background-size: cover;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      .slide-box {
+        padding: 40px 55px;
+        height: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 20px;
+        &.active h2 {
+          animation: fade-up-01 0.5s 1;
+          animation-fill-mode: forwards;
+          animation-delay: 0.3s;
+        }
+        &.active p {
+          animation: fade-up-01 0.5s 1;
+          animation-fill-mode: forwards;
+          animation-delay: 0.8s;
+        }
+        &.active a {
+          animation: fade-up-01 0.5s 1;
+          animation-fill-mode: forwards;
+          animation-delay: 1.3s;
+        }
+      }
+      @for $i from 1 to 5 {
+        &:nth-child($i) {
+          background: url(/schedule/img/bg#{$i}.svg) no-repeat center center;
+          background-size: cover;
+        }
+      }
+      h2 {
+        font-size: 28px;
+        text-transform: uppercase;
+        _font-weight: 700;
+        transform: translateY(25px);
+        opacity: 0;
+      }
+      p {
+        _font-size: 16px;
+        _font-weight: 400;
+        transform: translateY(25px);
+        opacity: 0;
+      }
+      a {
+        color: #fff;
+        border: 1px solid #fff;
+        text-align: center;
+        padding: 7px 0;
+        margin-top: 10px;
+        width: 100px;
+        transition: all 0.3s;
+        font-size: 12px;
+        transform: translateY(25px);
+        opacity: 0;
+        &:hover {
+          color: #13c7a3;
+          background: #fff;
+        }
+      }
+      i {
+        position: absolute;
+        font-size: 150px;
+        right: -20px;
+        top: -5px;
+        _opacity: 0.3;
+        color: #ebecf0;
+      }
+    }
+    &.each-pofol {
+      padding: 20px 0;
+      _border: 0;
+      > div {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+    }
+  }
+  .each-pofol {
+    .each-title {
+      width: 100%;
+      height: 25%;
+      h3 {
+        font-weight: 400;
+        color: #666;
+      }
+    }
+    .each-graph {
+      width: 100%;
+      height: 75%;
+      display: flex;
+      justify-content: space-between;
+      div {
+        height: 100%;
+        _border: 1px solid #f7f7f7;
+        border-radius: 20px;
+        @include box-inset();
+        _box-shadow: 0px 0px 3px #babecc;
+        background: $bg-color;
+        width: calc(25% - 10.5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        transition: all 0.3s;
+        b {
+          margin-top: 10px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        i {
+          position: absolute;
+          font-size: 45px;
+          opacity: 0.1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: none;
+          color: $main-color1;
+          &.fa-database {
+            color: $main-color1;
+          }
+          &.fa-thermometer-half {
+            color: $main-color2;
+          }
+          &.fa-clone {
+            color: $sub-color1;
+          }
+          &.fa-bar-chart-o {
+            color: $sub-color2;
+          }
+        }
+      }
+    }
+  }
 }
 
 .graph-ui > div.total-pofol {
