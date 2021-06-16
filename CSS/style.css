@@ -117,8 +117,8 @@ header {
   width: 7%;
   height: 100%;
   /* background: linear-gradient(0deg, #989 0%, #989 100%); */
-  background: linear-gradient(0deg, #13c7a3 0%, #0078ff 100%);
-  _background: F0EEEF;
+  _background: linear-gradient(0deg, #13c7a3 0%, #0078ff 100%);
+  background: F0EEEF;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -155,6 +155,7 @@ header h2 img {
 header a {
   display: block;
   color: #bd5ed9;
+  
 
   /* text-shadow: 0px 0px 10px #babecc; */
   /* background: linear-gradient(145deg, #989 0%, #989 100%);
@@ -172,16 +173,36 @@ header .gnb li {
 }
 header .gnb li span {
   position: absolute;
-  background: transparent
+  /* background: transparent
     url("data:image/svg+xml;base64,PHN2ZyBpZD0i66CI7J207Ja0XzEiIGRhdGEtbmFtZT0i66CI7J207Ja0IDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDM1IDM1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzUsNy41NWgwVi4xOGE3LjYsNy42LDAsMCwxLTcuNCw3LjM3SDE0LjJhMTAsMTAsMCwxLDAsMCwyMEgyNy41NUE3LjYsNy42LDAsMCwxLDM1LDM0LjY3aDBWMjcuNTFoMFoiLz48L3N2Zz4=")
-    no-repeat center center;
-  width: 0;
+    no-repeat center center; */
+  width: 100%;
   height: 100%;
-  bottom: 0;
-  right: 0;
-  _clip-path: 0;
+  top:0;
+  background: linear-gradient(0deg, #13c7a3 0%, #0078ff 100%);
+  clip-path:url(#path);
+  /* clip-path: path(
+   "M40,.07A8.7,8.7,0,0,1,31.43,8.6H15.93a11.56,11.56,0,0,0,0,23.12H31.4C36,31.82,40,35.47,40,40Z"
+  ); */
   transition: all 0.4s;
+  /* transform: scale(2); */
 }
+
+#svg {
+  position: absolute;
+  max-height: 100px;
+  width: 100%;
+  margin: auto;
+  display: block;
+  top:0;
+}
+#path{
+  transform: scale(0.025,0.025);
+}
+/* "M40,.07A8.7,8.7,0,0,1,31.43,8.6H15.93a11.56,11.56,0,0,0,0,23.12H31.4C36,31.82,40,35.47,40,40Z" */
+/* "M1.0,0A0.217,0.217,0,0,1,0.786,0.213 H 0.4 A 0.289, 0.289,0,0,0,0.4,0.791 H 0.785 A 0.215,0.215,0,0,1,1.0,1.0Z" */
+/* "M100,0 A 21.7 ,21.7%,0,0,1,78.6%,21.3% H 40% A 28.9%,28.9%,0,0,0,40%,79.1% H 78.5% A 21.5%,21.5%,0,0,1,100%,100%Z" */
+
 header .gnb li.active span,
 header .gnb li:hover span {
   width: 100%;
@@ -231,6 +252,7 @@ header .gnb a {
   justify-content: center;
   position: relative;
   z-index: 999;
+
 }
 /* header .gnb li.active span.nav-top,
 header .gnb li:hover span.nav-top {
