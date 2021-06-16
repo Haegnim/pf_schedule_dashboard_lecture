@@ -1,12 +1,8 @@
+@charset "UTF-8";
 /* Wrapper Style Code  */
-
 @font-face {
   font-family: "todo-logo-for-lecture";
-  src: url("/schedule/font/todo-logo-for-lecture-Regular.eot")
-      format("embedded-opentype"),
-    url("/schedule/font/todo-logo-for-lecture-Regular.woff2") format("woff2"),
-    url("/schedule/font/todo-logo-for-lecture-Regular.woff") format("woff"),
-    url("/schedule/font/todo-logo-for-lecture-Regular.ttf") format("truetype");
+  src: url("/schedule/font/todo-logo-for-lecture-Regular.eot") format("embedded-opentype"), url("/schedule/font/todo-logo-for-lecture-Regular.woff2") format("woff2"), url("/schedule/font/todo-logo-for-lecture-Regular.woff") format("woff"), url("/schedule/font/todo-logo-for-lecture-Regular.ttf") format("truetype");
 }
 .custom-font {
   display: inline-block;
@@ -19,26 +15,30 @@
 }
 
 .logo:before {
-  content: "\0530";
+  content: "԰";
   font-size: 60px;
   -webkit-font-smoothing: antialiased;
 }
+
 .logo2:before {
-  content: "\0532";
+  content: "Բ";
 }
+
 /* .custom-font:before {
   content: "\0532";
 } */
-
 .fa-database {
-  color: #989;
+  color: #13c7a3;
 }
+
 .fa-thermometer-half {
-  color: #989;
+  color: #0078ff;
 }
+
 .fa-clone {
   color: #8933ff;
 }
+
 .fa-bar-chart-o {
   color: #bd5ed9;
 }
@@ -47,41 +47,19 @@
         {r: 0, g: 120, b: 255},
         {r: 137, g: 51, b: 255},
         {r: 189, g: 94, b: 217} */
-
 .wrapper {
   width: 100%;
   height: 100vh;
-  background: #ebecf0;
-  /* background: linear-gradient(
-      135deg,
-      rgba(19, 199, 163, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(
-      45deg,
-      rgba(137, 51, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(
-      225deg,
-      rgba(0, 120, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(
-      315deg,
-      rgba(189, 94, 217, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ); */
+  background: linear-gradient(135deg, #13c7a3 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(45deg, #8933ff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(225deg, #0078ff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(315deg, #bd5ed9 0%, rgba(255, 255, 255, 0) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 796px;
 }
-.wrapper.active {
+.wrapper .active {
   width: 100%;
   height: 100vh;
-  background: #eee;
-  _background: #eee;
+  background: #ebecf0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,15 +77,13 @@
     rgba(253, 247, 249, 1) 100%
   ); */
   background: #ebecf0;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
-
-  /* box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 60%); */
-
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.6);
   border-radius: 30px;
   display: flex;
   padding: 12px;
   justify-content: space-between;
 }
+
 .dashboard > * {
   border-radius: 20px;
 }
@@ -116,7 +92,6 @@
 header {
   width: 7%;
   height: 100%;
-  /* background: linear-gradient(0deg, #989 0%, #989 100%); */
   background: linear-gradient(0deg, #13c7a3 0%, #0078ff 100%);
   _background: F0EEEF;
   display: flex;
@@ -124,133 +99,39 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
   position: relative;
-  /* border: 8px solid #fff; */
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
+  border: 8px solid #eee;
   border-radius: 20px;
   transition: all 0.3s;
-  position: relative;
 }
-/* header:after {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 90%;
-  height: 99%;
-  border: 4px solid #fff;
-  border-radius: 20px;
-  position: absolute;
-} */
-/* header:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
-} */
+header:hover {
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
+}
 header h2 {
   width: 30px;
   height: auto;
-  z-index: 999;
 }
 header h2 img {
   width: 100%;
 }
 header a {
   display: block;
-  color: #bd5ed9;
-
-  /* text-shadow: 0px 0px 10px #babecc; */
-  /* background: linear-gradient(145deg, #989 0%, #989 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  color: #fff;
 }
 header .gnb {
   width: 100%;
 }
-
-/* header hover effect style code  */
-header .gnb li {
-  position: relative;
-  /* background: #fff; */
-}
-header .gnb li span {
-  position: absolute;
-  background: transparent
-    url("data:image/svg+xml;base64,PHN2ZyBpZD0i66CI7J207Ja0XzEiIGRhdGEtbmFtZT0i66CI7J207Ja0IDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDM1IDM1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzUsNy41NWgwVi4xOGE3LjYsNy42LDAsMCwxLTcuNCw3LjM3SDE0LjJhMTAsMTAsMCwxLDAsMCwyMEgyNy41NUE3LjYsNy42LDAsMCwxLDM1LDM0LjY3aDBWMjcuNTFoMFoiLz48L3N2Zz4=")
-    no-repeat center center;
-  width: 0;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-  _clip-path: 0;
-  transition: all 0.4s;
-}
-header .gnb li.active span,
-header .gnb li:hover span {
-  width: 100%;
-}
-/* header .gnb li span.nav-top {
-  width: 100%;
-  height: 20%;
-  top: 0;
-  _right: 4px;
-  background: #ebecf0;
-  border-radius: 0 0 0 0;
-  transition: all 0.4s;
-}
-header .gnb li span.nav-mid {
-  width: 100%;
-  height: 60%;
-  background: #ebecf0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-header .gnb li span.nav-effect {
-  background: #fff;
-  right: 0;
-  width: 0;
-  height: 60%;
-  border-radius: 30px 0 0 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.4s;
-}
-header .gnb li span.nav-bottom {
-  width: 100%;
-  height: 20%;
-  bottom: 0;
-  _right: 4px;
-  background: #ebecf0;
-  border-radius: 0 0 0 0;
-  transition: all 0.4s;
-} */
-
 header .gnb a {
   width: 100%;
-  padding: 32px 0;
+  padding: 15px 0;
   font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 999;
 }
-/* header .gnb li.active span.nav-top,
-header .gnb li:hover span.nav-top {
-  border-radius: 0 0 20px 0;
-}
-header .gnb li.active span.nav-effect,
-header .gnb li:hover span.nav-effect {
-  width: 83%;
-}
-header .gnb li.active span.nav-bottom,
-header .gnb li:hover span.nav-bottom {
-  border-radius: 0 20px 0 0;
-}
-header .gnb li.active a,
-header .gnb li:hover a {
-  color: tomato;
-} */
 header .sign-out {
   font-size: 20px;
-  z-index: 999;
 }
 header #btn {
   width: 34px;
@@ -260,14 +141,19 @@ header #btn {
   border: none;
   background: #ebecf0;
   box-shadow: inset 1px 1px 2px #babecc;
-  z-index: 999;
+}
+header #btn:hover span {
+  transform: scale(0.8, 0.8);
+}
+header #btn:hover span.active {
+  top: 18px;
 }
 header #btn > span {
-  content: "";
+  _content: "";
   display: block;
   width: 26px;
   height: 26px;
-  background: #989;
+  background: #13c7a3;
   border-radius: 14px;
   margin-left: 50%;
   margin-top: 50%;
@@ -275,12 +161,6 @@ header #btn > span {
   left: -13px;
   position: relative;
   transition: all 0.4s;
-}
-header #btn:hover span {
-  transform: scale(0.8, 0.8);
-}
-header #btn span.active {
-  top: 18px;
 }
 
 /* Mobile Menu Icon Style code  */
@@ -322,13 +202,10 @@ header #btn span.active {
   height: 33.33%;
   border-radius: 20px;
 }
-
 .graph-ui div.intro {
   height: 100% !important;
   background-size: cover;
-
   color: #fff;
-
   position: relative;
   overflow: hidden;
 }
@@ -339,28 +216,49 @@ header #btn span.active {
   display: flex;
   flex-direction: column;
   position: relative;
-  _border: 8px solid #eee;
   border-radius: 20px;
-  _box-shadow: inset 2px 2px 4px #133cce86, inset -2px -2px 4px #133cce86;
 }
-.graph-ui div.intro .slide-box:nth-child(1) {
+.graph-ui div.intro .slide-box .graph-ui div.intro .slide-box:nth-child(1) {
   /* background: #f1c3ff; */
   background: url(/schedule/img/bg1.svg) no-repeat center center;
   background-size: cover;
 }
-.graph-ui div.intro .slide-box:nth-child(2) {
+.graph-ui div.intro .slide-box .graph-ui div.intro .slide-box:nth-child(2) {
   background: url(/schedule/img/bg2.svg) no-repeat center center;
   background-size: cover;
 }
-.graph-ui div.intro .slide-box:nth-child(3) {
+.graph-ui div.intro .slide-box .graph-ui div.intro .slide-box:nth-child(3) {
   background: url(/schedule/img/bg3.svg) no-repeat center center;
   background-size: cover;
 }
-.graph-ui div.intro .slide-box:nth-child(4) {
+.graph-ui div.intro .slide-box .graph-ui div.intro .slide-box:nth-child(4) {
   background: url(/schedule/img/bg4.svg) no-repeat center center;
   background-size: cover;
 }
-
+.graph-ui div.intro .slide-box.active h2 {
+  -webkit-animation: fade-up-01 0.5s 1;
+          animation: fade-up-01 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.graph-ui div.intro .slide-box.active p {
+  -webkit-animation: fade-up-01 0.5s 1;
+          animation: fade-up-01 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.graph-ui div.intro .slide-box.active a {
+  -webkit-animation: fade-up-01 0.5s 1;
+          animation: fade-up-01 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
 .graph-ui div.intro h2 {
   font-size: 28px;
   text-transform: uppercase;
@@ -387,7 +285,7 @@ header #btn span.active {
   opacity: 0;
 }
 .graph-ui div.intro a:hover {
-  color: #989;
+  color: #13c7a3;
   background: #fff;
 }
 .graph-ui div.intro i {
@@ -398,28 +296,11 @@ header #btn span.active {
   _opacity: 0.3;
   color: #ebecf0;
 }
-
-.graph-ui div.intro .slide-box.active h2 {
-  animation: fade-up-01 0.5s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0.3s;
-}
-.graph-ui div.intro .slide-box.active p {
-  animation: fade-up-01 0.5s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0.8s;
-}
-.graph-ui div.intro .slide-box.active a {
-  animation: fade-up-01 0.5s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 1.3s;
-}
-
-.graph-ui > div.each-pofol {
+.graph-ui div.each-pofol {
   padding: 20px 0;
   _border: 0;
 }
-.graph-ui > div.each-pofol > div {
+.graph-ui div.each-pofol div {
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -453,7 +334,6 @@ header #btn span.active {
   position: relative;
   transition: all 0.3s;
 }
-
 .graph-ui .each-pofol .each-graph div b {
   margin-top: 10px;
   font-size: 12px;
@@ -467,13 +347,13 @@ header #btn span.active {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  color: #989;
+  color: #13c7a3;
 }
 .graph-ui .each-pofol .each-graph div i.fa-database {
-  color: #989;
+  color: #13c7a3;
 }
 .graph-ui .each-pofol .each-graph div i.fa-thermometer-half {
-  color: #989;
+  color: #0078ff;
 }
 .graph-ui .each-pofol .each-graph div i.fa-clone {
   color: #8933ff;
@@ -481,41 +361,23 @@ header #btn span.active {
 .graph-ui .each-pofol .each-graph div i.fa-bar-chart-o {
   color: #bd5ed9;
 }
-
-.graph-ui > div.total-pofol {
+.graph-ui .each-pofol .each-graph div.total-pofol {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   background: #ebecf0;
   display: flex;
   transition: all 0.3s;
 }
-.graph-ui > div.total-pofol > div {
+.graph-ui .each-pofol .each-graph div.total-pofol > div {
   height: 100%;
 }
-.graph-ui > div.total-pofol div.total-chart {
+.graph-ui .each-pofol .each-graph div.total-pofol > div.total-chart {
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-/* .graph-ui > div.total-pofol div.total-chart h3 {
-  font-weight: 300;
-  margin-top: 15px;
-}
-.graph-ui > div.total-pofol div.total-txt {
-  width: 60%;
-  margin-top: 15px;
-}
-/* div.total-chart {
-  padding: 10px 0;
-} */
-/* div.total-chart .percent {
-  line-height: 0;
-  font-size: 22px;
-  font-weight: 600;
-  color: #989;
-} */
-div.total-chart .chart {
+.graph-ui .each-pofol .each-graph div.total-pofol > div.total-chart .chart {
   width: 100%;
   height: 100%;
   display: flex;
@@ -523,21 +385,25 @@ div.total-chart .chart {
   justify-content: center;
   flex-direction: column;
 }
-
-div.total-chart .percent {
-  line-height: 0;
-  font-size: 22px;
-  font-weight: 600;
-  color: #989;
-}
-div.total-chart .chart canvas {
+.graph-ui .each-pofol .each-graph div.total-pofol > div.total-chart .chart canvas {
   width: auto !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.graph-ui .each-pofol .each-graph div.total-pofol > div.total-chart .percent {
+  line-height: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #13c7a3;
+}
+.graph-ui .each-pofol .each-graph div.total-pofol > div.total-chart h3 {
+  font-weight: 300;
+  margin-top: 15px;
+}
 
 div.total-txt {
+  width: 60%;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
@@ -560,31 +426,22 @@ div.total-txt button {
   background: #ebecf0;
   padding: 10px 0px;
   border-radius: 25px;
-  _color: #989;
   width: 150px;
   box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
   transition: all 0.3s;
 }
 div.total-txt button:hover {
-  box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #ffffff;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
 }
 div.total-txt button:active {
   background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
-.graph-ui > div.total-pofol div.total-chart h3 {
-  font-weight: 300;
-  margin-top: 15px;
-}
-.graph-ui > div.total-pofol div.total-txt {
-  width: 60%;
-  _margin-top: 15px;
-}
+
 /* Table-ui Contents Style Code */
 .table-ui {
   width: 35%;
   height: 100%;
-  _background: #222;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -592,25 +449,18 @@ div.total-txt button:active {
 .table-ui > div {
   width: 100%;
   height: calc(50% - 8.5px);
-  _border: 1px solid #f7f7f7;
   border-radius: 20px;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   background: #ebecf0;
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
 }
-/* .table-ui > div:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
-} */
 .table-ui > div::-webkit-scrollbar {
   display: none;
 }
-/* .table-ui>div.each-contents{margin-top: 10px;}
-.table-ui .new-update{} */
-
 .table-ui .tit-box,
-.each-btns {
+.table-ui each-btns {
   width: 100%;
   height: auto;
   border-bottom: 1px solid #babecc;
@@ -627,43 +477,29 @@ div.total-txt button:active {
 .table-ui .tit-box a:hover {
   text-decoration: underline;
 }
+.table-ui .con-details {
+  margin-top: 5px;
+}
 .table-ui .con-details li {
   display: flex;
   padding: 5px 0;
   align-items: center;
 }
-.table-ui .con-details {
-  margin-top: 5px;
-}
 .table-ui .con-details li i {
   width: 50px;
   height: 50px;
-  _border: 1px solid #babecc;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   font-size: 20px;
-  _color: #989;
   margin-right: 10px;
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
-}
-/* .table-ui .con-txt {
-  width: 100%;
-} */
-.table-ui .each-contents .con-details li i {
-  _color: #989;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
 }
 .table-ui .con-txt p {
   color: #333;
   line-height: 1.4;
 }
-/* .table-ui .new-update .con-txt p a {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: block;
-} */
 .table-ui .con-txt p:hover {
   text-decoration: underline;
 }
@@ -680,23 +516,23 @@ div.total-txt button:active {
   font-weight: 400;
   border: none;
   border-radius: 20px;
-  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
   text-align: center;
   transition: all 0.4s;
 }
-.table-ui .each-contents .each-btns button.active {
-  _color: #989;
-  background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
-  border: none;
-  _text-shadow: inset 1px 1px 2px #989, inset -1px -1px 2px #989;
+.table-ui .each-contents .each-btns button:hover {
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
 }
-
-.graph-ui .title-box {
+.table-ui .each-contents .each-btns button:active {
+  background: #fefefe;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  border: none;
+}
+.table-ui .title-box {
   width: 100%;
   height: auto;
 }
-.graph-ui .title-box h3 {
+.table-ui .title-box h3 {
   font-size: 20px;
   font-weight: 400;
   padding-bottom: 10px;
@@ -704,63 +540,56 @@ div.total-txt button:active {
   border-bottom: 1px solid #babecc;
   margin-bottom: 10px;
 }
-
-.graph-ui > div.input-box {
+.table-ui > div.input-box {
   width: 100%;
   height: calc(66.66% - 12px);
   border-radius: 15px;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   background: #ebecf0;
   display: flex;
   margin-top: 12px;
   flex-direction: column;
   padding: 20px;
 }
-
-.graph-ui .input-box .input-tit {
+.table-ui > div.input-box .input-tit {
   display: flex;
   justify-content: space-between;
 }
-
-.graph-ui .input-box .input-tit input {
+.table-ui > div.input-box .input-tit input {
   width: calc(65% - 12px);
   padding: 15px;
   border: none;
   border-radius: 25px;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
   background: #ebecf0;
   transition: all 0.3s;
 }
-.graph-ui .input-box .input-tit input:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
-    -1px -1px 4px #72afff;
+.table-ui > div.input-box .input-tit input:hover {
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
 }
-.graph-ui .input-box .input-tit input:focus {
+.table-ui > div.input-box .input-tit input:focus {
   background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
-    inset 1px 1px 2px #72afff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
-.graph-ui .input-box .input-tit select {
+.table-ui > div.input-box .input-tit select {
   width: 35%;
   border: none;
   outline: 0;
   padding: 10px 15px;
   border-radius: 20px;
   background: #ebecf0;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
   color: #333;
   transition: all 0.3s;
 }
-.graph-ui .input-box .input-tit select:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
-    -1px -1px 4px #72afff;
+.table-ui > div.input-box .input-tit select:hover {
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
 }
-.graph-ui .input-box .input-tit select:focus {
+.table-ui > div.input-box .input-tit select:focus {
   background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
-    inset 1px 1px 2px #72afff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
-.graph-ui .input-con textarea {
+.table-ui .input-con textarea {
   width: 100%;
   border: none;
   outline: 0;
@@ -772,73 +601,78 @@ div.total-txt button:active {
   color: #333;
   background: #ebecf0;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
-  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
   transition: all 0.3s;
 }
-.graph-ui .input-con textarea:hover {
-  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff, 2px 2px 5px #72afff,
-    -1px -1px 4px #72afff;
+.table-ui .input-con textarea:hover {
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
 }
-.graph-ui .input-con textarea:focus {
+.table-ui .input-con textarea:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   background: #fefefe;
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff,
-    inset 1px 1px 2px #72afff;
 }
-.graph-ui .btns {
+.table-ui btns {
   width: 100%;
   height: auto;
   text-align: center;
   margin-top: 12px;
 }
-.graph-ui .btns button,
-#updateBtn {
+.table-ui btns button,
+.table-ui btns #updateBtn {
   outline: 0;
   border: none;
   border-radius: 20px;
   background: #ebecf0;
-  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
+  box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #fff;
   color: #333;
   padding: 10px 25px;
   transition: all 0.3s;
 }
-.graph-ui .btns button:hover {
+.table-ui btns button:hover {
   color: #fff;
   font-weight: bold;
-  background: #989;
+  background: #0078ff;
   box-shadow: inset 1px 1px 2px #0059ff, inset -1px -1px 2px #0099ff;
 }
+
 /* ----------------------------  */
 /* 3. 모달 박스 css 작성 => index.js 135번줄 */
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 999;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  _background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(255, 250, 250, 0.7); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(255, 250, 250, 0.7);
+  /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fafafa;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 10% auto;
+  /* 15% from the top and centered */
   padding: 25px;
   border-radius: 20px;
-  box-shadow: inset 1px 1px 2px #fff, inset 1px 1px 2px #babecc,
-    0px 10px 20px #babecc;
+  box-shadow: inset 1px 1px 2px #fff, inset 1px 1px 2px #babecc, 0px 10px 20px #babecc;
   border: 6px solid #fff;
-  width: 40%; /* Could be more or less, depending on screen size */
+  width: 40%;
+  /* Could be more or less, depending on screen size */
   _height: 20%;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-
 .modal-content .rate-form {
   width: 100%;
   height: auto;
@@ -850,7 +684,6 @@ div.total-txt button:active {
   width: auto;
   height: calc(25% - 5px);
   display: flex;
-  _padding: 0px 10px;
   justify-content: space-between;
   margin-bottom: 12px;
 }
@@ -872,12 +705,11 @@ div.total-txt button:active {
   outline: 0;
   border-radius: 22px;
   background: #fff;
-  box-shadow: inset 2px 2px 5px #babecc, inset 2px 2px 5px #fff,
-    3px 3px 4px #fff, 3px 3px 6px #babecc;
+  box-shadow: inset 2px 2px 5px #babecc, inset 2px 2px 5px #fff, 3px 3px 4px #fff, 3px 3px 6px #babecc;
   width: calc(35% - 12px);
 }
 .modal-content .rate-form p input:focus {
-  border: 1px solid #8933ff;
+  border: 1px solid #13c7a3;
 }
 
 #updateBtn {
@@ -918,7 +750,6 @@ div.total-txt button:active {
 .graph-ui.detail .each-pofol .each-graph div i {
   display: block;
 }
-
 .graph-ui.detail .detail-board {
   width: 100%;
   height: calc(60% - 10px);
@@ -932,13 +763,12 @@ div.total-txt button:active {
 .graph-ui.detail .detail-board::-webkit-scrollbar {
   display: none;
 }
-.detail-board .board-btns {
+.graph-ui.detail .detail-board .board-btns {
   width: 100%;
   height: auto;
   display: flex;
 }
-.detail-board .board-btns a,
-.board-table-btns .more-btn {
+.graph-ui.detail .detail-board .board-btns a {
   border: none;
   background: #ebecf0;
   padding: 10px 0px;
@@ -949,11 +779,8 @@ div.total-txt button:active {
   transition: all 0.3s;
   text-align: center;
 }
-.detail-board .board-btns a:hover,
-.detail-board .board-btns a:active,
-.board-table-btns .more-btn:hover {
-  background: #fefefe;
-  box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #fff;
+.graph-ui.detail .detail-board .board-btns a:hover {
+  box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
 }
 
 .board-table {
@@ -971,7 +798,7 @@ div.total-txt button:active {
   display: flex;
 }
 .board-table li.board-title span {
-  background: #989;
+  background: #13c7a3;
   color: #fff;
   border: 1px solid #fff;
   padding: 5px 0;
@@ -981,65 +808,52 @@ div.total-txt button:active {
 }
 .board-table li.board-contents span {
   color: #555;
-  padding: 10px 10px;
+  padding: 5px 10px;
 }
-.board-table li:nth-child(odd) {
-  background: #fff;
-}
-.board-table li.board-contents span:nth-child(3) {
-  justify-content: flex-start;
-}
-.board-table li.board-contents span a {
-  color: #555;
-}
-.board-table li.board-contents span a:hover {
+.board-table li.board-contents span:hover {
   text-decoration: underline;
 }
 .board-table li.board-contents span a.del-btn {
   border: none;
-  background: #989;
+  background: #13c7a3;
   color: #fff;
   padding: 3px 10px;
   font-size: 12px;
 }
-.board-table li.board-contents span a.del-btn.icon {
-  display: none;
-}
 .board-table li.board-contents button {
   border: none;
-  background: #989;
+  background: #13c7a3;
   color: #fff;
   padding: 5px 10px;
   font-size: 12px;
 }
-
 .board-table li span {
   padding: 5px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .board-table li span:nth-child(1) {
   width: 10%;
 }
+
 .board-table li span:nth-child(2) {
   width: 20%;
 }
+
 .board-table li span:nth-child(3) {
   width: 40%;
 }
+
 .board-table li span:nth-child(4) {
   width: 20%;
 }
+
 .board-table li span:nth-child(5) {
   width: 10%;
 }
 
-.board-table-btns {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-}
 /* The Close Button */
 .close {
   color: #aaa;
@@ -1054,9 +868,7 @@ div.total-txt button:active {
   border-radius: 18px;
   _margin-bottom: 20px;
 }
-
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   _border: 1px solid #333;
   box-shadow: 2px 2px 5px #babecc, 2px 2px 5px #fff;
   color: #333;

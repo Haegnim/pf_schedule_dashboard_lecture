@@ -69,7 +69,7 @@ $(function(){
     $('.total-chart .chart').easyPieChart({
         easing: 'easeOutElastic',
         delay: 3000,
-        barColor: '#13C7A3',
+        barColor: '#0078FF',
         trackColor: '#fff',
         scaleColor: false,
         lineWidth: 20,
@@ -104,7 +104,7 @@ $(function(){
                 $('.total-chart .chart').easyPieChart({
                     easing: 'easeOutElastic',
                     delay: 3000,
-                    barColor: '#13C7A3',
+                    barColor: '#0078FF',
                     trackColor: '#bbb',
                     scaleColor: false,
                     lineWidth: 18,
@@ -137,10 +137,10 @@ $(function(){
     //
 
         const poData = [
-            {poKind:'.db-pofol', bColor:'#13C7A3', tColor:'#fff'},
+            {poKind:'.db-pofol', bColor:'#0078FF', tColor:'#fff'},
             {poKind:'.api-pofol', bColor:'#0078FF', tColor:'#fff'},
-            {poKind:'.renewal-pofol', bColor:'#8933FF', tColor:'#fff'},
-            {poKind:'.panning-pofol', bColor:'#BD5ED9', tColor:'#fff'},
+            {poKind:'.renewal-pofol', bColor:'#0078FF', tColor:'#fff'},
+            {poKind:'.panning-pofol', bColor:'#0078FF', tColor:'#fff'},
             //{poKind:'.total-chart', bColor:'#BD5ED9', tColor:'#e6e6e6'}
         ];
 
@@ -207,7 +207,7 @@ const jsonDom = document.querySelector('#con-details');
 
 function calltabs(n){
     const result = jsonObj.filter(value => {
-      return value.sp_cate == n;
+    return value.sp_cate == n;
     });
     for(let i = 0; i < result.length; i++){
       jsonDom.innerHTML += `

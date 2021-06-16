@@ -30,6 +30,8 @@
 
     <!-- Main CSS Link  -->
     <link rel="stylesheet" href="/schedule/css/style.css?">
+    <!-- <link rel="stylesheet" href="/schedule/css/scss_ex.css?"> -->
+
 
     <!-- Animation CSS Link  -->
     <link rel="stylesheet" href="/schedule/css/animation.css?">
