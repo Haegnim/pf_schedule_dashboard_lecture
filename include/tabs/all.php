@@ -1,8 +1,14 @@
 <?php
+    $tabIdx = $_GET['key'];
     include $_SERVER['DOCUMENT_ROOT']."/connect/db_conn.php";
-    $sql = "SELECT * FROM SP_table ORDER BY SP_idx DESC";
-    $board_result = mysqli_query($dbConn, $sql);
 
+
+    if($tabIdx == "all"){
+      $sql = "SELECT * FROM SP_table ORDER BY SP_idx DESC";
+    }else{
+      $sql = "SELECT * FROM SP_table WHERE SP_cate = '{$tabIdx}' ORDER BY SP_idx DESC LIMIT 5";
+    }
+    $board_result = mysqli_query($dbConn, $sql);
     while($board_row=mysqli_fetch_array($board_result)){
       $board_row_idx = $board_row['SP_idx'];
       $board_row_cate = $board_row['SP_cate'];

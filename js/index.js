@@ -21,13 +21,7 @@ conTxt.forEach(element => {
     element.textContent = cutTxt;
 });
 
-//Mobile Menu Activate
-const mobileMenu = document.querySelector('.mobile-menu');
 
-mobileMenu.onclick = () => {
-    mobileMenu.classList.toggle('active');
-
-}
 
 const btn = document.querySelector('#btn');
 
@@ -167,6 +161,26 @@ $(function(){
         }
         startPie();    
 
+    });
+    //Mobile Menu Activate
+    // const mobileMenu = document.querySelector('.mobile-menu');
+
+    // mobileMenu.onclick = () => {
+    // mobileMenu.classList.toggle('active');
+
+
+    //}
+    $('.mobile-menu').click(function(){
+        $(this).toggleClass("active");
+
+        if($(this).hasClass("active")){
+            $(this).next().removeClass("hide")
+            $(this).next().addClass("show")
+
+        }else{
+            $(this).next().removeClass("show")
+            $(this).next().addClass("hide")
+        }
     });
 });
 //Open Modal for

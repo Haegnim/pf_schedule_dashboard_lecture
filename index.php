@@ -20,6 +20,8 @@
     <!-- Google Font Link  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     
     <!-- Reset CSS Link -->
     <link rel="stylesheet" href="/schedule/css/reset.css?">
@@ -39,14 +41,7 @@
     <!-- Media Query CSS Link -->
     <link rel="stylesheet" href="/schedule/css/media.css?ss">
 
-    <script defer>
-        const hostname = window.location.href;
-        console.log(hostname);
-        //console.log(hostname);
-        if(hostname == 'http://haegnim.dothome.co.kr/schedule/'){
-            window.location.replace('http://haegnim.dothome.co.kr/schedule/index.php?key=database')
-        }
-    </script>
+    
 </head>
 <body>
     

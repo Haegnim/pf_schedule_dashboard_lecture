@@ -29,6 +29,8 @@ graph-ui .each-pofol .each-graph div:hover {
   box-shadow: inset 3px 3px 4px #d9d9d9, inset -3px -3px 4px #ffffff;
 }
 
+font-family: 'EB Garamond', serif;
+
 header .gnb li span {
    position: absolute;
    background: transparent

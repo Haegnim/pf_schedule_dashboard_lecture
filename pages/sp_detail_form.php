@@ -21,6 +21,8 @@
     <!-- Google Font Link  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     
     <!-- Reset CSS Link -->
     <link rel="stylesheet" href="/schedule/css/reset.css">
@@ -72,9 +74,9 @@
             <div class="board-btns">
               <a href="?key=all" class="active">All</a>
               <a href="?key=database">Database</a>
-              <a href="?key=api">API</a>
-              <a href="?key=renewal">Renewal</a>
-              <a href="?key=planning">Planning</a>
+              <a href="?key=thermometer-half">API</a>
+              <a href="?key=clone">Renewal</a>
+              <a href="?key=bar-chart-o">Planning</a>
             </div>
             <div class="board-table">
               <ul>
@@ -87,8 +89,13 @@
                 </li>
 
                 <?php
+                
                 $tab_path = $_GET['key'];
-                   include $_SERVER["DOCUMENT_ROOT"].'/schedule/include/tabs/'.$tab_path.'.php';
+                   include $_SERVER["DOCUMENT_ROOT"].'/schedule/include/tabs/all.php';
+                   $sql = "SELECT * FROM SP_table ORDER BY SP_idx DESC";
+                   $board_result = mysqli_query($dbConn, $sql);
+                   
+                  //  $sql1 = "SELECT * FROM SP_table WHERE SP_cate = 'thermometer-half' ORDER BY SP_idx DESC LIMIT 5";
                    //php의 마침표는 js의 +
                   ?>
 
@@ -159,9 +166,9 @@
         //테이블 탭 활성화 기능
         const pathName = window.location.href;
         const tabBtns = document.querySelectorAll('.board-btns a');
-        const tabElements = ['all', 'database', 'api', 'renewal', 'planning'];
+        const tabElements = ['all', 'database', 'thermometer-half', 'clone', 'bar-chart-o'];
 
-        console.log(tabBtns);
+        // console.log(tabBtns2);
 
         tabBtns.forEach(btn =>{
           btn.classList.remove('active');
@@ -169,7 +176,7 @@
 
         for(let i = 0; i < tabBtns.length; i++){
           tabBtns[i].classList.remove('active');
-          if(pathName.include(tabElements[i])){
+          if(pathName.includes(tabElements[i])){
             tabBtns[i].classList.add('active');
           }
         }

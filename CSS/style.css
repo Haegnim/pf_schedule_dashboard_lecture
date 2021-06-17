@@ -151,6 +151,7 @@ header {
   border-radius: 20px;
   transition: all 0.3s;
   position: relative;
+  z-index: 989;
 }
 /* header:hover {
   box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
@@ -233,37 +234,11 @@ header .gnb li span {
 /* clip-path:path("M80,0C 80, 7.68, 80, 17, 80, 18 H 80 c-32.53,0-32.53,46.59,0,46.59h0C80,63.59,80,71.87,80,80Z"); */
 /* } */ 
 
-@keyframes svg {
-  0% {
-    background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
-    background-size: cover;
-    /* background: #fff; */
-    /* clip-path:path("M40,0 S40,8.5,40,8.5 H40 c -0, 0 -0, 23.3, 0, 23.3 H40 C 40,40,40,40,40,40 Z"); */
-    clip-path:path("M80,0C 80, 7.68, 80, 17, 80, 18 H 80 c-0,0-0,46.59,0,46.59h0C80,63.59,80,71.87,80,80Z");
-    /* clip-path:path("M80,0c80,12,-12,12 H80c-0,0-0,46.59,0,46.59h80C80,63.59,80,80,80,80Z"); */
-    /* "M80,0s0,14.26-17.29,14.26H60.3c-32.53,0-32.53,51.26,0,51.26h2.41C80,65.52,80,80,80,80Z" */
-    
-  }
-  50% {
-    background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
-    background-size: cover;
-    /* background: #fff; */
-    /* clip-path:path("M80,0s0,15-15,15H60.3c-32.53,0-32.53,46.59,0,46.59h2.41C80,63.59,80,80,80,80Z"); */
-    clip-path:path("M80,0C 80, 7.68, 75, 17, 67, 18 H 60c-32.53,0-32.53,46.59,0,46.59h0C72,63.59,80,71.87,80,80Z");
 
-  }
-  100% {
-    background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
-    background-size: cover;
-    /* background: #fff; */
-    /* clip-path:path("M80,0s0,17-17,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z"); */
-    clip-path:path("M80,0 C 80, 7.68, 75, 17, 67, 18 H 29c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
-
-  }
-}
 
 header .gnb li.active span{
   background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
+
     /* background-size: cover; */
     /* background: #fff; */
     /* clip-path:path("M80,0c0,8.68-7.91,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
@@ -417,6 +392,41 @@ header #btn span.active {
   transform: rotate(135deg);
 }
 
+/* mobile-menu items style code */
+.mobile-meun-items{
+  position: absolute;
+  background: #000;
+  display: flex;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  padding: 10px 20px;
+  _flex-direction: column;
+  z-index: 999;
+  margin-top: 5px;
+  border-radius: 20px;
+  _border: 1px solid #ccc;
+  transform: translateY(-40px);
+  opacity: 0;
+  visibility: hidden;
+}
+.mobile-meun-items.hide{
+  animation:hide 0.4s 1;
+  animation-fill-mode: forwards;
+}
+.mobile-meun-items.show{
+  animation:show 0.4s 1;
+  animation-fill-mode: forwards;
+}
+
+.mobile-meun-items li{ width: 25%; text-align: center; }
+.mobile-meun-items a{
+  color: #fff;
+  font-size: 25px;
+  display: block;
+  padding: 15px 0;
+}
+
 /* Main Page Graph-ui Contents Style Code */
 .graph-ui {
   width: calc(58% - 28px);
@@ -534,8 +544,11 @@ header #btn span.active {
   height: 25%;
 }
 .graph-ui .each-pofol .each-title h3 {
-  font-weight: 400;
-  color: #666;
+  font-weight: 500;
+  font-size: 23px;
+  color: #555;
+  font-family: 'EB Garamond', serif;
+  margin-left: 10px;
 }
 .graph-ui .each-pofol .each-graph {
   width: 100%;
@@ -649,11 +662,12 @@ div.total-txt {
   justify-content: center;
 }
 div.total-txt h3 {
-  font-size: 20px;
-  font-weight: 400;
   padding: 0 0 5px 0;
-  color: #555;
   border-bottom: 1px solid #babecc;
+  font-weight: 600;
+  font-size: 30px;
+  color: #333;
+  font-family: 'EB Garamond', serif;
 }
 div.total-txt p {
   font-weight: 300;
@@ -673,7 +687,7 @@ div.total-txt button {
 div.total-txt button:hover {
   box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #ffffff;
 }
-div.total-txt button:active {
+div.total-txt button.active {
   background: #fefefe;
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
 }
@@ -725,9 +739,10 @@ div.total-txt button:active {
   padding: 5px 0;
 }
 .table-ui .tit-box p {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
-  color: #666;
+  color: #555;
+  font-family: 'EB Garamond', serif;
 }
 .table-ui .tit-box a:hover {
   text-decoration: underline;
@@ -1033,7 +1048,7 @@ div.total-txt button:active {
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
-  max-height: 350px;
+  _max-height: 350px;
 }
 .graph-ui.detail .detail-board::-webkit-scrollbar {
   display: none;
@@ -1056,7 +1071,7 @@ div.total-txt button:active {
   text-align: center;
 }
 .detail-board .board-btns a:hover,
-.detail-board .board-btns a:active,
+.detail-board .board-btns a.active,
 .board-table-btns .more-btn:hover {
   background: #fefefe;
   box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #fff;

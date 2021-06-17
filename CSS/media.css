@@ -10,6 +10,7 @@
     padding: 0 30px;
     /* background: linear-gradient(-90deg, #13c7a3 0%, #0078ff 100%); */
   }
+  
   header .gnb {
     display: flex;
     justify-content: center;
@@ -127,15 +128,21 @@
     height: auto;
     min-height: auto;
   }
-
+  header #btn{
+    display: none;
+  }
   .dashboard {
     width: 100%;
     height: 100%;
     border-radius: 0;
   }
+  
   /* Header Contents Style Code */
   header {
-    padding: 8px 15px;
+    padding: 15px 25px;
+  }
+  .custom-font {
+    font-size: 50px;
   }
   /* Graph-ui Contents Style Code */
   .graph-ui {
@@ -156,6 +163,7 @@
     border-bottom: 1.5px solid #dfdfdf;
   }
   .graph-ui .each-pofol .each-graph {
+    flex-wrap: wrap;
     height: auto;
   }
   .graph-ui .each-pofol .each-graph div {
@@ -171,6 +179,8 @@
     width: 100%;
     margin-top: 14px;
   }
+  .table-ui .each-contents .each-btns button{font-size: 12px;}
+
   div.total-txt {
     padding-left: 30px;
   }
@@ -197,17 +207,23 @@
     transform: translate(-50%, -50%);
   }
   /* detail page style code */
+
+  .graph-ui.detail .detail-board{
+    _height: auto;
+    max-height: 350px;
+  }
+
   .graph-ui.detail .total-pofol {
     width: 100%;
-    height: 250px;
+    height: 300px;
   }
   .graph-ui.detail .each-pofol {
     height: auto;
     width: 100%;
   }
   .graph-ui.detail .each-pofol .each-graph {
-    _display: flex;
     align-content: center;
+ 
   }
   .graph-ui.detail .each-pofol .each-graph div {
     height: calc(100% - 24px);
@@ -215,6 +231,7 @@
     margin-top: 0;
     padding: 20px 0;
   }
+
   .detail-board .board-btns a {
     width: 25%;
     text-align: center;
@@ -244,14 +261,20 @@
 }
 
 @media screen and (max-width: 450px) {
-  .graph-ui.detail .each-pofol .each-graph {
-    align-content: space-between;
+  /* .graph-ui.detail .each-pofol .each-graph {
+    align-content: center;
     margin-top: 10px;
+  } */
+  .graph-ui div.intro i{
+    display: none;
+  }
+  .graph-ui.detail .each-pofol{
+    padding: 5px 0;
   }
   .graph-ui.detail .each-pofol .each-graph div {
-    width: 50%;
-    height: calc(50% - 4px);
-    padding: 0;
+    width: calc(50% - 8px);
+    height: calc(50% - 8px);
+    margin: 4px 0;
   }
   .board-table li.board-contents span a.del-btn.txt {
     display: none;

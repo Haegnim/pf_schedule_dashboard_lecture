@@ -1,3 +1,17 @@
+<?php
+  session_start();
+  if(isset($_SESSION['authcode'])){
+      $authcode = $_SESSION['authcode'];
+  }else{
+    echo"
+    <script>
+        location.href='/schedule/pages/sp_auth.php'
+    </script>
+    ";
+      }
+
+?>
+
 <header>
     <h2><a href="/schedule/index.php"><i class="custom-font logo"></i></a></h2>
     <ul class="gnb" id="gnbA">
@@ -46,9 +60,9 @@
         <span></span>
     </div>
     <ul class="mobile-meun-items">
-        <li><a href="#"><i class="custom-font logo2"></i></a></li>
-        <li><a href="#"><i class="fa fa-pencil"></i></a></li>
-        <li><a href="#"><i class="fa fa-search"></i></a></li>
+        <li><a href="/schedule/index.php"><i class="custom-font logo2"></i></a></li>
+        <li><a href="/schedule/pages/sp_insert_form.php"><i class="fa fa-pencil"></i></a></li>
+        <li><a href="/schedule/pages/sp_detail_form.php?key=all"><i class="fa fa-search"></i></a></li>
         <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
     </ul>
 </header>
@@ -72,4 +86,4 @@
         }
     }
     abc();
-        </script>
+        </>
