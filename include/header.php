@@ -7,27 +7,19 @@
             </clipPath>
             </defs>
             </svg>
-        <li class="active">
+        <li class="active" >
             <a href="/schedule/index.php"><i class="custom-font logo2"></i>
             </a>
-            <span class="nav-top"></span>
-
-            
+            <span class="nav-top" viewBox="0 0 80 80"></span>    
             <!-- <span class="nav-mid"></span>
             <span class="nav-effect"></span>
-            <span class="nav-bottom"></span> -->
-            
-            
+            <span class="nav-bottom"></span> -->  
         </li>
         <li>
             <a href="/schedule/pages/sp_insert_form.php">
-            
             <i class="fa fa-pencil"></i></a>
             <span class="nav-top">
-                
             </span>
-            
-        </svg>
             
             <!-- <span class="nav-mid"></span>
             <span class="nav-effect"></span> -->
@@ -53,6 +45,12 @@
         <span></span>
         <span></span>
     </div>
+    <ul class="mobile-meun-items">
+        <li><a href="#"><i class="custom-font logo2"></i></a></li>
+        <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+        <li><a href="#"><i class="fa fa-search"></i></a></li>
+        <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+    </ul>
 </header>
 <script>
     function abc(){

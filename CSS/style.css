@@ -30,18 +30,18 @@
   content: "\0532";
 } */
 
-.fa-database {
-  color: #989;
+/* .fa-database {
+  color: #000;
 }
 .fa-thermometer-half {
-  color: #989;
+  color: #000;
 }
 .fa-clone {
   color: #8933ff;
 }
 .fa-bar-chart-o {
   color: #bd5ed9;
-}
+} */
 
 /* {r: 19, g: 199, b: 163},
         {r: 0, g: 120, b: 255},
@@ -81,7 +81,28 @@
   width: 100%;
   height: 100vh;
   background: #eee;
-  _background: #eee;
+  background: linear-gradient(
+      135deg,
+      rgba(19, 199, 163, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(137, 51, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(
+      225deg,
+      rgba(0, 120, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(
+      315deg,
+      rgba(189, 94, 217, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  background: #000;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +137,7 @@
 header {
   width: 7%;
   height: 100%;
-  /* background: linear-gradient(0deg, #989 0%, #989 100%); */
+  /* background: linear-gradient(0deg, #000 0%, #000 100%); */
   /* background: linear-gradient(0deg, #13c7a3 0%, #0078ff 100%); */
   _background: F0EEEF;
   display: flex;
@@ -150,7 +171,7 @@ header a {
   
 
   /* text-shadow: 0px 0px 10px #babecc; */
-  /* background: linear-gradient(145deg, #989 0%, #989 100%);
+  /* background: linear-gradient(145deg, #000 0%, #000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
@@ -194,6 +215,23 @@ header .gnb li span {
   /* clip-path:path("M90,0s0,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z"); */
   transition: all 0.4s;
 }
+/* header .gnb:nth-child(2) li span {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top:0;
+  right: 0;
+  /* background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
+  background: url(/schedule/img/patton.png) no-repeat center center;
+  background-size: cover; */
+  /* clip-path:url(#path); */
+  /* clip-path:url(#path2); */
+  /* clip-path:path("M90,0s0,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z"); */
+  /* transition: all 0.4s; */
+/* background: #000; */
+/* clip-path:path("M80,0c0,8.68-7.91,17-17.29,17h0c-32.53,0-32.53,46.59,0,46.59h0C72,63.59,80,71.87,80,80Z"); */
+/* clip-path:path("M80,0C 80, 7.68, 80, 17, 80, 18 H 80 c-32.53,0-32.53,46.59,0,46.59h0C80,63.59,80,71.87,80,80Z"); */
+/* } */ 
 
 @keyframes svg {
   0% {
@@ -201,34 +239,42 @@ header .gnb li span {
     background-size: cover;
     /* background: #fff; */
     /* clip-path:path("M40,0 S40,8.5,40,8.5 H40 c -0, 0 -0, 23.3, 0, 23.3 H40 C 40,40,40,40,40,40 Z"); */
-    clip-path:path("M80,0s80,15-12.29,17 H80c-0,0-0,46.59,0,46.59h80C80,80,80,80,80,80Z");
+    clip-path:path("M80,0C 80, 7.68, 80, 17, 80, 18 H 80 c-0,0-0,46.59,0,46.59h0C80,63.59,80,71.87,80,80Z");
+    /* clip-path:path("M80,0c80,12,-12,12 H80c-0,0-0,46.59,0,46.59h80C80,63.59,80,80,80,80Z"); */
+    /* "M80,0s0,14.26-17.29,14.26H60.3c-32.53,0-32.53,51.26,0,51.26h2.41C80,65.52,80,80,80,80Z" */
     
   }
   50% {
     background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
     background-size: cover;
     /* background: #fff; */
-    clip-path:path("M80,0s0,17-17.29,17H60.3c-32.53,0-32.53,46.59,0,46.59h2.41C80,63.59,80,80,80,80Z");
+    /* clip-path:path("M80,0s0,15-15,15H60.3c-32.53,0-32.53,46.59,0,46.59h2.41C80,63.59,80,80,80,80Z"); */
+    clip-path:path("M80,0C 80, 7.68, 75, 17, 67, 18 H 60c-32.53,0-32.53,46.59,0,46.59h0C72,63.59,80,71.87,80,80Z");
+
   }
   100% {
     background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
     background-size: cover;
     /* background: #fff; */
-    clip-path:path("M80,0s0,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z");
+    /* clip-path:path("M80,0s0,17-17,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z"); */
+    clip-path:path("M80,0 C 80, 7.68, 75, 17, 67, 18 H 29c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
+
   }
 }
 
 header .gnb li.active span{
   background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
-    background-size: cover;
+    /* background-size: cover; */
     /* background: #fff; */
-    clip-path:path("M80,0s0,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z");
+    /* clip-path:path("M80,0c0,8.68-7.91,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
+     */
+     clip-path:path("M80,0 C 80, 7.68, 75, 17, 67, 18 H 29c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
 }
 header .gnb li:hover span {
   /* width: 100%; */
   /* clip-path:url(#path); */
   animation-name: svg;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
   
@@ -326,7 +372,7 @@ header #btn > span {
   display: block;
   width: 26px;
   height: 26px;
-  background: #989;
+  background: #000;
   border-radius: 14px;
   margin-left: 50%;
   margin-top: 50%;
@@ -352,17 +398,17 @@ header #btn span.active {
 }
 .mobile-menu span {
   display: block;
-  background: #fff;
+  background: #000;
   position: absolute;
 }
 .mobile-menu span:nth-child(1) {
   width: 100%;
-  height: 2px;
+  height: 3px;
   top: 50%;
   transform: translateY(-50%);
 }
 .mobile-menu span:nth-child(2) {
-  width: 2px;
+  width: 3px;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -446,7 +492,7 @@ header #btn span.active {
   opacity: 0;
 }
 .graph-ui div.intro a:hover {
-  color: #989;
+  color: #000;
   background: #fff;
 }
 .graph-ui div.intro i {
@@ -526,13 +572,13 @@ header #btn span.active {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  color: #989;
+  color: #000;
 }
 .graph-ui .each-pofol .each-graph div i.fa-database {
-  color: #989;
+  color: #000;
 }
 .graph-ui .each-pofol .each-graph div i.fa-thermometer-half {
-  color: #989;
+  color: #000;
 }
 .graph-ui .each-pofol .each-graph div i.fa-clone {
   color: #8933ff;
@@ -572,7 +618,7 @@ header #btn span.active {
   line-height: 0;
   font-size: 22px;
   font-weight: 600;
-  color: #989;
+  color: #000;
 } */
 div.total-chart .chart {
   width: 100%;
@@ -587,7 +633,7 @@ div.total-chart .percent {
   line-height: 0;
   font-size: 22px;
   font-weight: 600;
-  color: #989;
+  color: #000;
 }
 div.total-chart .chart canvas {
   width: auto !important;
@@ -619,7 +665,7 @@ div.total-txt button {
   background: #ebecf0;
   padding: 10px 0px;
   border-radius: 25px;
-  _color: #989;
+  _color: #000;
   width: 150px;
   box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff;
   transition: all 0.3s;
@@ -703,7 +749,7 @@ div.total-txt button:active {
   align-items: center;
   border-radius: 50%;
   font-size: 20px;
-  _color: #989;
+  _color: #000;
   margin-right: 10px;
   box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
 }
@@ -711,7 +757,7 @@ div.total-txt button:active {
   width: 100%;
 } */
 .table-ui .each-contents .con-details li i {
-  _color: #989;
+  _color: #000;
 }
 .table-ui .con-txt p {
   color: #333;
@@ -744,11 +790,11 @@ div.total-txt button:active {
   transition: all 0.4s;
 }
 .table-ui .each-contents .each-btns button.active {
-  _color: #989;
+  _color: #000;
   background: #fefefe;
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
   border: none;
-  _text-shadow: inset 1px 1px 2px #989, inset -1px -1px 2px #989;
+  _text-shadow: inset 1px 1px 2px #000, inset -1px -1px 2px #000;
 }
 
 .graph-ui .title-box {
@@ -863,7 +909,7 @@ div.total-txt button:active {
 .graph-ui .btns button:hover {
   color: #fff;
   font-weight: bold;
-  background: #989;
+  background: #000;
   box-shadow: inset 1px 1px 2px #0059ff, inset -1px -1px 2px #0099ff;
 }
 /* ----------------------------  */
@@ -987,6 +1033,7 @@ div.total-txt button:active {
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
+  max-height: 350px;
 }
 .graph-ui.detail .detail-board::-webkit-scrollbar {
   display: none;
@@ -1030,7 +1077,7 @@ div.total-txt button:active {
   display: flex;
 }
 .board-table li.board-title span {
-  background: #989;
+  background: #000;
   color: #fff;
   border: 1px solid #fff;
   padding: 5px 0;
@@ -1056,7 +1103,7 @@ div.total-txt button:active {
 }
 .board-table li.board-contents span a.del-btn {
   border: none;
-  background: #989;
+  background: #000;
   color: #fff;
   padding: 3px 10px;
   font-size: 12px;
@@ -1066,7 +1113,7 @@ div.total-txt button:active {
 }
 .board-table li.board-contents button {
   border: none;
-  background: #989;
+  background: #000;
   color: #fff;
   padding: 5px 10px;
   font-size: 12px;
