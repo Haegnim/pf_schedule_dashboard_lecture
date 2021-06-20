@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="wrap">
-  <form action="/schedule/php/auth.php" type="post" name="auth_form">
+  <form action="/schedule/php/auth.php" method="post" name="auth_form">
     <input type="password" placeholder="인증코드를 입력해 주세요." name="auth_code">
     <button type="button">인증하기</button>
   </form>
@@ -23,14 +23,14 @@
   <script>
     const authCode = document.querySelector('button');
 
-    authCode.addEventListener('click',function(){
+    authCode.addEventListener('click',abc);
+    function abc(){
       if(!document.auth_form.auth_code.value){
         alert('인증코드를 입력해 주세요!');
         return;
       }
       document.auth_form.submit();
-    })
-    
+    }
   </script>
 
 </body>
