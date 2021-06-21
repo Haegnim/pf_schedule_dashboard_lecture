@@ -88,10 +88,11 @@
             $detail_reg = $detail_row['SP_reg'];
             // echo $detail_cate, $detail_num;
           ?>
-            <form action="#">
+            <form action="/schedule/php/update_details.php">
             <div class="detail-title">
               <h2><?=$detail_tit?></h2>
-              <input type="text" value="<?=$detail_tit?>" class="hidden-tit">
+              <input type="text" value="<?=$detail_tit?>" class="hidden-tit" name="update_tit">
+              <input type="hidden" value="<?=$detail_num?>" name="update_num">
             </div>
 
             <div class="board-table detail-view">
@@ -110,23 +111,27 @@
                   <span><?=$detail_cate?></span>
                   <span>
                     <em><?=$detail_con?></em>
-                    <textarea class="hidden-con"><?=$detail_con?></textarea>
+                    <textarea class="hidden-con" name="update_con"><?=$detail_con?></textarea>
                   </span>
                   <span><?=$detail_reg?></span>
                 </li>
 
                 </div>
               </ul>
-            </div>
-            <!-- end of board-table  -->
-            <div class="send-update">
+              <div class="send-update">
               <button type="submit">수정 입력</button>
             </div>
+              <div class="detail-btns">
+              <button type="button" class="update-btn">수정</button>
+            </div>
+           
+            </div>
+            <!-- end of board-table  -->
+            
+            
             </form>
 
-            <div class="detail-btns">
-              <button type="button">수정</button>
-            </div>
+            
             
 
             
@@ -169,6 +174,25 @@
     <script src="/schedule/js/jquery.index.js"></script>
     <script src="/schedule/js/modalAjax.js"></script>
     <script src="/schedule/js/total.avg.js"></script>
+
+    <script>
+      $(function(){
+        $(".update-btn").click(function(){
+          $(this).toggleClass("on");
+          if($(this).hasClass("on")){
+            $(".detail-view em, .detail-title h2").hide();
+            $(".hidden-tit, .hidden-con, .send-update").show();
+            $(this).text('수정 취소');
+          }else{
+            $(".detail-view em, .detail-title h2").show();
+            $(".hidden-tit, .hidden-con, .send-update").hide();
+            $(this).text('수정');
+          }
+
+        });
+
+      });
+    </script>
 
 </body>
 </html>

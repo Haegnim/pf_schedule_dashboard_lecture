@@ -65,7 +65,7 @@
     function abc(){
         const pathName2 = window.location.href;
         const tabBtns = document.querySelectorAll('.gnb li');
-        const tabElements2 = ['index','sp_insert_form', 'sp_detail_form'];
+        const tabElements2 = ['index','insert', 'detail'];
 
         console.log(tabBtns);
 
@@ -73,7 +73,7 @@
         //   btn.classList.remove('active');
         // });
 
-        for(let i = 0; i <script tabBtns.length; i++){
+        for(let i = 0; i < tabBtns.length; i++){
           tabBtns[i].classList.remove('active');
           if(pathName2.includes(tabElements2[i])){
             tabBtns[i].classList.add('active');
