@@ -208,32 +208,8 @@ header .gnb li span {
   height: 80px;
   top:0;
   right: 0;
-  /* background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
-  background: url(/schedule/img/patton.png) no-repeat center center;
-  background-size: cover; */
-  /* clip-path:url(#path); */
-  /* clip-path:url(#path2); */
-  /* clip-path:path("M90,0s0,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z"); */
   transition: all 0.4s;
 }
-/* header .gnb:nth-child(2) li span {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  top:0;
-  right: 0;
-  /* background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
-  background: url(/schedule/img/patton.png) no-repeat center center;
-  background-size: cover; */
-  /* clip-path:url(#path); */
-  /* clip-path:url(#path2); */
-  /* clip-path:path("M90,0s0,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C80,63.59,80,80,80,80Z"); */
-  /* transition: all 0.4s; */
-/* background: #000; */
-/* clip-path:path("M80,0c0,8.68-7.91,17-17.29,17h0c-32.53,0-32.53,46.59,0,46.59h0C72,63.59,80,71.87,80,80Z"); */
-/* clip-path:path("M80,0C 80, 7.68, 80, 17, 80, 18 H 80 c-32.53,0-32.53,46.59,0,46.59h0C80,63.59,80,71.87,80,80Z"); */
-/* } */ 
-
 
 
 header .gnb li.active span{
@@ -996,9 +972,7 @@ div.total-txt button.active {
     3px 3px 4px #fff, 3px 3px 6px #babecc;
   width: calc(35% - 12px);
 }
-.modal-content .rate-form p input:focus {
-  border: 1px solid #8933ff;
-}
+.modal-content .rate-form p input:focus {border: 1px solid #8933ff;}
 
 #updateBtn {
   display: block;
@@ -1032,12 +1006,8 @@ div.total-txt button.active {
   height: calc(50% - 5px);
   width: calc(50% - 5px);
 }
-.graph-ui.detail .each-pofol .each-graph div b {
-  display: none;
-}
-.graph-ui.detail .each-pofol .each-graph div i {
-  display: block;
-}
+.graph-ui.detail .each-pofol .each-graph div b {display: none;}
+.graph-ui.detail .each-pofol .each-graph div i {display: block;}
 
 .graph-ui.detail .detail-board {
   width: 100%;
@@ -1097,25 +1067,16 @@ div.total-txt button.active {
   border: 1px solid #fff;
   padding: 5px 0;
 }
-.board-table li.board-contents {
-  border-bottom: 1px solid #f0f0f0;
-}
+.board-table li.board-contents {border-bottom: 1px solid #f0f0f0;}
 .board-table li.board-contents span {
   color: #555;
   padding: 10px 10px;
 }
-.board-table li:nth-child(odd) {
-  background: #fff;
-}
-.board-table li.board-contents span:nth-child(3) {
-  justify-content: flex-start;
-}
-.board-table li.board-contents span a {
-  color: #555;
-}
-.board-table li.board-contents span a:hover {
-  text-decoration: underline;
-}
+.board-table li:nth-child(odd) {background: #fff;}
+.board-table li.board-contents span:nth-child(3) {justify-content: flex-start;}
+.board-table li.board-contents span a {color: #555;}
+.board-table li.board-contents span a:hover {text-decoration: underline;}
+
 .board-table li.board-contents span a.del-btn {
   border: none;
   background: #000;
@@ -1123,9 +1084,7 @@ div.total-txt button.active {
   padding: 3px 10px;
   font-size: 12px;
 }
-.board-table li.board-contents span a.del-btn.icon {
-  display: none;
-}
+.board-table li.board-contents span a.del-btn.icon {display: none;}
 .board-table li.board-contents button {
   border: none;
   background: #000;
@@ -1140,21 +1099,12 @@ div.total-txt button.active {
   justify-content: center;
   align-items: center;
 }
-.board-table li span:nth-child(1) {
-  width: 10%;
-}
-.board-table li span:nth-child(2) {
-  width: 20%;
-}
-.board-table li span:nth-child(3) {
-  width: 40%;
-}
-.board-table li span:nth-child(4) {
-  width: 20%;
-}
-.board-table li span:nth-child(5) {
-  width: 10%;
-}
+
+.board-table li span:nth-child(1) {width: 10%;}
+.board-table li span:nth-child(2) {width: 20%;}
+.board-table li span:nth-child(3) {width: 40%;}
+.board-table li span:nth-child(4) {width: 20%;}
+.board-table li span:nth-child(5) {width: 10%;}
 
 .board-table-btns {
   margin: 20px 0;
@@ -1184,3 +1134,11 @@ div.total-txt button.active {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Detail View Page Style Code  */
+.detail-view em{font-style: normal;}
+.hidden-tit, .hidden-con{display: none;}
+.board-view li span:nth-child(2) {width: 20%;}
+.board-view li span:nth-child(1) {width: 10%;}
+.board-view li span:nth-child(3) {width: 50%;}
+.board-view li span:nth-child(4) {width: 20%;}

@@ -1,7 +1,7 @@
 <?php
   session_start();
-  if(isset($_SESSION['authcode'])){
-      $authcode = $_SESSION['authcode'];
+  if(isset($_SESSION['usercode'])){
+      $authcode = $_SESSION['usercode'];
   }else{
     echo"
     <script>
@@ -15,12 +15,6 @@
 <header>
     <h2><a href="/schedule/index.php"><i class="custom-font logo"></i></a></h2>
     <ul class="gnb" id="gnbA">
-            <svg id="svg" viewBox="0 0 40 40" > <defs>
-            <clipPath id="path" clipPathUnits="objectBoundingBox">
-                <path d="M40,0S40,8.5,31.35,8.5H15.82c-16.26,0-16.26,23.3,0,23.3H31.35C40,31.8,40,40,40,40Z"/>
-            </clipPath>
-            </defs>
-            </svg>
         <li class="active" >
             <a href="/schedule/index.php"><i class="custom-font logo2"></i>
             </a>
@@ -52,8 +46,9 @@
     </ul>
     
     <div type ="button" id ="btn" onclick = "bgBtn();">
-<span></span></div>
-    <a href="#" class="sign-out"><i class="fa fa-sign-out"></i></a>
+        <span></span>
+    </div>
+    <a href="/schedule/php/sign_out.php" class="sign-out"><i class="fa fa-sign-out"></i></a>
     
     <div class="mobile-menu">
         <span></span>
@@ -63,7 +58,7 @@
         <li><a href="/schedule/index.php"><i class="custom-font logo2"></i></a></li>
         <li><a href="/schedule/pages/sp_insert_form.php"><i class="fa fa-pencil"></i></a></li>
         <li><a href="/schedule/pages/sp_detail_form.php?key=all"><i class="fa fa-search"></i></a></li>
-        <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+        <li><a href="/schedule/php/sign_out.php"><i class="fa fa-sign-out"></i></a></li>
     </ul>
 </header>
 <script>
@@ -78,7 +73,7 @@
         //   btn.classList.remove('active');
         // });
 
-        for(let i = 0; i < tabBtns.length; i++){
+        for(let i = 0; i <script tabBtns.length; i++){
           tabBtns[i].classList.remove('active');
           if(pathName2.includes(tabElements2[i])){
             tabBtns[i].classList.add('active');
@@ -86,4 +81,4 @@
         }
     }
     abc();
-        </>
+        </script>
