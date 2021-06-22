@@ -99,27 +99,9 @@
             <?php
                 include $_SERVER['DOCUMENT_ROOT']."/schedule/include/table_ui.php";
                  ?>
-<div id="myModal" class="modal">
-
-<!-- Modal content -->
-<div class="modal-content">
-    <span class="close" id="times">&times;</span>
-    <!-- <p>Some text in the Modal..</p> -->
-    <form action="/schedule/php/sp_rate_insert.php" class="rate-form" name="rate_form">
-        
-    </form>
-    <div class="updateBtnBox">
-    <button type="button" id="updateBtn">Update Rate</button>
-    </div>
-</div>
-<script>
-    const updateBrn = document.querySelector('#updateBtn');
-    updateBtn.onclick = function(){
-        //alert('abc');
-        document.rate_form.submit();
-        modal.style.display = "none";
-    }
-</script>
+            <?php
+            include $_SERVER['DOCUMENT_ROOT']."/schedule/include/modal.php";
+            ?>
         </div>
         <!-- End of Main Dashboard Frame  -->
         

@@ -5,15 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1" />
 <style>
-  .wrap{width: 100%; height: 100vh; display:flex; align-items:center; justify-content:center;background:#f9f9f9;}
+  .wrap{width: 100%; height: 100vh; display:flex; align-items:center; justify-content:center;background: #ebecf0;}
   form{margin-bottom: 10px;}
   .wrap form{width:100%; height:auto; display:flex; justify-content:center; flex-direction:column; align-items: center;}
-  .wrap form input{width: 25%; outline:0; border-radius:20px; _border:1px soild #ccc; padding:10px; margin-bottom:20px; box-shadow:1px 1px 3px #333, 1px 1px 3px #fff}
-  .wrap form button{background:#333; outline:0; border:1px soild #ccc; color:#fff; border-radius:20px; margin:0 1px; padding:10px 36px;}
+  .wrap form input{background: #ebecf0; width: 25%; outline:0; border-radius:25px; border:none; padding:13px; margin-bottom:20px; box-shadow: inset 3px 3px 5px #babecc, inset -3px -3px 5px #fff; transition: all 0.4s; text-align:center}
+  .wrap form input:hover{background: #fff; box-shadow: inset 1px 1px 3px #babecc, inset -1px -1px 3px #fff; color:#0078FF}
+  .wrap form input:focus{background: #fff; box-shadow: inset 1px 1px 3px #babecc, inset -1px -1px 3px #fff; color:#0078FF}
+
+
+  .wrap form button{background: #ebecf0; outline:0; border:none; color:#000; border-radius:25px; margin:0 1px; padding:10px 36px;box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #fff; transition: all 0.4s}
+  .wrap form button:hover{
+    color:#0078FF;
+    box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #fff;
+  }
+  .wrap form button:focus{
+    color:#0078FF;
+    box-shadow: inset 3px 3px 5px #babecc, inset -3px -3px 5px #fff
+  }
+  @media screen and (max-width: 1200px) {
+    .wrap form input{width: 40%;}
+  }
 
   @media screen and (max-width:400px){
     .wrap form input{font-size:12px}
     .wrap form button{font-size:12px}
+    .wrap form input{width: 60%;}
+  }
   }
 </style>
   <title>Auth Page</title>

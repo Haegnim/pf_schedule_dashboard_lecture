@@ -304,7 +304,7 @@ header .gnb li:hover a {
   color: tomato;
 } */
 header .sign-out {
-  font-size: 20px;
+  font-size: 28px;
   z-index: 999;
 }
 header #btn {

@@ -87,6 +87,7 @@
             $detail_con = $detail_row['SP_con'];
             $detail_reg = $detail_row['SP_reg'];
             // echo $detail_cate, $detail_num;
+            
           ?>
             <form action="/schedule/php/update_details.php">
             <div class="detail-title">
@@ -138,31 +139,9 @@
             
             
         </section>
-        <div id="myModal" class="modal">
-
-              <!-- Modal content -->
-              <div class="modal-content">
-                  <span class="close" id="times">&times;</span>
-                  <!-- <p>Some text in the Modal..</p> -->
-                  <form action="/schedule/php/sp_rate_insert.php" class="rate-form" name="rate_form">
-                      
-                  </form>
-                  <div class="updateBtnBox">
-                  <button type="button" id="updateBtn">Update Rate</button>
-                  </div>
-              </div>
-              
-            </div>
-        </div>        
-    </div>
-    <script>
-      const updateBrn = document.querySelector('#updateBtn');
-      updateBtn.onclick = function(){
-          //alert('abc');
-          document.rate_form.submit();
-          modal.style.display = "none";
-                  }
-              </script>
+        <?php
+     include $_SERVER['DOCUMENT_ROOT']."/schedule/include/modal.php";
+    ?>
     <!-- Jquery Framework Load -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <!-- Plugins Load -->
