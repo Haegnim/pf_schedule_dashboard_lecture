@@ -123,6 +123,7 @@
             </div>
               <div class="detail-btns">
               <button type="button" class="update-btn">수정</button>
+              <button type="button" class="deldte-btn">삭제</button>
             </div>
            
             </div>
@@ -135,7 +136,9 @@
             
 
             
-            <div id="myModal" class="modal">
+            
+        </section>
+        <div id="myModal" class="modal">
 
               <!-- Modal content -->
               <div class="modal-content">
@@ -149,8 +152,7 @@
                   </div>
               </div>
               
-          </div>
-        </section>
+            </div>
         </div>        
     </div>
     <script>
@@ -176,7 +178,9 @@
     <script src="/schedule/js/total.avg.js"></script>
 
     <script>
+      
       $(function(){
+        //수정 버튼 클릭 이벤트
         $(".update-btn").click(function(){
           $(this).toggleClass("on");
           if($(this).hasClass("on")){
@@ -191,6 +195,15 @@
 
         });
 
+        //삭제 버튼 클릭 이벤트
+        $(".deldte-btn").click(function(){
+          const isCheck = confirm('정말 삭제하시겟습니까?');
+          if(isCheck === false){
+            return false;
+          }else{
+            location.href='/schedule/php/sp_delete.php?del_idx=<?=$detail_num?>';
+          }
+        });
       });
     </script>
 

@@ -26,6 +26,21 @@ $(function(){
             <span class="percent"></span>
           </span>`
           );
+
+          if(spAvg > 0 && spAvg <= 33){
+            $('#total_msg').html(`Your process rate is very low.. Plz Hurry Up!!`);
+          } else if(spAvg > 34 && spAvg <= 66){
+            $('#total_msg').html(`Don't forget the Gitbut Backup!<br>Hurry up!!`);
+          } else if(spAvg > 67 && spAvg <= 90){
+            $('#total_msg').html(`Maybe Now You have to deploy first<br>then check rests`);
+          }else {
+            $('#total_msg').html(`Almost done!!<br>Check your detail process`);
+          }
+          //0~33 : Your process rate is very low.. Plz Hurry Up!!
+          //34~66 : Don't forget the Gitbut Backup!<br>Hurry up!!
+          //66~90 : Maybe Now You have to deploy first<br>then check rests
+          //91~: Almost done!!<br>Check your detail process
+
       }
     });
 

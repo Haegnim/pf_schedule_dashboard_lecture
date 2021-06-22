@@ -7,8 +7,8 @@
 <style>
   .wrap{width: 100%; height: 100vh; display:flex; align-items:center; justify-content:center;background:#f9f9f9;}
   form{margin-bottom: 10px;}
-  .wrap form{width:100%; height:auto; display:flex; justify-content:center; flex-direction:column;}
-  .wrap form input{outline:0; border-radius:20px; border:1px soild #ccc; padding:10px; margin-bottom:20px}
+  .wrap form{width:100%; height:auto; display:flex; justify-content:center; flex-direction:column; align-items: center;}
+  .wrap form input{width: 25%; outline:0; border-radius:20px; _border:1px soild #ccc; padding:10px; margin-bottom:20px; box-shadow:1px 1px 3px #333, 1px 1px 3px #fff}
   .wrap form button{background:#333; outline:0; border:1px soild #ccc; color:#fff; border-radius:20px; margin:0 1px; padding:10px 36px;}
 
   @media screen and (max-width:400px){

@@ -22,13 +22,9 @@
   header .gnb li {
     background: #ebecf0;
   }
-  header .gnb li span {
-    display: none;
-  }
+  header .gnb li span {display: none;}
   header .gnb li:hover a,
-  header .gnb li.active a {
-    color: #000;
-  }
+  header .gnb li.active a {color: #000;}
   header:after {
     top: 0;
     left: 0;
@@ -141,9 +137,6 @@
   header {
     padding: 15px 25px;
   }
-  .custom-font {
-    font-size: 50px;
-  }
   /* Graph-ui Contents Style Code */
   .graph-ui {
     height: auto;
@@ -243,21 +236,20 @@
   .board-table li.board-contents span {
     padding: 5px;
   }
-  .board-table li span:nth-child(1) {
-    width: 15%;
-  }
-  .board-table li span:nth-child(2) {
-    display: none;
-  }
-  .board-table li span:nth-child(3) {
-    width: 45%;
-  }
-  .board-table li span:nth-child(4) {
-    width: 25%;
-  }
-  .board-table li span:nth-child(5) {
-    width: 15%;
-  }
+  .board-table li span:nth-child(1) {  width: 15%;}
+  .board-table li span:nth-child(2) {  display: none;}
+  .board-table li span:nth-child(3) {  width: 45%;}
+  .board-table li span:nth-child(4) {  width: 25%;}
+  .board-table li span:nth-child(5) {  width: 15%;}
+
+  .detail-view li span{font-size: 12px;}
+  .detail-view li.board-contents span{padding: 10px 0;}
+  .detail-view li span:nth-child(1) {width: 15%;}
+  .detail-view li span:nth-child(2) {width: 60%;}
+  .detail-view li span:nth-child(3) {width: 60%;}
+  .detail-view li span:nth-child(4) {width: 25%;}
+
+  .detail-btns button{font-size: 12px;}
 }
 
 @media screen and (max-width: 450px) {
@@ -394,4 +386,7 @@
   }
   /* .modal-content .rate-form p label{font-size: 12px; width: 30%;
   } */
+  .detail-view li span:nth-child(1) {width: 20%; display: flex;}
+  .detail-view li span:nth-child(3) {width: 80%;}
+  .detail-view li span:nth-child(4) {display: none;}
 }

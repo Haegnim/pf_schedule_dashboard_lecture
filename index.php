@@ -57,25 +57,25 @@
                     <div class="slide-box">
                         <h2>Database Project Process</h2>
                         <p>데이터베이스 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
-                        <a href="#">More Details</a>
+                        <a href="/schedule/pages/sp_detail_form.php?key=database">More Details</a>
                         <i class="fa fa-database"></i>
                     </div>
                     <div class="slide-box">
-                        <h2>Database Project Process</h2>
+                        <h2>API Project Process</h2>
                         <p>API 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
-                        <a href="#">More Details</a>
+                        <a href="/schedule/pages/sp_detail_form.php?key=thermometer-half">More Details</a>
                         <i class="fa fa-database"></i>
                     </div>
                     <div class="slide-box">
-                        <h2>Database Project Process</h2>
+                        <h2>Renewal Project Process</h2>
                         <p>리뉴얼 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
-                        <a href="#">More Details</a>
+                        <a href="/schedule/pages/sp_detail_form.php?key=clone">More Details</a>
                         <i class="fa fa-database"></i>
                     </div>
                     <div class="slide-box">
-                        <h2>Database Project Process</h2>
+                        <h2>Planning Project Process</h2>
                         <p>기획 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
-                        <a href="#">More Details</a>
+                        <a href="/schedule/pages/sp_detail_form.php?key=bar-chart-o">More Details</a>
                         <i class="fa fa-database"></i>
                     </div>
                     

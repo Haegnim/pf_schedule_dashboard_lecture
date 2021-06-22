@@ -13,7 +13,7 @@
   echo "
     <script>
       alert('글이 삭제되었습니다.');
-      location.href='/schedule/pages/sp_detail_form.php';
+      location.href='/schedule/pages/sp_detail_form.php?key=all';
     </script>
   ";
 ?>

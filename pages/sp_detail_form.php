@@ -44,7 +44,7 @@
         const hostname = window.location.href;
         //console.log(hostname);
         if(hostname == 'http://localhost/schedule/'){
-            window.location.replace('http://localhost/schedule/?key=database')
+            window.location.replace('http://localhost/schedule/?key=all')
         }
     </script>
 </head>
