@@ -42,7 +42,7 @@
         <div class="each-contents">
             <div class="each-btns">
                 <button class="active" value='database'>Database</button>
-                <button value='thermomethr-half'>API</button>
+                <button value='thermometer-half'>API</button>
                 <button value='clone'>Renewal</button>
                 <button value='bar-chart-o'>Planning</button>
             </div>

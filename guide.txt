@@ -29,17 +29,3 @@ graph-ui .each-pofol .each-graph div:hover {
   box-shadow: inset 3px 3px 4px #d9d9d9, inset -3px -3px 4px #ffffff;
 }
 
-font-family: 'EB Garamond', serif;
-
-header .gnb li span {
-   position: absolute;
-   background: transparent
-     url("data:image/svg+xml;base64,PHN2ZyBpZD0i66CI7J207Ja0XzEiIGRhdGEtbmFtZT0i66CI7J207Ja0IDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDM1IDM1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzUsNy41NWgwVi4xOGE3LjYsNy42LDAsMCwxLTcuNCw3LjM3SDE0LjJhMTAsMTAsMCwxLDAsMCwyMEgyNy41NUE3LjYsNy42LDAsMCwxLDM1LDM0LjY3aDBWMjcuNTFoMFoiLz48L3N2Zz4=")
-     no-repeat center center;
-   width: 0;
-   height: 100%;
-   bottom: 0;
-   right: 0;
-   _clip-path: 0;
-   transition: all 0.4s;
- }

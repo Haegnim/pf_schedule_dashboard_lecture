@@ -87,7 +87,13 @@
             $detail_con = $detail_row['SP_con'];
             $detail_reg = $detail_row['SP_reg'];
             // echo $detail_cate, $detail_num;
-            
+            if($detail_cate == "thermometer-half"){
+              $detail_cate = "API";
+            }if($detail_cate == "clone"){
+              $detail_cate = "Renewal";
+            }if($detail_cate == "bar-chart-o"){
+              $detail_cate = "Planning";
+            }
           ?>
             <form action="/schedule/php/update_details.php">
             <div class="detail-title">

@@ -9,7 +9,7 @@
   form{margin-bottom: 10px;}
   .wrap form{width:100%; height:auto; display:flex; justify-content:center; flex-direction:column; align-items: center;}
   .wrap form input{background: #ebecf0; width: 25%; outline:0; border-radius:25px; border:none; padding:13px; margin-bottom:20px; box-shadow: inset 3px 3px 5px #babecc, inset -3px -3px 5px #fff; transition: all 0.4s; text-align:center}
-  .wrap form input:hover{background: #fff; box-shadow: inset 1px 1px 3px #babecc, inset -1px -1px 3px #fff; color:#0078FF}
+  .wrap form input:hover{ box-shadow: inset 1px 1px 3px #babecc, inset -1px -1px 3px #fff; color:#0078FF}
   .wrap form input:focus{background: #fff; box-shadow: inset 1px 1px 3px #babecc, inset -1px -1px 3px #fff; color:#0078FF}
 
 

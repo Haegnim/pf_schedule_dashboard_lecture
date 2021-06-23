@@ -63,8 +63,8 @@ $(function(){
     $('.total-chart .chart').easyPieChart({
         easing: 'easeOutElastic',
         delay: 3000,
-        barColor: '#0078FF',
-        trackColor: '#fff',
+        barColor: '#0078ff',
+        trackColor: '#dadce5',
         scaleColor: false,
         lineWidth: 20,
         trackWidth: 20,
@@ -98,8 +98,8 @@ $(function(){
                 $('.total-chart .chart').easyPieChart({
                     easing: 'easeOutElastic',
                     delay: 3000,
-                    barColor: '#0078FF',
-                    trackColor: '#bbb',
+                    barColor: '#0078ff',
+                    trackColor: '#dadce5',
                     scaleColor: false,
                     lineWidth: 18,
                     trackWidth: 18,
@@ -116,11 +116,11 @@ $(function(){
 //--------each charts
 
     if(winWidth <= 950){
-        lWidth = 5;
-        tWidth = 5;
-    } else {
         lWidth = 8;
         tWidth = 8;
+    } else {
+        lWidth = 10;
+        tWidth = 10;
     }
     if(winWidth <= 1280){
         eachSize = 90;
@@ -131,10 +131,10 @@ $(function(){
     //
 
         const poData = [
-            {poKind:'.db-pofol', bColor:'#0078FF', tColor:'#fff'},
-            {poKind:'.api-pofol', bColor:'#0078FF', tColor:'#fff'},
-            {poKind:'.renewal-pofol', bColor:'#0078FF', tColor:'#fff'},
-            {poKind:'.panning-pofol', bColor:'#0078FF', tColor:'#fff'},
+            {poKind:'.db-pofol', bColor:'#0078FF', tColor:'#dadce5'},
+            {poKind:'.api-pofol', bColor:'#0078ff', tColor:'#dadce5'},
+            {poKind:'.renewal-pofol', bColor:'#0078ff', tColor:'#dadce5'},
+            {poKind:'.panning-pofol', bColor:'#0078ff', tColor:'#dadce5'},
             //{poKind:'.total-chart', bColor:'#BD5ED9', tColor:'#e6e6e6'}
         ];
 

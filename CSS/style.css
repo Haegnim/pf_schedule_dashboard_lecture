@@ -168,8 +168,6 @@ header a {
   color: #000;
   /* color: #fff; */
 
-  
-
   /* text-shadow: 0px 0px 10px #babecc; */
   /* background: linear-gradient(145deg, #000 0%, #000 100%);
   -webkit-background-clip: text;
@@ -186,16 +184,16 @@ header .gnb {
   width: 100%;
   margin: auto;
   display: block;
-  top:0;
+  top: 0;
 }
-#path{
+#path {
   position: absolute;
   max-height: 100px;
   width: 100%;
   margin: auto;
   display: block;
-  top:0;
-  transform: scale(0.025,0.025);
+  top: 0;
+  transform: scale(0.025, 0.025);
 }
 header .gnb li {
   position: relative;
@@ -205,20 +203,21 @@ header .gnb li span {
   position: absolute;
   width: 80px;
   height: 80px;
-  top:0;
+  top: 0;
   right: 0;
   transition: all 0.4s;
 }
 
-
-header .gnb li.active span{
+header .gnb li.active span {
   background: linear-gradient(90deg, #13c7a3 0%, #0078ff 100%);
 
-    /* background-size: cover; */
-    /* background: #fff; */
-    /* clip-path:path("M80,0c0,8.68-7.91,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
+  /* background-size: cover; */
+  /* background: #fff; */
+  /* clip-path:path("M80,0c0,8.68-7.91,17-17.29,17h-34c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
      */
-     clip-path:path("M80,0 C 80, 7.68, 75, 17, 67, 18 H 29c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z");
+  clip-path: path(
+    "M80,0 C 80, 7.68, 75, 17, 67, 18 H 29c-32.53,0-32.53,46.59,0,46.59h34C72,63.59,80,71.87,80,80Z"
+  );
 }
 header .gnb li:hover span {
   /* width: 100%; */
@@ -227,13 +226,12 @@ header .gnb li:hover span {
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  
+
   /* clip-path:path("M40,.07A8.73,8.73,0,0,1,31.4,8.6H15.93a11.56,11.56,0,0,0,0,23.12H31.4C36,31.82,40,35.47,40,40Z"); */
   /* clip-path:path("M40,0S40,8.5,31.35,8.5H15.82c-16.26,0-16.26,23.3,0,23.3H31.35C40,31.8,40,40,40,40Z"); */
-
 }
 header .gnb li.active a,
-header .gnb li:hover a{
+header .gnb li:hover a {
   color: #fff;
   /* color: #0078ff; */
 
@@ -285,7 +283,6 @@ header .gnb a {
   position: relative;
   transition: all 0.4s;
   z-index: 999;
-
 }
 /* header .gnb li.active span.nav-top,
 header .gnb li:hover span.nav-top {
@@ -368,7 +365,7 @@ header #btn span.active {
 }
 
 /* mobile-menu items style code */
-.mobile-meun-items{
+.mobile-meun-items {
   position: absolute;
   background: #000;
   display: flex;
@@ -385,17 +382,20 @@ header #btn span.active {
   opacity: 0;
   visibility: hidden;
 }
-.mobile-meun-items.hide{
-  animation:hide 0.4s 1;
+.mobile-meun-items.hide {
+  animation: hide 0.4s 1;
   animation-fill-mode: forwards;
 }
-.mobile-meun-items.show{
-  animation:show 0.4s 1;
+.mobile-meun-items.show {
+  animation: show 0.4s 1;
   animation-fill-mode: forwards;
 }
 
-.mobile-meun-items li{ width: 25%; text-align: center; }
-.mobile-meun-items a{
+.mobile-meun-items li {
+  width: 25%;
+  text-align: center;
+}
+.mobile-meun-items a {
   color: #fff;
   font-size: 25px;
   display: block;
@@ -485,7 +485,7 @@ header #btn span.active {
   font-size: 150px;
   right: -20px;
   top: -5px;
-  _opacity: 0.3;
+  opacity: 0.3;
   color: #ebecf0;
 }
 
@@ -570,10 +570,10 @@ header #btn span.active {
   color: #000;
 }
 .graph-ui .each-pofol .each-graph div i.fa-clone {
-  color: #8933ff;
+  color: #000;
 }
 .graph-ui .each-pofol .each-graph div i.fa-bar-chart-o {
-  color: #bd5ed9;
+  color: #000;
 }
 
 .graph-ui > div.total-pofol {
@@ -693,7 +693,6 @@ div.total-txt button.active {
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
-  
 }
 /* .table-ui > div:hover {
   box-shadow: 2px 2px 5px #babecc, -2px -2px 5px #ffffff;
@@ -891,16 +890,22 @@ div.total-txt button.active {
   border: none;
   border-radius: 20px;
   background: #ebecf0;
-  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #ffffff;
+  box-shadow: 3px 3px 6px #babecc, -3px -3px 6px #fff;
   color: #333;
   padding: 10px 25px;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
-.graph-ui .btns button:hover {
-  color: #fff;
-  font-weight: bold;
-  background: #000;
-  box-shadow: inset 1px 1px 2px #0059ff, inset -1px -1px 2px #0099ff;
+.graph-ui .btns button {
+  transition: all 0.4s;
+}
+.graph-ui .btns button:hover,
+#updateBtn:hover {
+  _font-weight: bold;
+  box-shadow: 1px 1px 2px #babecc, -1px -1px 2px #fff;
+}
+.graph-ui .btns button:focus,
+#updateBtn:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 /* ----------------------------  */
 /* 3. 모달 박스 css 작성 => index.js 135번줄 */
@@ -932,6 +937,7 @@ div.total-txt button.active {
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .modal-content .rate-form {
@@ -971,12 +977,15 @@ div.total-txt button.active {
     3px 3px 4px #fff, 3px 3px 6px #babecc;
   width: calc(35% - 12px);
 }
-.modal-content .rate-form p input:focus {border: 1px solid #8933ff;}
+.modal-content .rate-form p input:focus {
+  border: 1px solid #0078ff;
+}
 
 #updateBtn {
   display: block;
   margin: 15px auto 0;
   border-radius: 20px;
+  background: #fafafa;
 }
 
 /* Deail Page Style Code  */
@@ -1005,8 +1014,12 @@ div.total-txt button.active {
   height: calc(50% - 5px);
   width: calc(50% - 5px);
 }
-.graph-ui.detail .each-pofol .each-graph div b {display: none;}
-.graph-ui.detail .each-pofol .each-graph div i {display: block;}
+.graph-ui.detail .each-pofol .each-graph div b {
+  display: none;
+}
+.graph-ui.detail .each-pofol .each-graph div i {
+  display: block;
+}
 
 .graph-ui.detail .detail-board {
   width: 100%;
@@ -1017,7 +1030,6 @@ div.total-txt button.active {
   padding: 30px 20px;
   overflow: hidden;
   overflow-y: auto;
-  _max-height: 350px;
 }
 .graph-ui.detail .detail-board::-webkit-scrollbar {
   display: none;
@@ -1066,15 +1078,25 @@ div.total-txt button.active {
   border: 1px solid #fff;
   padding: 5px 0;
 }
-.board-table li.board-contents {border-bottom: 1px solid #f0f0f0;}
+.board-table li.board-contents {
+  border-bottom: 1px solid #f0f0f0;
+}
 .board-table li.board-contents span {
   color: #555;
   padding: 10px 10px;
 }
-.board-table li:nth-child(odd) {background: #fff;}
-.board-table li.board-contents span:nth-child(3) {justify-content: flex-start;}
-.board-table li.board-contents span a {color: #555;}
-.board-table li.board-contents span a:hover {text-decoration: underline;}
+.board-table li:nth-child(odd) {
+  background: #fff;
+}
+.board-table li.board-contents span:nth-child(3) {
+  justify-content: flex-start;
+}
+.board-table li.board-contents span a {
+  color: #555;
+}
+.board-table li.board-contents span a:hover {
+  text-decoration: underline;
+}
 
 .board-table li.board-contents span a.del-btn {
   border: none;
@@ -1083,7 +1105,9 @@ div.total-txt button.active {
   padding: 3px 10px;
   font-size: 12px;
 }
-.board-table li.board-contents span a.del-btn.icon {display: none;}
+.board-table li.board-contents span a.del-btn.icon {
+  display: none;
+}
 .board-table li.board-contents button {
   border: none;
   background: #000;
@@ -1099,11 +1123,21 @@ div.total-txt button.active {
   align-items: center;
 }
 
-.board-table li span:nth-child(1) {width: 10%;}
-.board-table li span:nth-child(2) {width: 20%;}
-.board-table li span:nth-child(3) {width: 40%;}
-.board-table li span:nth-child(4) {width: 20%;}
-.board-table li span:nth-child(5) {width: 10%;}
+.board-table li span:nth-child(1) {
+  width: 10%;
+}
+.board-table li span:nth-child(2) {
+  width: 20%;
+}
+.board-table li span:nth-child(3) {
+  width: 40%;
+}
+.board-table li span:nth-child(4) {
+  width: 20%;
+}
+.board-table li span:nth-child(5) {
+  width: 10%;
+}
 
 .board-table-btns {
   margin: 20px 0;
@@ -1123,6 +1157,7 @@ div.total-txt button.active {
   box-shadow: 6px 6px 12px #babecc, 6px 6px 12px #fff;
   border-radius: 18px;
   _margin-bottom: 20px;
+  transition: all 0.4s;
 }
 
 .close:hover,
@@ -1134,48 +1169,77 @@ div.total-txt button.active {
   cursor: pointer;
 }
 
-.detail-title h2{
-  font-size: 18px; 
+.detail-title h2 {
+  font-size: 18px;
   font-weight: 300;
   padding-left: 18px;
   border-left: 3px solid #000;
 }
-.detail-title .hidden-tit{
+.detail-title .hidden-tit {
   padding: 10px;
   color: #999;
   border: 1px solid #f0f0f0;
   width: 40%;
 }
-.detail-title .hidden-tit:focus{border:1px solid #000}
-.board-contents .hidden-con{
-  width: 100%; 
-  height: 100px; 
-  border: 1px solid #f0f0f0; 
-  color: #999; 
-  resize: none; 
-  padding: 10px; 
-  font-family: "Roboto", "Noto Sans KR", sans-serif;}
-/* Detail View Page Style Code  */
-.detail-view em{font-style: normal;}
-.hidden-tit, .hidden-con, .send-update{display: none;}
-.detail-view li span:nth-child(1) {width: 10%;}
-.detail-view li span:nth-child(2) {width: 20%;}
-.detail-view li span:nth-child(3) {width: 50%;}
-.detail-view li span:nth-child(4) {width: 20%;}
-
-.detail-btns{width: 100%; height: auto; display: flex; justify-content: center;}
-.send-update button,
-.detail-btns button{
-  border:1px solid #000; 
-  background: #000; 
-  color: #fff; 
-  padding: 5px 15px; 
-  transition: all 0.4s; 
-  margin:0 3px
+.detail-title .hidden-tit:focus {
+  border: 1px solid #000;
 }
-.detail-btns button:hover{background:#fff; color:#000;}
+.board-contents .hidden-con {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #f0f0f0;
+  color: #999;
+  resize: none;
+  padding: 10px;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+/* Detail View Page Style Code  */
+.detail-view em {
+  font-style: normal;
+}
+.hidden-tit,
+.hidden-con,
+.send-update {
+  display: none;
+}
+.detail-view li span:nth-child(1) {
+  width: 10%;
+}
+.detail-view li span:nth-child(2) {
+  width: 20%;
+}
+.detail-view li span:nth-child(3) {
+  width: 50%;
+}
+.detail-view li span:nth-child(4) {
+  width: 20%;
+}
 
-.send-update{width: 100%; height: auto; 
-  padding: 0 0 10px 0; 
-  margin: 0 0 10px 0; 
-  border-bottom: 1px solid #f0f0f0; text-align:center}
+.detail-btns {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.send-update button,
+.detail-btns button {
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  padding: 5px 15px;
+  transition: all 0.4s;
+  margin: 0 3px;
+}
+.detail-btns button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.send-update {
+  width: 100%;
+  height: auto;
+  padding: 0 0 10px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+}

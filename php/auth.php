@@ -9,7 +9,7 @@ $sql = "SELECT * FROM auth WHERE auth = '$auth_code'";
 $auth_result = mysqli_query($dbConn, $sql);
 $auth_match = mysqli_num_rows($auth_result);
 
-var_dump($auth_match);
+// var_dump($auth_match);
 
 if(!$auth_match){
   echo "
