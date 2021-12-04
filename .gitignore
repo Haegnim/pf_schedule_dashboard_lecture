@@ -8,12 +8,13 @@
 
 # only ignore the TODO file in the current directory, not subdir/TODO
 /ex
+/guide
 # ignore all files in the build/ directory
 build/
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
-doc/*.txt
-doc/*.docx
-doc/*.prettierrc
+*.txt
+*.docx
+*.prettierrc
 
 # ignore all .pdf files in the doc/ directory
