@@ -1,6 +1,6 @@
 <img src="img/mainlogo.png" align="left" width="35" height="35"/>
 
-# &nbsp;&nbsp;SCHEDULE BORD
+# SCHEDULE BORD
 
 _todo 스케줄 대시보드_
 
