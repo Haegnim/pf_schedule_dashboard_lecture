@@ -1,4 +1,4 @@
-<img src="img/mainlogo.png" align="right" width="35"/>
+<img src="img/mainlogo.png" width="35" style="float:left"/>
 
 # SCHEDULE BORD
 
