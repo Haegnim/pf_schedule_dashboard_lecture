@@ -1,10 +1,10 @@
-<img src="img/mainlogo.png" align="right" width="35" height="35"/>
+<img src="img/mainlogo.png" align="right" width="35"/>
 
 # SCHEDULE BORD
 
 _todo 스케줄 대시보드_
 
-<img width="1381" alt="schedule" src="https://user-images.githubusercontent.com/84562770/144698734-9ba86e80-5f28-47ce-acfa-3e939c6c1d18.png">
+![mainpage](https://user-images.githubusercontent.com/84562770/144698734-9ba86e80-5f28-47ce-acfa-3e939c6c1d18.png)
 
 <p align="center">효과적인 일정 관리를 위한 스케줄 홈페이지입니다<br>
 <br>
