@@ -43,6 +43,6 @@ http://haegnim.dothome.co.kr/schedule/<br>
 이 사이트를 만드는데 쓰인 플러그인은 다음과 같습니다.  
 <br>
 | Plugin | WebSite |
-| **\*\***\*\***\*\*** | :\***\*\*\*\*\***\*\*\*\*\***\*\*\*\*\***\*\*\*\***\*\*\*\*\***\*\*\*\*\***\*\*\*\*\***: |
+|------|---|
 | `lightslider` | http://sachinchoolur.github.io/lightslider/index.html |
 | `easypiechart` | https://github.com/rendro/easy*pie*chart |
