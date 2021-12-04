@@ -43,11 +43,11 @@
     file_put_contents($_SERVER["DOCUMENT_ROOT"].'/schedule/data/sp_table.json', json_encode($arr, JSON_UNESCAPED_UNICODE));
 
     //-------------------
-    // location.href='/schedule/pages/sp_insert_form.php';
     
-        echo "
-            <script>
-                alert('작성이 완료되었습니다!');
+    echo "
+    <script>
+    alert('작성이 완료되었습니다!');
+    location.href='/schedule/pages/sp_insert_form.php';
             </script>
 
         ";
