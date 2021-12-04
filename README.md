@@ -1,7 +1,8 @@
 # SCHEDULE BORD
 
 <br>
-*todo 스케줄 대시보드*
+
+_todo 스케줄 대시보드_
 
 <p align="center">
 <img src="https://img.shields.io/badge/HTML5*E34F26?style=flat*square&logo=HTML5&logoColor=white"/></a> &nbsp
@@ -42,6 +43,6 @@ http://haegnim.dothome.co.kr/schedule/<br>
 이 사이트를 만드는데 쓰인 플러그인은 다음과 같습니다.  
 <br>
 | Plugin | WebSite |
-| **\*\***\*\***\*\*** | :****\*\*****\*\*\*\*****\*\*****\*\*\*****\*\*****\*\*\*\*****\*\*****: |
+| **\*\***\*\***\*\*** | :\***\*\*\*\*\***\*\*\*\*\***\*\*\*\*\***\*\*\*\***\*\*\*\*\***\*\*\*\*\***\*\*\*\*\***: |
 | `lightslider` | http://sachinchoolur.github.io/lightslider/index.html |
 | `easypiechart` | https://github.com/rendro/easy*pie*chart |
