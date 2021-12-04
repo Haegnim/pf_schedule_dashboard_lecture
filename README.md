@@ -1,4 +1,6 @@
-# SCHEDULE BORD <img src="img/mainlogo.png" width="35" style="float:right; margin:0"/>
+<img src="img/mainlogo.png" width="35" style="float:left; margin:0 7px 0 0"/>
+
+# SCHEDULE BORD
 
 _todo 스케줄 대시보드_
 
